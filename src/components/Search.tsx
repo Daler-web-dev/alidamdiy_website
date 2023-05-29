@@ -14,7 +14,7 @@ export function Search (props: IAppProps) {
       } = useForm();
       const submit = (data: any) => console.log(data);
   return (
-    <div className="container mx-auto px-6 mt-4">
+    <div className="container mx-auto px-24 mt-4">
         <form action="" onSubmit={handleSubmit(submit)}>
         <div className="w-full flex items-center">
           <div className="flex items-center w-[60%]">
