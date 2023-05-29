@@ -8,7 +8,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 
    return (
       <header className="w-full bg-[#BBBBBB]">
-         <div className="container mx-auto px-6 py-7 flex items-center justify-between bg-[#BBBBBB]">
+         <div className="container mx-auto px-[100px] py-7 flex items-center justify-between bg-[#BBBBBB]">
             <div className="">
                <Link href={'/'}>
                   <Image src={'/images/logo.png'} width={170} height={45} alt="logo" />
@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
             </div>
             <div className="flex items-center">
                <div className="relative">
-                  <BiSearch size={12} className="absolute top-2 left-1" />
+                  <BiSearch size={15} className="absolute top-1 left-1" />
                   <input type="text" className="max-w-[180px] w-full px-6 border-b border-[#000] bg-transparent outline-transparent" />
                </div>
             </div>
@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
                <nav>
                   <ul className="flex gap-8">
                      <li className="font-medium text-[#474747]">
-                        <Link href={'#'}>Каталог</Link>
+                        <Link href={'/catalog'}>Каталог</Link>
                      </li>
                      <li className="font-medium text-[#474747]">
                         <Link href={'#'}>Водителям</Link>

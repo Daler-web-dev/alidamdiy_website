@@ -34,11 +34,11 @@ export default function Home() {
 	return (
 		<>
 			<section className='relative'>
-				<div className="container mx-auto px-6 flex items-start justify-center mb-10">
+				<div className="container mx-auto px-[100px] flex items-start justify-center mb-10">
 					<div className="w-full h-[700px] absolute left-0 z-[-1] rounded-b-3xl overflow-hidden">
 						<Image className='w-full h-full object-cover' src={'/images/car.png'} width={1000} height={1000} alt='car' />
 					</div>
-					<div className="w-full py-32  flex items-center justify-start">
+					<div className="w-full py-24 flex items-center justify-start">
 						<div className="max-w-[623px] w-full px-[39px] py-[33px] rounded-[15px] backdrop-blur bg-[#ffffff99]">
 							<div className="mb-3">
 								<p className='text-xl font-semibold'>Арендуйте лучшие авто</p>
@@ -67,8 +67,8 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-6 mb-60">
-					<div className="flex items-center gap-14 px-96">
+				<div className="container mx-auto px-[100px] mb-60">
+					<div className="flex items-center gap-14 px-72 max-xl:px-40 max-lg:px-10 max-md:px-0">
 						<div className="">
 							<h2 className='text-5xl font-bold leading-[120%] tracking-[-0.011em] text-[#E31E24]'>Наши машины</h2>
 						</div>
@@ -78,7 +78,7 @@ export default function Home() {
 					</div>
 					<div className="">
 						<div className="mt-12 flex items-center justify-center">
-							<ul className='w-2/4 flex justify-between'>
+							<ul className='flex justify-between'>
 								{
 									arr.map((item: { id: number, title: string }) => {
 										return (
@@ -98,13 +98,13 @@ export default function Home() {
 			</section >
 
 			<section className='bg-[#1E1E1E] mb-[63px]'>
-				<div className="relative -top-10 w-full overflow-hidden py-5">
-					<div className="w-full py-10 rotate-[-1.28deg] bg-[#E31E24]">
-						<h2 className='text-center text-6xl font-bold leading-[105%] tracking-[-0.011em] text-white'>Мы в цифрах</h2>
+				<div className="relative -top-14 w-full overflow-hidden py-6">
+					<div className="relative right-4 w-[110%] py-10 rotate-[-1.28deg] bg-[#E31E24]">
+						<h2 className='text-center text-[64px] font-bold leading-[105%] tracking-[-0.011em] text-white'>Мы в цифрах</h2>
 					</div>
 				</div>
 
-				<div className="container mx-auto px-6">
+				<div className="container mx-auto px-[100px]">
 					<div className="flex items-center justify-between">
 						<div className="flex flex-col items-center">
 							<div className="p-8 border-b border-white">
@@ -140,7 +140,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-6 mb-[30px]">
+				<div className="container mx-auto px-[100px] mb-[30px]">
 					<div className="flex">
 						<div className="w-1/2">
 							<h3 className='text-[64px] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>Частые <br /> вопросы</h3>
@@ -166,9 +166,9 @@ export default function Home() {
 
 			<section className='relative'>
 				<div className="overflow-hidden w-full h-[350px] z-[-1] absolute top-0 left-0 py-6">
-					<div className="w-full h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
+					<div className="relative right-5 w-[110%] h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
 				</div>
-				<div className="container mx-auto px-6 flex items-center justify-between gap-20 mb-10">
+				<div className="container mx-auto px-[100px] flex items-center justify-between gap-20 mb-10">
 					<div className="w-2/5">
 						<div className="w-2/5 mb-3">
 							<h3 className='text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]'>У вас остались ещё вопросы?</h3>
@@ -196,7 +196,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-6">
+				<div className="container mx-auto px-[100px]">
 					<div className="mb-6">
 						<h2 className='text-[64px] font-bold leading-[105%] tracking-[-0.011em] text-[#E31E24]'>Наш офис</h2>
 					</div>

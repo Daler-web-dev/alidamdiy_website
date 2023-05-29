@@ -8,7 +8,7 @@ const Footer: React.FC<FooterProps> = () => {
 
    return (
       <footer className="w-full mt-[100px] rounded-t-[16px] bg-[#BBBBBB]">
-         <div className="container mx-auto px-6 py-[70px] max-lg:py-[60px] flex max-md:flex-col items-start gap-20 max-lg:gap-14 max-md:gap-5 max-sm:gap-0">
+         <div className="container mx-auto px-[100px] py-[70px] max-lg:py-[60px] flex max-md:flex-col items-start gap-20 max-lg:gap-14 max-md:gap-5 max-sm:gap-0">
             <div className="w-1/2 h-full flex max-md:justify-start max-md:mb-5">
                <Image className="" src={'/images/logo.png'} width={391} height={105} alt="logo" />
             </div>
