@@ -69,7 +69,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto ppx-24 mb-60">
+				<div className="container mx-auto px-24 mb-60">
 					<div className="flex items-center gap-14 px-72 max-xl:px-40 max-lg:px-10 max-md:px-0">
 						<div className="">
 							<h2 className='text-5xl font-bold leading-[120%] tracking-[-0.011em] text-[#E31E24]'>Наши машины</h2>
@@ -151,11 +151,13 @@ export default function Home() {
 						</div>
 						<div className="w-1/2 flex flex-col gap-8">
 							<div className="relative">
+								<div className="absolute top-5 -left-10 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
 								<div className="absolute top-5 -left-10 w-6 h-6 rounded-full bg-[#E31E24]"></div>
 								<h3 className='mb-3 text-[28px] font-bold leading-[115%] tracking-[-0.011em]'>В чем заключаются наши услуги?</h3>
 								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>Готовы отправиться в захватывающее приключение? Наша компания предлагает широкий выбор автомобилей для аренды, специально  разработанных для путешествий!</p>
 							</div>
 							<div className="relative">
+								<div className="absolute top-5 -left-10 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
 								<div className="absolute top-5 -left-10 w-6 h-6 rounded-full bg-[#E31E24]"></div>
 								<h3 className='mb-3 text-[28px] font-bold leading-[115%] tracking-[-0.011em]'>Как мы предоставляем аренду машины?</h3>
 								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>Всё очень просто! Заполните короткую форму и в течении 12 часов мы свами свяжемся для предоставления подробной информациии</p>
@@ -174,7 +176,7 @@ export default function Home() {
 				</div>
 				<div className="container mx-auto px-24 flex items-center justify-between gap-20 mb-10">
 					<div className="w-2/5">
-						<div className="w-2/5 mb-3">
+						<div className="w-3/4 mb-3">
 							<h3 className='text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]'>У вас остались ещё вопросы?</h3>
 						</div>
 						<div className="">
