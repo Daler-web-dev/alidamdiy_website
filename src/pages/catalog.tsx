@@ -6,7 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 import Products from "@/components/Products";
 import { Search } from "@/components/Search";
 
-export default function catalog(props: IAppProps) {
+export default function Catalog(props: IAppProps) {
   const cars: any = [
     {
       id: uuidv4(),
@@ -116,7 +116,6 @@ export default function catalog(props: IAppProps) {
         </div>
       </div>
       <Search />
-      
     </>
   );
 }
