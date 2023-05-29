@@ -5,10 +5,15 @@
     font-family: MyFont;
     src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-SemiBoldGiga-BF64265524278d4.ttf');
 }
+@font-face {
+    font-family: MyFontLight;
+    src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-wghtwdthslnt-BF6426552452763.ttf');
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: MyFontLight;
 }
 body {
     background: #EEEEEE;
@@ -22,4 +27,5 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background: #A8A8A8;
+    font-family: MyFontLight;
 }
