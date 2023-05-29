@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Button from '@/components/children/button'
+import Item from '@/components/children/Item'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -58,7 +60,7 @@ export default function Home() {
 								</p>
 							</div>
 							<div className="flex gap-5">
-								<button className='font-medium px-6 py-2 rounded-[5px] bg-[#E31E24] text-white'>Сделать заказ</button>
+								<Button>Сделать заказ</Button>
 								<button className='font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]'>Подробнее</button>
 							</div>
 						</div>
@@ -90,15 +92,17 @@ export default function Home() {
 								}
 							</ul>
 						</div>
-						<div className="">
-
+						<div className="grid grid-cols-4 gap-[30px] mt-[45px]">
+							{
+								[0, 1, 2, 3].map((item: number) => <Item key={item} />)
+							}
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<section className='bg-[#1E1E1E] mb-[63px]'>
-				<div className="relative -top-14 w-full overflow-hidden py-6">
+				<div className="relative -top-20 w-full overflow-hidden py-6">
 					<div className="relative right-4 w-[110%] py-10 rotate-[-1.28deg] bg-[#E31E24]">
 						<h2 className='text-center text-[64px] font-bold leading-[105%] tracking-[-0.011em] text-white'>Мы в цифрах</h2>
 					</div>
@@ -185,7 +189,7 @@ export default function Home() {
 						</div>
 						<div className="mt-8 flex items-center justify-between">
 							<div className="h-2/5">
-								<button className='px-6 py-2 font-medium leading-[150%] tracking-[-0.011em] rounded-[5px] text-white bg-[#E31E24]'>Отправить</button>
+								<Button>Отправить</Button>
 							</div>
 							<div className="w-3/4">
 								<p className='text-[#6A6A6A]'>Нажимая кнопку «Отправить», я даю своё согласие на обработку и распространение персональных данных.</p>

@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+
+import Button from "./children/button";
+
 import { BiSearch } from 'react-icons/bi'
 
 interface HeaderProps {
 }
+
 const Header: React.FC<HeaderProps> = ({ }) => {
 
    return (
@@ -17,10 +21,10 @@ const Header: React.FC<HeaderProps> = ({ }) => {
             <div className="flex items-center">
                <div className="relative">
                   <BiSearch size={15} className="absolute top-1 left-1" />
-                  <input type="text" className="max-w-[180px] w-full px-6 border-b border-[#000] bg-transparent outline-transparent" />
+                  <input type="text" className="max-w-[180px] w-full px-6 outline-none bg-transparent outline-transparent border-b  border-[#000]" />
                </div>
             </div>
-            <div className="">
+            <div className="">   
                <nav>
                   <ul className="flex gap-8">
                      <li className="font-medium text-[#474747]">
@@ -45,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
                </select>
             </div>
             <div className="">
-               <button className="px-6 py-2 bg-[#E31E24] text-white">Сделать заказ</button>
+               <Button>Сделать заказ</Button>
             </div>
          </div>
       </header>
