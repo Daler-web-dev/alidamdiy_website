@@ -34,7 +34,7 @@ export default function Home() {
 	return (
 		<>
 			<section className='relative'>
-				<div className="container mx-auto ppx-24 flex items-start justify-center mb-10">
+				<div className="container mx-auto px-24 flex items-start justify-center mb-10">
 					<div className="w-full h-[700px] absolute left-0 z-[-1] rounded-b-3xl overflow-hidden">
 						<Image className='w-full h-full object-cover' src={'/images/car.png'} width={1000} height={1000} alt='car' />
 					</div>
@@ -140,7 +140,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto ppx-24 mb-[30px]">
+				<div className="container mx-auto px-24 mb-[30px]">
 					<div className="flex">
 						<div className="w-1/2">
 							<h3 className='text-[64px] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>Частые <br /> вопросы</h3>
@@ -168,7 +168,7 @@ export default function Home() {
 				<div className="overflow-hidden w-full h-[350px] z-[-1] absolute top-0 left-0 py-6">
 					<div className="relative right-5 w-[110%] h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
 				</div>
-				<div className="container mx-auto ppx-24 flex items-center justify-between gap-20 mb-10">
+				<div className="container mx-auto px-24 flex items-center justify-between gap-20 mb-10">
 					<div className="w-2/5">
 						<div className="w-2/5 mb-3">
 							<h3 className='text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]'>У вас остались ещё вопросы?</h3>
