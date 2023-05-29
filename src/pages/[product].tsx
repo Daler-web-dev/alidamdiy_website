@@ -1,3 +1,4 @@
+import Button from "@/components/children/Button";
 import Image from "next/image";
 import * as React from "react";
 
@@ -85,9 +86,7 @@ export default function product(props: IAppProps) {
             </div>
             <hr className="border-0 h-px bg-[#858585]" />
             <div className="flex items-center gap-3 mt-9">
-              <button className="px-6 py-2 bg-[#E31E24] text-white rounded-md">
-                Сделать заказ
-              </button>
+              <Button> Сделать заказ </Button>
               <button className="font-medium px-6 py-2 rounded-md border border-[#E31E24] ">
                 Консультация
               </button>
