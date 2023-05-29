@@ -14,7 +14,7 @@ export function Search(props: IAppProps) {
 	} = useForm();
 	const submit = (data: any) => console.log(data);
 	return (
-		<div className="container mx-auto px-6 mt-4">
+		<div className="container mx-auto px-24 mt-4">
 			<form action="" onSubmit={handleSubmit(submit)}>
 				<div className="w-full flex items-center">
 					<div className="flex items-center w-[60%]">
@@ -22,7 +22,7 @@ export function Search(props: IAppProps) {
 							<label htmlFor="car-name">МАРКА АВТО</label>
 							<select
 								id="car-name"
-								className="font-['MyFont'] outline-none"
+								className="font-['MyFont'] outline-none bg-transparent"
 								{...register("mark")}
 							>
 								<option value="Chevrolet Lacetti">Chevrolet Lacetti</option>
@@ -34,7 +34,7 @@ export function Search(props: IAppProps) {
 							<label htmlFor="car-name">ТИП АВТО</label>
 							<select
 								id="car-name"
-								className="font-['MyFont'] outline-none"
+								className="font-['MyFont'] outline-none bg-transparent"
 								{...register("type")}
 							>
 								<option value="Все">Все</option>
