@@ -8,6 +8,22 @@
 @font-face {
     font-family: MyFontLight;
     src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-wghtwdthslnt-BF6426552452763.ttf');
+  }
+@font-face {
+    font-family: MyFontBoldMega;
+    src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-BoldMega-BF64265523e2a0f.ttf');
+}
+@font-face {
+    font-family: MyFontBold;
+    src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-Bold-BF642655237526d.ttf');
+}
+@font-face {
+    font-family: MyFontMedium;
+    src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-Medium-BF6426554c71848.ttf');
+}
+@font-face {
+    font-family: MyFontSemiBold;
+    src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-BoldGiga-BF64265523d2352.ttf');
 }
 *{
     margin: 0;

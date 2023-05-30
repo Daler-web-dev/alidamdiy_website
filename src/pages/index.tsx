@@ -37,7 +37,7 @@ export default function Home() {
 		<>
 			<section className="relative">
 				<div className="container mx-auto px-24 flex items-start justify-center mb-10">
-					<div className="w-full h-[700px] absolute left-0 z-[-1] rounded-b-3xl overflow-hidden">
+					<div className="w-full h-full absolute left-0 z-[-1] rounded-b-3xl overflow-hidden">
 						<Image
 							className="w-full h-full object-cover"
 							src={"/images/car.png"}
@@ -52,14 +52,14 @@ export default function Home() {
 								<p className="text-xl font-semibold">Арендуйте лучшие авто</p>
 							</div>
 							<div className="mb-3">
-								<h2 className="text-6xl font-bold leading-[120%] tracking-[-0.011em]">
+								<h2 className="font-[MyFont] text-5xl font-bold leading-[120%] tracking-[-0.011em]">
 									Откройте
-									<span className="text-[#E31E24]"> мир Узбекистана </span>
-									<span className="text-[#211F20]">с нами!</span>
+									<span className="font-[MyFont] text-[#E31E24]"> мир Узбекистана </span>
+									<span className="font-[MyFont] text-[#211F20]">с нами!</span>
 								</h2>
 							</div>
 							<div className="mb-7">
-								<p className="leading-[190%] text-[#474747]">
+								<p className="font-[MyFontMedium] leading-[190%] text-[#474747]">
 									Готовы отправиться в захватывающее приключение? Наша компания
 									предлагает широкий выбор автомобилей для аренды, специально
 									разработанных для путешествий!
@@ -112,7 +112,7 @@ export default function Home() {
 			<section className="bg-[#1E1E1E] mb-[63px]">
 				<div className="relative -top-20 w-full overflow-hidden py-6">
 					<div className="relative right-4 w-[110%] py-10 rotate-[-1.28deg] bg-[#E31E24]">
-						<h2 className="text-center text-[64px] font-bold leading-[105%] tracking-[-0.011em] text-white">Мы в цифрах</h2>
+						<h2 className="font-[MyFontBoldMega] text-center text-[64px] leading-[105%] tracking-[-0.011em] text-white">Мы в цифрах</h2>
 					</div>
 				</div>
 
@@ -158,7 +158,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="py-14">
-						<p className="text-3xl leading-[190%] tracking-[-0.011em] text-[#E6E6E6]">
+						<p className="font-[MyFontMedium] text-3xl leading-[190%] tracking-[-0.011em] text-[#E6E6E6]">
 							Готовы отправиться в захватывающее приключение? Наша компания
 							предлагает широкий выбор автомобилей для аренды, специально
 							разработанных для путешествий!
@@ -171,19 +171,23 @@ export default function Home() {
 				<div className="container mx-auto px-24 mb-[30px]">
 					<div className="flex">
 						<div className="w-1/2">
-							<h3 className='text-[64px] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>Частые <br /> вопросы</h3>
+							<h3 className='font-[MyFontSemiBold] text-[64px] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>Частые <br /> вопросы</h3>
 						</div>
 						<div className="w-1/2 flex flex-col gap-8">
 							<div className="relative">
 								<div className="absolute top-5 -left-10 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
 								<div className="absolute top-5 -left-10 w-6 h-6 rounded-full bg-[#E31E24]"></div>
-								<h3 className='mb-3 text-[28px] font-bold leading-[115%] tracking-[-0.011em]'>В чем заключаются наши услуги?</h3>
+								<div className="w-1/2">
+									<h3 className='mb-3 font-[MyFontBold] text-[28px] leading-[115%] tracking-[-0.011em]'>В чем заключаются наши услуги?</h3>
+								</div>
 								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>Готовы отправиться в захватывающее приключение? Наша компания предлагает широкий выбор автомобилей для аренды, специально  разработанных для путешествий!</p>
 							</div>
 							<div className="relative">
 								<div className="absolute top-5 -left-10 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
 								<div className="absolute top-5 -left-10 w-6 h-6 rounded-full bg-[#E31E24]"></div>
-								<h3 className='mb-3 text-[28px] font-bold leading-[115%] tracking-[-0.011em]'>Как мы предоставляем аренду машины?</h3>
+								<div className="w-2/3">
+									<h3 className='mb-3 font-[MyFontBold] text-[28px] leading-[115%] tracking-[-0.011em]'>Как мы предоставляем аренду машины?</h3>
+								</div>
 								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>Всё очень просто! Заполните короткую форму и в течении 12 часов мы свами свяжемся для предоставления подробной информациии</p>
 							</div>
 						</div>
@@ -198,17 +202,17 @@ export default function Home() {
 				<div className="overflow-hidden w-full h-[350px] z-[-1] absolute top-0 left-0 py-6">
 					<div className="relative right-5 w-[110%] h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
 				</div>
-				<div className="container mx-auto px-24 flex items-center justify-between gap-20 mb-10">
+				<div className="container mx-auto px-24 flex items-center justify-between gap-[70px] mb-10">
 					<div className="w-2/5">
-						<div className="w-3/4 mb-3">
+						<div className="w-2/4 mb-3">
 							<h3 className='text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]'>У вас остались ещё вопросы?</h3>
 						</div>
-						<div className="">
+						<div className="w-full">
 							<p className='text-xl leading-[190%] tracking-[-0.011em] text-[#FAFAFA]'>Оставьте заявку, и мы обязательно свяжемся чтобы помочь вам выбрать, то что вас интересует!</p>
 						</div>
 					</div>
 					<div className="w-3/5 py-[66px] px-14 rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA]">
-						<h2 className='text-4xl font-bold leading-[115%] tracking-[-0.011em] mb-8'>Оставить заявку</h2>
+						<h2 className='font-[MyFontSemiBold] text-4xl font-bold leading-[115%] tracking-[-0.011em] mb-8'>Оставить заявку</h2>
 						<div className="flex items-center gap-6">
 							<input type="text" placeholder='Ваше имя' className='w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
 							<input type="text" className='w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
@@ -228,7 +232,7 @@ export default function Home() {
 			<section>
 				<div className="container mx-auto px-24">
 					<div className="mb-6">
-						<h2 className="text-[64px] font-bold leading-[105%] tracking-[-0.011em] text-[#E31E24]">
+						<h2 className="font-[MyFontSemiBold] text-[64px] font-bold leading-[105%] tracking-[-0.011em] text-[#E31E24]">
 							Наш офис
 						</h2>
 					</div>
