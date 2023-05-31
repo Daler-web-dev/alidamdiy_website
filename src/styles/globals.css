@@ -26,22 +26,21 @@
     src: url('/Fonts/grtsk-font-family-1684902914-0/TRYGrtsk-BoldGiga-BF64265523d2352.ttf');
 }
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: MyFontLight;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: MyFontLight;
 }
 body {
-    background: #EEEEEE;
+   background: #EEEEEE;
 }
 ::-webkit-scrollbar {
-  width: 5px;
+  	width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+ 	background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background: #A8A8A8;
-  font-family: MyFontLight;
 }
