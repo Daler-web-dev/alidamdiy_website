@@ -2,17 +2,18 @@ import { Button, Slider } from '@mui/material';
 import * as React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 
-export interface IAppProps {
+export interface ISearch {
+	filteredData: any
 }
 
-export function Search(props: IAppProps) {
+const Search: React.FC<ISearch> = ({ filteredData }) => {
 	const {
 		register,
 		handleSubmit,
 		control,
 		formState: { errors },
 	} = useForm();
-	const submit = (data: any) => console.log(data);
+	const submit = (data: any) => filteredData(data);
 	return (
 		<div className="container mx-auto px-24 mt-4">
 			<form action="" onSubmit={handleSubmit(submit)}>
@@ -37,14 +38,14 @@ export function Search(props: IAppProps) {
 								className="font-['MyFont'] outline-none bg-transparent"
 								{...register("type")}
 							>
-								<option value="Все">Все</option>
-								<option value="Хэтчбэк">Хэтчбэк</option>
-								<option value="Минивэн">Минивэн</option>
-								<option value="Седан">Седан</option>
+								<option value="All">Все</option>
+								<option value="Hatchback">Хэтчбэк</option>
+								<option value="Minivan">Минивэн</option>
+								<option value="Sedan">Седан</option>
 							</select>
 						</div>
 					</div>
-					<div className="w-[40%] flex items-center gap-3">
+					<div className="w-[40%] flex items-center gap-5">
 						<Controller
 							control={control}
 							name="range"
@@ -90,3 +91,5 @@ export function Search(props: IAppProps) {
 		</div>
 	);
 }
+
+export default Search;
