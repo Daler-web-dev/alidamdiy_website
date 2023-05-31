@@ -43,5 +43,5 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background: #A8A8A8;
-    font-family: MyFontLight;
+  font-family: MyFontLight;
 }

@@ -14,7 +14,11 @@ module.exports = {
       },
       height: {
         'h42': '420px'
-      }
+      },
+      width: {
+        'w48': '48%',
+        '1/10': '55%'
+      },
     },
     screens: {
       'sm': '640px',

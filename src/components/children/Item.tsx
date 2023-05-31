@@ -3,23 +3,38 @@ import Button from "./Button";
 import { useState } from "react";
 import Link from "next/link";
 
-interface ItemProps {}
+interface ItemProps {
+      item?: {
+        id?: string,
+        name?: string,
+        type?: string,
+        price?: number,
+        img?: string,
+        desc?: string
+      }, 
+}
 
-const Item: React.FC<ItemProps> = () => {
+const Item: React.FC<ItemProps> = ({ item }: ItemProps) => {
   const [hide, setHide] = useState<boolean>(false);
 
   return (
     <Link
-      href={"/qctw"}
+      href={'/123'}
       onMouseEnter={() => setHide(true)}
       onMouseLeave={() => setHide(false)}
       className="relative rounded-[15px] ease-in duration-100 hover:shadow-[0_0_15px_#00000050] bg-white"
     >
       <div className="px-[15px] py-2 text-[#474747]">
         <h3 className="text-xl font-bold leading-[190%] tracking-[-0.011em]">
-          Chevrolet Lacetti
+          {
+            item?.name || 'Chevrolet Lacetti'
+          }
         </h3>
-        <p className="leading-[190%] tracking-[-0.011em]">Хэтчбэк</p>
+        <p className="leading-[190%] tracking-[-0.011em]">
+          {
+            item?.type || 'Хэтчбек'
+          }
+        </p>
       </div>
       <div className="">
         <Image
@@ -45,7 +60,9 @@ const Item: React.FC<ItemProps> = () => {
         </div>
         <div className="">
           <p className="text-xl font-semibold leading-[190%] tracking-[-0.011em] text-[#FC0202]">
-            25$/сутки
+          {
+            item?.price || 25
+          }$/сутки
           </p>
         </div>
       </div>

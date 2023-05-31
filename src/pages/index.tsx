@@ -102,7 +102,7 @@ export default function Home() {
 						</div>
 						<div className="grid grid-cols-4 gap-[30px] mt-[45px]">
 							{
-								[0, 1, 2, 3].map((item: number) => <Item key={item} />)
+								[0, 1, 2, 3].map((item: number) => <Item key={item}  />)
 							}
 						</div>
 					</div>
