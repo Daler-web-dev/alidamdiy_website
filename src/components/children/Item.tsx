@@ -21,7 +21,9 @@ const Item: React.FC<ItemProps> = ({ }) => {
 			</div>
 			<div className="flex items-center justify-between px-[20px] pt-[15px] pb-[24px] border-t border-[#C6C6C6]">
 				<div className="flex gap-[6px]">
-					<Image className="w-auto" src={"/images/icons/seat.png"} width={18} height={24} alt="seat" />
+					<div className="w-[18px] h-[24px]">
+						<Image className="w-auto h-auto" src={"/images/icons/seat.png"} width={18} height={24} alt="seat" />
+					</div>
 					<p className="leading-[190%] tracking-[-0.011em] text-[#474747]">
 						4 места
 					</p>
