@@ -112,11 +112,7 @@ export default function Home() {
 						</div>
 						<div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 gap-[30px] max-lg:gap-[20px] mt-[45px]">
 							{
-								[0, 1, 2, 3].map((item: number) => {
-									return (
-										<Item key={item} />
-									)
-								})
+								[0, 1, 2, 3].map((item: number) => <Item key={item} />)
 							}
 						</div>
 					</div>

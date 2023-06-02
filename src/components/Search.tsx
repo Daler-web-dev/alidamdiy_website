@@ -2,27 +2,28 @@ import { Button, Slider } from '@mui/material';
 import * as React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 
-export interface IAppProps {
+export interface ISearch {
+	filteredData: any
 }
 
-export function Search(props: IAppProps) {
+const Search: React.FC<ISearch> = ({ filteredData }) => {
 	const {
 		register,
 		handleSubmit,
 		control,
 		formState: { errors },
 	} = useForm();
-	const submit = (data: any) => console.log(data);
+	const submit = (data: any) => filteredData(data);
 	return (
-		<div className="container mx-auto px-24 mt-4">
+		<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
 			<form action="" onSubmit={handleSubmit(submit)}>
-				<div className="w-full flex items-center">
-					<div className="flex items-center w-[60%]">
-						<div className="w-[300px] h-[70px] border rounded-tl-2xl rounded-bl-2xl flex flex-col px-3 py-2 gap-1">
-							<label htmlFor="car-name">МАРКА АВТО</label>
+				<div className="w-full flex max-lg:flex-col max-lg:gap-5 items-center">
+					<div className="max-lg:w-full flex items-center w-[60%]">
+						<div className="w-[300px] h-[70px] border-[0.25px] border-[#000] rounded-tl-2xl rounded-bl-2xl flex flex-col px-3 py-2 gap-1">
+							<label className='max-sm:text-xs' htmlFor="car-name">МАРКА АВТО</label>
 							<select
 								id="car-name"
-								className="font-['MyFont'] outline-none bg-transparent"
+								className="max-sm:text-sm font-['MyFont'] outline-non bg-transparent"
 								{...register("mark")}
 							>
 								<option value="Chevrolet Lacetti">Chevrolet Lacetti</option>
@@ -30,21 +31,21 @@ export function Search(props: IAppProps) {
 								<option value="Chevrolet Orlando">Chevrolet Orlando</option>
 							</select>
 						</div>
-						<div className="w-[300px] h-[70px] border rounded-br-2xl border-l-0 rounded-tr-2xl flex flex-col px-3 py-2 gap-1">
-							<label htmlFor="car-name">ТИП АВТО</label>
+						<div className="w-[300px] h-[70px] border-[0.25px] border-[#000] rounded-br-2xl rounded-tr-2xl flex flex-col px-3 py-2 gap-1">
+							<label className='max-sm:text-xs' htmlFor="car-name">ТИП АВТО</label>
 							<select
 								id="car-name"
-								className="font-['MyFont'] outline-none bg-transparent"
+								className="max-sm:text-sm font-['MyFont'] outline-none bg-transparent"
 								{...register("type")}
 							>
-								<option value="Все">Все</option>
-								<option value="Хэтчбэк">Хэтчбэк</option>
-								<option value="Минивэн">Минивэн</option>
-								<option value="Седан">Седан</option>
+								<option value="All">Все</option>
+								<option value="Hatchback">Хэтчбэк</option>
+								<option value="Minivan">Минивэн</option>
+								<option value="Sedan">Седан</option>
 							</select>
 						</div>
 					</div>
-					<div className="w-[40%] flex items-center gap-3">
+					<div className="max-lg:w-full w-[40%] flex items-center gap-5">
 						<Controller
 							control={control}
 							name="range"
@@ -75,7 +76,7 @@ export function Search(props: IAppProps) {
 						<div>
 							<Button
 								variant="contained"
-								className="w-64 h-16 rounded-2xl"
+								className="w-64 max-sm:w-[184px] h-16 max-sm:h-11 rounded-2xl"
 								style={{
 									backgroundColor: "#FC0202",
 								}}
@@ -90,3 +91,5 @@ export function Search(props: IAppProps) {
 		</div>
 	);
 }
+
+export default Search;
