@@ -109,7 +109,7 @@ const Catalog: React.FC<ICarsProducts> = () => {
   return (
     <>
       <div
-        className="w-full h-[425px] px-24 py-6"
+        className="w-full h-[425px] py-6"
         style={{
           backgroundImage: "url('/images/car-bg.png')",
           backgroundPosition: "center",
@@ -117,13 +117,13 @@ const Catalog: React.FC<ICarsProducts> = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="w-full h-full flex flex-col justify-between">
+        <div className="container m-auto w-full h-full flex flex-col justify-between px-24 max-xl:px-14 max-lg:px-5">
           <div></div>
           <div className="flex flex-col gap-3">
-            <h1 className="text-white font-['MyFont'] text-4xl ">
+            <h1 className="text-white font-['MyFont'] text-4xl max-lg:text-3xl max-md:text-2xl">
               Каталог авто
             </h1>
-            <h1 className="text-white text-xl">Главная страница / Каталог</h1>
+            <h1 className="text-white text-xl max-md:text-sm">Главная страница / Каталог</h1>
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@ const Catalog: React.FC<ICarsProducts> = () => {
           <h1 className="text-center text-xl">Мы не нашли то, что вы искали</h1>
         </>
       ) : null}
-      <div className="grid grid-cols-4 gap-[30px] mt-[45px] px-24">
+      <div className="container m-auto grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 gap-[30px] max-lg:gap-5 mt-[45px] px-24 max-xl:px-14 max-lg:px-5">
         {data.map((i: ICarsProducts) => (
           <Item key={i.id} item={i} />
         ))}

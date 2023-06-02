@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 
 	return (
 		<header className="w-full bg-[#BBBBBB]">
-			<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-6 py-7 flex items-center justify-between bg-[#BBBBBB]">
+			<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 py-7 max-md:py-5 max-sm:py-4 flex items-center justify-between bg-[#BBBBBB]">
 				<div className="max-xl:hidden block">
 					<Link href={"/"}>
 						<Image
@@ -63,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 						<h1 className="font-bold text-[#E31E24]">+998 91 123 32 33</h1>
 					</div>
 				</div>
-				<div className="max-md:block hidden ">
+				<div className="max-md:block hidden">
 					<Link href={"/"}>
 						<Image
 							src={"/images/logo.png"}

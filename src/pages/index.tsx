@@ -1,7 +1,8 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import Button from "@/components/children/Button";
+import Image from "next/image";
+
 import Item from "@/components/children/Item";
+import Button from "@/components/children/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,8 +37,17 @@ export default function Home() {
 	return (
 		<>
 			<section className="relative">
-				<div className="container mx-auto px-24 flex items-start justify-center mb-10">
-					<div className="w-full h-full absolute left-0 z-[-1] rounded-b-3xl overflow-hidden">
+				<div className="w-full h-full hidden max-sm:block">
+					<Image
+						className="w-full h-full object-cover"
+						src={"/images/car.png"}
+						width={1000}
+						height={1000}
+						alt="car"
+					/>
+				</div>
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 flex items-start justify-center mb-10">
+					<div className="w-full h-full absolute left-0 z-[-1] rounded-b-3xl overflow-hidden max-sm:hidden">
 						<Image
 							className="w-full h-full object-cover"
 							src={"/images/car.png"}
@@ -46,20 +56,20 @@ export default function Home() {
 							alt="car"
 						/>
 					</div>
-					<div className="w-full py-24 flex items-center justify-start">
-						<div className="max-w-[623px] w-full px-[39px] py-[33px] rounded-[15px] backdrop-blur bg-[#ffffff99]">
-							<div className="mb-3">
+					<div className="w-full py-24 max-lg:py-14 max-md:py-10 max-sm:py-[14px] flex items-center justify-start">
+						<div className="max-w-[623px] w-full px-[39px] max-sm:px-0 py-[33px] max-sm:py-0 rounded-[15px] backdrop-blur bg-[#ffffff99] max-sm:bg-transparent">
+							<div className="mb-3 max-sm:mb-0">
 								<p className="text-xl font-semibold">Арендуйте лучшие авто</p>
 							</div>
-							<div className="mb-3">
-								<h2 className="font-[MyFont] text-5xl font-bold leading-[120%] tracking-[-0.011em]">
+							<div className="mb-3 max-sm:mb-0">
+								<h2 className="font-[MyFont] text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
 									Откройте
 									<span className="font-[MyFont] text-[#E31E24]"> мир Узбекистана </span>
 									<span className="font-[MyFont] text-[#211F20]">с нами!</span>
 								</h2>
 							</div>
-							<div className="mb-7">
-								<p className="font-[MyFontMedium] leading-[190%] text-[#474747]">
+							<div className="mb-7 max-md:mb-[7px]">
+								<p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
 									Готовы отправиться в захватывающее приключение? Наша компания
 									предлагает широкий выбор автомобилей для аренды, специально
 									разработанных для путешествий!
@@ -77,8 +87,8 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-24 mb-60">
-					<div className="flex items-center gap-14 px-72 max-xl:px-40 max-lg:px-10 max-md:px-0">
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-60">
+					<div className="flex items-center gap-14 px-72 max-xl:px-40 max-lg:px-0 max-md:hidden">
 						<div className="">
 							<h2 className='text-5xl font-bold leading-[120%] tracking-[-0.011em] text-[#E31E24]'>Наши машины</h2>
 						</div>
@@ -88,7 +98,7 @@ export default function Home() {
 					</div>
 					<div className="">
 						<div className="mt-12 flex items-center justify-center">
-							<ul className='flex justify-between'>
+							<ul className='flex justify-between max-lg:overflow-auto max-lg:pb-2'>
 								{
 									arr.map((item: { id: number, title: string }) => {
 										return (
@@ -100,27 +110,27 @@ export default function Home() {
 								}
 							</ul>
 						</div>
-						<div className="grid grid-cols-4 gap-[30px] mt-[45px]">
+						<div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 gap-[30px] max-lg:gap-[20px] mt-[45px]">
 							{
-								[0, 1, 2, 3].map((item: number) => <Item key={item}  />)
+								[0, 1, 2, 3].map((item: number) => <Item key={item} />)
 							}
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section className="bg-[#1E1E1E] mb-[63px]">
+			<section className="bg-[#1E1E1E] mb-[63px] max-lg:mb-14 max-md:mb-[43px]">
 				<div className="relative -top-20 w-full overflow-hidden py-6">
 					<div className="relative right-4 w-[110%] py-10 rotate-[-1.28deg] bg-[#E31E24]">
-						<h2 className="font-[MyFontBoldMega] text-center text-[64px] leading-[105%] tracking-[-0.011em] text-white">Мы в цифрах</h2>
+						<h2 className="text-center text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontBoldMega] leading-[105%] tracking-[-0.011em] text-white">Мы в цифрах</h2>
 					</div>
 				</div>
 
-				<div className="container mx-auto px-24">
-					<div className="flex items-center justify-between">
-						<div className="flex flex-col items-center">
-							<div className="p-8 border-b border-white">
-								<h3 className="text-center text-8xl font-semibold text-[#E31E24]">
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5">
+					<div className="flex flex-wrap justify-center items-center gap-20 max-xl:gap-10 max-md:gap-[35px]">
+						<div className="w-fit flex flex-col items-center justify-center">
+							<div className="py-8 px-8 max-lg:px-5 border-b border-white">
+								<h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
 									120+
 								</h3>
 							</div>
@@ -131,9 +141,9 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="flex flex-col items-center">
-							<div className="p-8 border-b border-white">
-								<h3 className="text-center text-8xl font-semibold text-[#E31E24]">
+						<div className="flex flex-col items-center justify-center">
+							<div className="py-8 px-8 max-lg:px-5 border-b border-white">
+								<h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
 									1200+
 								</h3>
 							</div>
@@ -144,9 +154,9 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="flex flex-col items-center">
-							<div className="p-8 border-b border-white">
-								<h3 className="text-center text-8xl font-semibold text-[#E31E24]">
+						<div className="flex flex-col items-center justify-center">
+							<div className="py-8 px-8 max-lg:px-5 border-b border-white">
+								<h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
 									23
 								</h3>
 							</div>
@@ -158,7 +168,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="py-14">
-						<p className="font-[MyFontMedium] text-3xl leading-[190%] tracking-[-0.011em] text-[#E6E6E6]">
+						<p className="font-[MyFontMedium] text-3xl max-lg:text-2xl leading-[190%] tracking-[-0.011em] text-[#E6E6E6]">
 							Готовы отправиться в захватывающее приключение? Наша компания
 							предлагает широкий выбор автомобилей для аренды, специально
 							разработанных для путешествий!
@@ -168,32 +178,32 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-24 mb-[30px]">
-					<div className="flex">
-						<div className="w-1/2">
-							<h3 className='font-[MyFontSemiBold] text-[64px] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>Частые <br /> вопросы</h3>
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-[30px]">
+					<div className="flex max-md:flex-col max-md:gap-5">
+						<div className="w-3/5 max-xl:w-1/2 max-md:w-full max-md:px-5">
+							<h3 className='text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontSemiBold] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>Частые <br /> вопросы</h3>
 						</div>
-						<div className="w-1/2 flex flex-col gap-8">
+						<div className="w-2/5 max-xl:w-1/2 max-md:w-full flex flex-col gap-8 max-md:px-5">
 							<div className="relative">
-								<div className="absolute top-5 -left-10 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
-								<div className="absolute top-5 -left-10 w-6 h-6 rounded-full bg-[#E31E24]"></div>
-								<div className="w-1/2">
-									<h3 className='mb-3 font-[MyFontBold] text-[28px] leading-[115%] tracking-[-0.011em]'>В чем заключаются наши услуги?</h3>
+								<div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
+								<div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
+								<div className="w-3/5 max-xl:w-3/4 max-md:w-full">
+									<h3 className='mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]'>В чем заключаются наши услуги?</h3>
 								</div>
 								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>Готовы отправиться в захватывающее приключение? Наша компания предлагает широкий выбор автомобилей для аренды, специально  разработанных для путешествий!</p>
 							</div>
 							<div className="relative">
-								<div className="absolute top-5 -left-10 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
-								<div className="absolute top-5 -left-10 w-6 h-6 rounded-full bg-[#E31E24]"></div>
-								<div className="w-2/3">
-									<h3 className='mb-3 font-[MyFontBold] text-[28px] leading-[115%] tracking-[-0.011em]'>Как мы предоставляем аренду машины?</h3>
+								<div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
+								<div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
+								<div className="w-4/5 max-md:w-full">
+									<h3 className='mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]'>Как мы предоставляем аренду машины?</h3>
 								</div>
 								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>Всё очень просто! Заполните короткую форму и в течении 12 часов мы свами свяжемся для предоставления подробной информациии</p>
 							</div>
 						</div>
 					</div>
-					<div className="mt-[68px]">
-						<p className='text-3xl leading-[190%] tracking-[-0.011em]'>Готовы отправиться в захватывающее приключение? Наша компания предлагает широкий выбор автомобилей для аренды, специально  разработанных для путешествий!</p>
+					<div className="mt-[68px] max-lg:mt-10 max-sm:mt-[35px]">
+						<p className='text-3xl max-md:text-2xl leading-[190%] tracking-[-0.011em]'>Готовы отправиться в захватывающее приключение? Наша компания предлагает широкий выбор автомобилей для аренды, специально  разработанных для путешествий!</p>
 					</div>
 				</div>
 			</section>
@@ -202,27 +212,27 @@ export default function Home() {
 				<div className="overflow-hidden w-full h-[350px] z-[-1] absolute top-0 left-0 py-6">
 					<div className="relative right-5 w-[110%] h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
 				</div>
-				<div className="container mx-auto px-24 flex items-center justify-between gap-[70px] mb-10">
-					<div className="w-2/5">
-						<div className="w-2/4 mb-3">
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0 max-lg:pt-20 flex max-lg:flex-col items-center justify-between gap-[70px] max-2xl:gap-14 max-xl:gap-5 mb-10">
+					<div className="w-2/5 max-lg:w-full max-md:px-5">
+						<div className="w-3/4 mb-3">
 							<h3 className='text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]'>У вас остались ещё вопросы?</h3>
 						</div>
 						<div className="w-full">
 							<p className='text-xl leading-[190%] tracking-[-0.011em] text-[#FAFAFA]'>Оставьте заявку, и мы обязательно свяжемся чтобы помочь вам выбрать, то что вас интересует!</p>
 						</div>
 					</div>
-					<div className="w-3/5 py-[66px] px-14 rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA]">
-						<h2 className='font-[MyFontSemiBold] text-4xl font-bold leading-[115%] tracking-[-0.011em] mb-8'>Оставить заявку</h2>
-						<div className="flex items-center gap-6">
+					<div className="w-3/5 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA]">
+						<h2 className='text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8'>Оставить заявку</h2>
+						<div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
 							<input type="text" placeholder='Ваше имя' className='w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
 							<input type="text" className='w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
 						</div>
-						<div className="mt-8 flex items-center justify-between">
+						<div className="mt-8 flex items-center gap-9 max-xl:gap-5">
 							<div className="h-2/5">
 								<Button>Отправить</Button>
 							</div>
 							<div className="w-3/4">
-								<p className='text-[#6A6A6A]'>Нажимая кнопку «Отправить», я даю своё согласие на обработку и распространение персональных данных.</p>
+								<p className='max-xl:text-sm max-md:text-xs text-[#6A6A6A]'>Нажимая кнопку «Отправить», я даю своё согласие на обработку и распространение персональных данных.</p>
 							</div>
 						</div>
 					</div>
@@ -230,9 +240,9 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-24">
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0">
 					<div className="mb-6">
-						<h2 className="font-[MyFontSemiBold] text-[64px] font-bold leading-[105%] tracking-[-0.011em] text-[#E31E24]">
+						<h2 className="max-md:text-center text-[64px] max-lg:text-5xl max-md:text-4xl max-sm:text-[32px] font-[MyFontSemiBold] font-bold leading-[105%] tracking-[-0.011em] text-[#E31E24]">
 							Наш офис
 						</h2>
 					</div>
