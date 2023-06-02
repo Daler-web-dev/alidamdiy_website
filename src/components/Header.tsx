@@ -75,8 +75,9 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 				</div>
 				<div className="">
 					<select className="font-medium uppercase bg-transparent">
-						<option>ru</option>
-						<option>uz</option>
+						<option>🇷🇺 Ru</option>
+						<option>🇺🇿 Uz</option>
+						<option>🇬🇧 En</option>
 					</select>
 				</div>
 				<div className="max-md:hidden">

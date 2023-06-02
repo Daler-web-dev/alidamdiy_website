@@ -85,7 +85,8 @@ const Search: React.FC<ISearch> = ({ filteredData }) => {
             <div>
               <Button
                 variant="contained"
-                className="w-64 max-sm:w-[184px] h-16 max-sm:h-11 rounded-2xl max-380sm:w-[250px] max-380sm:h-16"
+                className="w-64 max-sm:w-[184px] h-16 max-sm:h-11 rounded-2xl max-380sm:w-[250px] max-380sm:h-16
+				ease-in duration-150 hover:shadow-[0_0_10px_#E31E24]"
                 style={{
                   backgroundColor: "#FC0202",
                 }}
