@@ -141,7 +141,7 @@ const Catalog: React.FC<ICarsProducts> = () => {
           <h1 className="text-center text-xl">Мы не нашли то, что вы искали</h1>
         </>
       ) : null}
-      <div className="container m-auto grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 gap-[30px] max-lg:gap-5 mt-[45px] px-24 max-xl:px-14 max-lg:px-5">
+      <div className="container m-auto grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[30px] max-lg:gap-5 mt-[45px] px-24 max-xl:px-14 max-lg:px-5">
         {data.map((i: ICarsProducts) => (
           <Item key={i.id} item={i} />
         ))}
