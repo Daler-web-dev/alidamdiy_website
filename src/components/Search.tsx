@@ -4,9 +4,11 @@ import { Controller, useForm } from "react-hook-form";
 
 export interface ISearch {
   filteredData: any;
+  text: string,
+  typeOfCar: string,
 }
 
-const Search: React.FC<ISearch> = ({ filteredData }) => {
+const Search: React.FC<ISearch> = ({ filteredData, text, typeOfCar }) => {
   const {
     register,
     handleSubmit,
@@ -35,7 +37,7 @@ const Search: React.FC<ISearch> = ({ filteredData }) => {
             </div>
             <div className="w-[300px] h-[70px] border-[0.25px] border-[#000] rounded-br-2xl rounded-tr-2xl flex flex-col px-3 py-2 gap-1 max-minSm:rounded-2xl max-380sm:w-full">
               <label className="max-sm:text-xs" htmlFor="car-name">
-                ТИП АВТО
+                { typeOfCar }
               </label>
               <select
                 id="car-name"
@@ -92,7 +94,7 @@ const Search: React.FC<ISearch> = ({ filteredData }) => {
                 }}
                 type="submit"
               >
-                Поиск
+                { text }
               </Button>
             </div>
           </div>

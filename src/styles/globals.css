@@ -44,3 +44,7 @@ body {
   border-radius: 100px;
   background: #A8A8A8;
 }
+
+.trnst{
+    transition: 5s ease-in 10s !important;
+}
