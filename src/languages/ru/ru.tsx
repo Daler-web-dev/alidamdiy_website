@@ -1,4 +1,4 @@
-export default {
+const ru = {
     header: {
         catalog: "Каталог",
         drivers: "Водителям",
@@ -77,3 +77,5 @@ export default {
         successText2: 'Ожидайте нашего звонка в течении 24 часов'
     }
 }
+
+export default ru;

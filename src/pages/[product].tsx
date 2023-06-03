@@ -1,4 +1,4 @@
-import Button from "@/components/children/Button";
+// import Button from "@/components/children/Button";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
@@ -8,10 +8,11 @@ import { MdClose } from "react-icons/md";
 import { CSSTransition } from "react-transition-group";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
+import Button from "../components/children/button"
 
-export interface IAppProps {}
+export interface IAppProps { }
 
-export default function product(props: IAppProps) {
+export default function Product(props: IAppProps) {
   const [isActive, setIsActive] = React.useState<string>("characteristic");
   const [isShow, setIsShow] = React.useState<boolean>(false);
   const [success, setSuccess] = React.useState<boolean>(false);

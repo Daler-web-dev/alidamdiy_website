@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "./Button";
 import { useState } from "react";
 import Link from "next/link";
+import Button from "../children/button"
 
 interface ItemProps {
 	item?: {
@@ -16,7 +16,6 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ item }: ItemProps) => {
 	const [hide, setHide] = useState<boolean>(false);
-
 	return (
 		<Link
 			href={'/123'}
@@ -46,10 +45,10 @@ const Item: React.FC<ItemProps> = ({ item }: ItemProps) => {
 				/>
 			</div>
 			<div className="flex items-center justify-between px-[20px] pt-[15px] pb-[24px] border-t border-[#C6C6C6]">
-				<div className="flex gap-[6px]">
+				<div className="flex items-center gap-[6px]">
 					<div className="w-[18px] h-[24px]">
 						<Image
-							className="w-auto"
+							className=""
 							src={"/images/icons/seat.png"}
 							width={100}
 							height={100}
@@ -61,7 +60,7 @@ const Item: React.FC<ItemProps> = ({ item }: ItemProps) => {
 					</p>
 				</div>
 				<div className="">
-					<p className="text-xl font-semibold leading-[190%] tracking-[-0.011em] text-[#FC0202]">
+					<p className="text-xl max-lg:text-base font-semibold leading-[190%] tracking-[-0.011em] text-[#FC0202]">
 						{
 							item?.price || 25
 						}$/сутки
@@ -69,8 +68,7 @@ const Item: React.FC<ItemProps> = ({ item }: ItemProps) => {
 				</div>
 			</div>
 			<div
-				className={`bg-white w-full rounded-b-[15px] px-[20px] pb-[17px] absolute -bottom-36 left-0 z-10 shadow-[0_14px_15px_#00000050] ${hide ? "block" : "hidden"
-					}`}
+				className={`bg-white w-full rounded-b-[15px] px-[20px] pb-[17px] absolute -bottom-36 left-0 z-10 shadow-[0_14px_15px_#00000050] ${hide ? "block" : "hidden"}`}
 			>
 				<div className="mb-[10px]">
 					<ul>

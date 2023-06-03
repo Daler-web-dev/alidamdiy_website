@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { BiSearch } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Button from "./children/Button";
+// import Button from "./children/Button";
 import { useRouter } from "next/router";
 import uz from "@/languages/uzb/uz";
 import ru from "@/languages/ru/ru";
@@ -11,6 +11,8 @@ import eng from "@/languages/eng/eng";
 import Context from "./useTranslate";
 import { ItranslateData } from "./Types/Types";
 import { useContext } from "react";
+// import Button from "@/components/children/Button";
+import Button from "../components/children/button"
 
 interface HeaderProps {}
 

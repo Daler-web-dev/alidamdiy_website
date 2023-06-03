@@ -1,4 +1,4 @@
-export default {
+const eng = {
     header: {
         catalog: "Catalog",
         drivers: "For Drivers",
@@ -76,3 +76,5 @@ export default {
         successText2: 'Expect our call within 24 hours'
     }
 }
+
+export default eng;

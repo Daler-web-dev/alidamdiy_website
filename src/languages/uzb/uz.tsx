@@ -1,4 +1,4 @@
-export default {
+const uz = {
     header: {
         catalog: "Katalog",
         drivers: "Haydovchilar uchun",
@@ -77,3 +77,4 @@ export default {
         successText2: "24 soat ichida qo'ng'iroqimizni kuting"
     }
 }
+export default uz;

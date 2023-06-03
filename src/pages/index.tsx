@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 
 import Item from "@/components/children/Item";
-import Button from "@/components/children/Button";
+import Button from "../components/children/button";
 import { useContext } from "react";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
@@ -69,7 +69,7 @@ export default function Home() {
 							</div>
 							<div className="mb-3 max-sm:mb-0">
 								<h2 className="font-[MyFont] text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-									{ locale === 'uz' ? <span className="font-[MyFont] text-[#E31E24]">O'zbekiston</span> : translation?.banner?.mainText } 
+									{ locale === 'uz' ? <span className="font-[MyFont] text-[#E31E24]">O&apos;zbekiston</span> : translation?.banner?.mainText } 
 									<span className="font-[MyFont] text-[#E31E24]"> { locale === 'uz' ? <span className="font-[MyFont] text-[#E31E24]">dunyosini biz</span> : translation?.banner?.world } </span>
 									<span className="font-[MyFont] text-[#211F20]">{locale === 'uz' ? <span className="font-[MyFont]">bilan oching</span> : translation?.banner?.us }!</span>
 								</h2>
