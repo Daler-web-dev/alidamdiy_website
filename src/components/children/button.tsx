@@ -1,5 +1,5 @@
 interface ButtonProps {
-   children: string
+   children: string | string[]
 }
 
 const Button: React.FC<ButtonProps> = ({ children }) => {

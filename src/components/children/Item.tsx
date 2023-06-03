@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "./Button";
 import { useState } from "react";
 import Link from "next/link";
+import Button from "../children/button"
 
 interface ItemProps {
 	item?: {
@@ -16,7 +16,6 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ item }: ItemProps) => {
 	const [hide, setHide] = useState<boolean>(false);
-
 	return (
 		<Link
 			href={'/123'}

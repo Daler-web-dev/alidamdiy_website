@@ -1,33 +1,36 @@
 import * as React from "react";
+import Context from "./useTranslate";
+import { ItranslateData } from "./Types/Types";
 
 export interface IDescription {
   isActive: string;
 }
 
 const Description: React.FC<IDescription> = ({ isActive }) => {
+  const translation = React.useContext<ItranslateData>(Context);
   const desc = [
     {
-      title: "Двигатель",
+      title: translation?.productPage.engine,
       value: "Турбодвигатель с выприском топлива",
     },
     {
-      title: "Количество, расположение цилиндров",
+      title: translation?.productPage.count,
       value: "3 подряд",
     },
     {
-      title: "Рабочий объём (куб.см)",
+      title: translation?.productPage.text,
       value: "1.2л",
     },
     {
-      title: "Максимальная мощность (л.с. при об/мин)",
+      title: translation?.productPage.text2,
       value: "180 км/ч (1.2л) 11,1 сек",
     },
     {
-      title: "Максимальный крутящий момент (Нм при об/мин)",
+      title: translation?.productPage.text3,
       value: "190 при 2000-4000 rpm",
     },
     {
-      title: "Тип передачи",
+      title: translation?.productPage.text4,
       value: "Автоматическая, 6-ступенчетая",
     },
   ];
@@ -37,7 +40,9 @@ const Description: React.FC<IDescription> = ({ isActive }) => {
         <div className="w-full mt-8 h-fit bg-[#fffffe] max-xl:overflow-y-scroll">
           <div className="max-xl:w-[1240px]">
             <div className="w-full h-14 bg-[#f5f5f5] py-4">
-              <h1 className="text-center">Двигатель и трансмиссия</h1>
+              <h1 className="text-center">
+                {translation?.productPage.description}
+              </h1>
             </div>
             {desc.map((i, idx) => (
               <div key={idx} className="flex items-center">
