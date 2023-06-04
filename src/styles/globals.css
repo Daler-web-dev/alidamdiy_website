@@ -46,5 +46,23 @@ body {
 }
 
 .trnst{
-    transition: 5s ease-in 10s !important;
+    transition: 5s ease-in !important;
+}
+
+.trnst2{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) !important;
+      animation: anim 2s;
+}
+
+@keyframes anim {
+    0%{
+        transform: scale(0) !important;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) !important;
+    }
 }

@@ -1,17 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { BiSearch } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/router";
-import uz from "@/languages/uzb/uz";
-import ru from "@/languages/ru/ru";
-import eng from "@/languages/eng/eng";
 import Context from "./useTranslate";
 import { ItranslateData } from "./Types/Types";
 import { useContext, useState } from "react";
-
 import Button from "../components/children/button"
 
 interface HeaderProps { }
@@ -108,5 +103,4 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 		</header>
 	);
 };
-
 export default Header;
