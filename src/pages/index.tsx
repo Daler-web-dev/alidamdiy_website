@@ -38,8 +38,9 @@ export default function Home() {
 		},
 	];
 	const router = useRouter();
-    const { locale } = router;
+	const { locale } = router;
 	const translation = useContext<ItranslateData>(Context)
+
 	return (
 		<>
 			<section className="relative">
@@ -65,24 +66,27 @@ export default function Home() {
 					<div className="w-full py-24 max-lg:py-14 max-md:py-10 max-sm:py-[14px] flex items-center justify-start">
 						<div className="max-w-[623px] w-full px-[39px] max-sm:px-0 py-[33px] max-sm:py-0 rounded-[15px] backdrop-blur bg-[#ffffff99] max-sm:bg-transparent">
 							<div className="mb-3 max-sm:mb-0">
-								<p className="text-xl font-semibold">{ translation?.banner?.rentText }</p>
+								<p className="text-xl font-semibold">{translation?.banner?.rentText}</p>
 							</div>
 							<div className="mb-3 max-sm:mb-0">
 								<h2 className="font-[MyFont] text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-									{ locale === 'uz' ? <span className="font-[MyFont] text-[#E31E24]">O&apos;zbekiston</span> : translation?.banner?.mainText } 
-									<span className="font-[MyFont] text-[#E31E24]"> { locale === 'uz' ? <span className="font-[MyFont] text-[#E31E24]">dunyosini biz</span> : translation?.banner?.world } </span>
-									<span className="font-[MyFont] text-[#211F20]">{locale === 'uz' ? <span className="font-[MyFont]">bilan oching</span> : translation?.banner?.us }!</span>
+									{locale === 'uz' ? <span className="font-[MyFont] text-[#E31E24]">O&apos;zbekiston</span> : translation?.banner?.mainText}
+									<span className="font-[MyFont] text-[#E31E24]"> {locale === 'uz' ? <span className="font-[MyFont] text-[#E31E24]">dunyosini biz</span> : translation?.banner?.world} </span>
+									<span className="font-[MyFont] text-[#211F20]">{locale === 'uz' ? <span className="font-[MyFont]">bilan oching</span> : translation?.banner?.us}!</span>
 								</h2>
 							</div>
-							<div className="mb-7 max-md:mb-[7px]">
+							<div className="mb-3">
 								<p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
-								{ translation?.banner?.text2 }
+									{translation?.banner?.text2}
 								</p>
 							</div>
+							<div className="mb-3">
+								<p className="font-bold text-[#E31E24]">+998 91 123 32 33</p>
+							</div>
 							<div className="flex gap-5">
-								<Button>{ translation?.banner?.orderBtn }</Button>
+								<Button>{translation?.banner?.orderBtn}</Button>
 								<button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
-								{ translation?.banner?.infoBtn }
+									{translation?.banner?.infoBtn}
 								</button>
 							</div>
 						</div>
@@ -94,11 +98,11 @@ export default function Home() {
 				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-60">
 					<div className="flex items-center gap-14 px-72 max-xl:px-40 max-lg:px-0 max-md:hidden">
 						<div className="">
-							<h2 className='text-5xl font-bold leading-[120%] tracking-[-0.011em] text-[#E31E24]'>{ translation?.cars?.carsText }
+							<h2 className='text-5xl font-bold leading-[120%] tracking-[-0.011em] text-[#E31E24]'>{translation?.cars?.carsText}
 							</h2>
 						</div>
 						<div className="">
-							<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>{ translation?.cars?.carsText2 }</p>
+							<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>{translation?.cars?.carsText2}</p>
 						</div>
 					</div>
 					<div className="">
@@ -127,7 +131,7 @@ export default function Home() {
 			<section className="bg-[#1E1E1E] mb-[63px] max-lg:mb-14 max-md:mb-[43px]">
 				<div className="relative -top-20 w-full overflow-hidden py-6">
 					<div className="relative right-4 w-[110%] py-10 rotate-[-1.28deg] bg-[#E31E24]">
-						<h2 className="text-center text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontBoldMega] leading-[105%] tracking-[-0.011em] text-white">{ translation?.statistics?.num }</h2>
+						<h2 className="text-center text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontBoldMega] leading-[105%] tracking-[-0.011em] text-white">{translation?.statistics?.num}</h2>
 					</div>
 				</div>
 
@@ -141,7 +145,7 @@ export default function Home() {
 							</div>
 							<div className="p-3 text-white">
 								<p className="text-center leading-[115%] tracking-[-0.011em]">
-								{ translation?.statistics?.cars }
+									{translation?.statistics?.cars}
 								</p>
 							</div>
 						</div>
@@ -154,7 +158,7 @@ export default function Home() {
 							</div>
 							<div className="text-center p-3 text-white">
 								<p className="leading-[115%] tracking-[-0.011em]">
-								{ translation?.statistics?.rentedCars }
+									{translation?.statistics?.rentedCars}
 								</p>
 							</div>
 						</div>
@@ -167,14 +171,14 @@ export default function Home() {
 							</div>
 							<div className="p-3 text-white">
 								<p className="text-center leading-[115%] tracking-[-0.011em]">
-								{ translation?.statistics?.count }
+									{translation?.statistics?.count}
 								</p>
 							</div>
 						</div>
 					</div>
 					<div className="py-14">
 						<p className="font-[MyFontMedium] text-3xl max-lg:text-2xl leading-[190%] tracking-[-0.011em] text-[#E6E6E6]">
-						{ translation?.banner?.text2 }
+							{translation?.banner?.text2}
 						</p>
 					</div>
 				</div>
@@ -184,29 +188,29 @@ export default function Home() {
 				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-[30px]">
 					<div className="flex max-md:flex-col max-md:gap-5">
 						<div className="w-3/5 max-xl:w-1/2 max-md:w-full max-md:px-5">
-							<h3 className='text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontSemiBold] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>{ translation?.questions?.questionText }</h3>
+							<h3 className='text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontSemiBold] leading-[105%] tracking-[-0.011em] text-[#E31E24]'>{translation?.questions?.questionText}</h3>
 						</div>
 						<div className="w-2/5 max-xl:w-1/2 max-md:w-full flex flex-col gap-8 max-md:px-5">
 							<div className="relative">
 								<div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
 								<div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
 								<div className="w-3/5 max-xl:w-3/4 max-md:w-full">
-									<h3 className='mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]'>{ translation?.questions?.title }</h3>
+									<h3 className='mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]'>{translation?.questions?.title}</h3>
 								</div>
-								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>{ translation?.questions?.titleText }</p>
+								<p className='leading-[190%] tracking-[-0.011em] text-[#474747]'>{translation?.questions?.titleText}</p>
 							</div>
 							<div className="relative">
 								<div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
 								<div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
 								<div className="w-4/5 max-md:w-full">
-									<h3 className='mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]'>{ translation?.questions?.title2 }</h3>
+									<h3 className='mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]'>{translation?.questions?.title2}</h3>
 								</div>
-								<p className='leading-[190%] tracking-[-0.011em] 32text-[#474747]'>{ translation?.questions?.titleText }</p>
+								<p className='leading-[190%] tracking-[-0.011em] 32text-[#474747]'>{translation?.questions?.titleText}</p>
 							</div>
 						</div>
 					</div>
 					<div className="mt-[68px] max-lg:mt-10 max-sm:mt-[35px]">
-						<p className='text-3xl max-md:text-2xl leading-[190%] tracking-[-0.011em]'>{ translation?.banner?.text2 }
+						<p className='text-3xl max-md:text-2xl leading-[190%] tracking-[-0.011em]'>{translation?.banner?.text2}
 						</p>
 					</div>
 				</div>
@@ -219,24 +223,24 @@ export default function Home() {
 				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0 max-lg:pt-20 flex max-lg:flex-col items-center justify-between gap-[70px] max-2xl:gap-14 max-xl:gap-5 mb-10">
 					<div className="w-2/5 max-lg:w-full max-md:px-5">
 						<div className="w-3/4 mb-3">
-							<h3 className='text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]'>{ translation?.questions?.questions }</h3>
+							<h3 className='text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]'>{translation?.questions?.questions}</h3>
 						</div>
 						<div className="w-full">
-							<p className='text-xl leading-[190%] tracking-[-0.011em] text-[#FAFAFA]'>{ translation?.questions?.questions2 }</p>
+							<p className='text-xl leading-[190%] tracking-[-0.011em] text-[#FAFAFA]'>{translation?.questions?.questions2}</p>
 						</div>
 					</div>
 					<div className="w-3/5 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA]">
-						<h2 className='text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8'>{ translation?.modal?.application }</h2>
-						<div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
-							<input type="text" placeholder={ translation?.modal?.placeholder } className='w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
-							<input type="text" className='w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
+						<h2 className='text-4xl max-xl:text-3xl max-md:text-2xl max-sm:text-xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8'>{translation?.modal?.application}</h2>
+						<div className="flex max-sm:flex-col items-center gap-6 max-md:gap-4 max-sm:gap-3">
+							<input type="text" placeholder={translation?.modal?.placeholder} className='w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
+							<input type="text" className='w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]' />
 						</div>
 						<div className="mt-8 flex items-center gap-9 max-xl:gap-5">
 							<div className="h-2/5">
-								<Button>{ translation?.modal?.btn }</Button>
+								<Button>{translation?.modal?.btn}</Button>
 							</div>
 							<div className="w-3/4">
-								<p className='max-xl:text-sm max-md:text-xs text-[#6A6A6A]'>{ translation?.modal?.text }</p>
+								<p className='max-xl:text-sm max-md:text-xs text-[#6A6A6A]'>{translation?.modal?.text}</p>
 							</div>
 						</div>
 					</div>

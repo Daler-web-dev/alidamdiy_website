@@ -124,13 +124,13 @@ const Catalog: React.FC<ICarsProducts> = () => {
           <div></div>
           <div className="flex flex-col gap-3">
             <h1 className="text-white font-['MyFont'] text-4xl max-lg:text-3xl max-md:text-2xl">
-              { translation?.catalogPage.mainText }
+              {translation?.catalogPage.mainText}
             </h1>
-            <h1 className="text-white text-xl max-md:text-sm">{ translation?.catalogPage.linkText }</h1>
+            <h1 className="text-white text-xl max-md:text-sm">{translation?.catalogPage.linkText}</h1>
           </div>
         </div>
       </div>
-      <Search filteredData={filteredData} text={ translation?.catalogPage.btn } typeOfCar={translation?.catalogPage.typeOfCar} />
+      <Search filteredData={filteredData} text={translation?.catalogPage.btn} typeOfCar={translation?.catalogPage.typeOfCar} />
       {!data.length ? (
         <>
           <div className="w-full px-24 py-6 flex justify-center mt-4">
