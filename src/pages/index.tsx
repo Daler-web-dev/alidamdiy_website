@@ -189,152 +189,152 @@ export default function Home() {
       </section>
       <section className="bg-[#1E1E1E] mb-[63px] max-lg:mb-14 max-md:mb-[43px]">
         <div className="relative -top-20 w-full overflow-hidden py-6">
-          <div className="relative right-4 w-[110%] py-10 rotate-[-1.28deg] bg-[#E31E24]">
+		<div className="relative right-4 w-[110%] py-10 max-sm:px-5 rotate-[-1.28deg] bg-[#E31E24]">
             <h2 className="text-center text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontBoldMega] leading-[105%] tracking-[-0.011em] text-white">
               {translation?.statistics?.num}
             </h2>
           </div>
         </div>
 
-        <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5">
-          <div className="flex flex-wrap justify-center items-center gap-20 max-xl:gap-10 max-md:gap-[35px]">
-            <div className="w-fit flex flex-col items-center justify-center">
-              <div className="py-8 px-8 max-lg:px-5 border-b border-white">
-                <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                  120+
-                </h3>
-              </div>
-              <div className="p-3 text-white">
-                <p className="text-center leading-[115%] tracking-[-0.011em]">
-                  {translation?.statistics?.cars}
-                </p>
-              </div>
-            </div>
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5">
+					<div className="flex flex-wrap justify-center items-center gap-20 max-xl:gap-10 max-md:gap-[35px]">
+						<div className="w-fit flex flex-col items-center justify-center">
+							<div className="py-8 px-8 max-lg:px-5 border-b border-white">
+								<h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
+									120+
+								</h3>
+							</div>
+							<div className="p-3 text-white">
+								<p className="text-center leading-[115%] tracking-[-0.011em]">
+									{translation?.statistics?.cars}
+								</p>
+							</div>
+						</div>
 
-            <div className="flex flex-col items-center justify-center">
-              <div className="py-8 px-8 max-lg:px-5 border-b border-white">
-                <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                  1200+
-                </h3>
-              </div>
-              <div className="text-center p-3 text-white">
-                <p className="leading-[115%] tracking-[-0.011em]">
-                  {translation?.statistics?.rentedCars}
-                </p>
-              </div>
-            </div>
+						<div className="flex flex-col items-center justify-center">
+							<div className="py-8 px-8 max-lg:px-5 border-b border-white">
+								<h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
+									1200+
+								</h3>
+							</div>
+							<div className="text-center p-3 text-white">
+								<p className="leading-[115%] tracking-[-0.011em]">
+									{translation?.statistics?.rentedCars}
+								</p>
+							</div>
+						</div>
 
-            <div className="flex flex-col items-center justify-center">
-              <div className="py-8 px-8 max-lg:px-5 border-b border-white">
-                <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                  23
-                </h3>
-              </div>
-              <div className="p-3 text-white">
-                <p className="text-center leading-[115%] tracking-[-0.011em]">
-                  {translation?.statistics?.count}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="py-14">
-            <p className="font-[MyFontMedium] text-3xl max-lg:text-2xl leading-[190%] tracking-[-0.011em] text-[#E6E6E6]">
-              {translation?.banner?.text2}
-            </p>
-          </div>
-        </div>
-      </section>
+						<div className="flex flex-col items-center justify-center">
+							<div className="py-8 px-8 max-lg:px-5 border-b border-white">
+								<h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
+									23
+								</h3>
+							</div>
+							<div className="p-3 text-white">
+								<p className="text-center leading-[115%] tracking-[-0.011em]">
+									{translation?.statistics?.count}
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="py-14">
+						<p className="font-[MyFontMedium] text-3xl max-lg:text-2xl leading-[190%] tracking-[-0.011em] text-[#E6E6E6]">
+							{translation?.banner?.text2}
+						</p>
+					</div>
+				</div>
+			</section>
 
-      <section>
-        <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-[30px]">
-          <div className="flex max-md:flex-col max-md:gap-5">
-            <div className="w-3/5 max-xl:w-1/2 max-md:w-full max-md:px-5">
-              <h3 className="text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontSemiBold] leading-[105%] tracking-[-0.011em] text-[#E31E24]">
-                {translation?.questions?.questionText}
-              </h3>
-            </div>
-            <div className="w-2/5 max-xl:w-1/2 max-md:w-full flex flex-col gap-8 max-md:px-5">
-              <div className="relative">
-                <div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
-                <div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
-                <div className="w-3/5 max-xl:w-3/4 max-md:w-full">
-                  <h3 className="mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]">
-                    {translation?.questions?.title}
-                  </h3>
-                </div>
-                <p className="leading-[190%] tracking-[-0.011em] text-[#474747]">
-                  {translation?.questions?.titleText}
-                </p>
-              </div>
-              <div className="relative">
-                <div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
-                <div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
-                <div className="w-4/5 max-md:w-full">
-                  <h3 className="mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]">
-                    {translation?.questions?.title2}
-                  </h3>
-                </div>
-                <p className="leading-[190%] tracking-[-0.011em] 32text-[#474747]">
-                  {translation?.questions?.titleText}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-[68px] max-lg:mt-10 max-sm:mt-[35px]">
-            <p className="text-3xl max-md:text-2xl leading-[190%] tracking-[-0.011em]">
-              {translation?.banner?.text2}
-            </p>
-          </div>
-        </div>
-      </section>
+			<section>
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-[30px]">
+					<div className="flex max-md:flex-col max-md:gap-5">
+						<div className="w-3/5 max-xl:w-1/2 max-md:w-full max-md:px-5">
+							<h3 className="text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontSemiBold] leading-[105%] tracking-[-0.011em] text-[#E31E24]">
+								{translation?.questions?.questionText}
+							</h3>
+						</div>
+						<div className="w-2/5 max-xl:w-1/2 max-md:w-full flex flex-col gap-8 max-md:px-5">
+							<div className="relative">
+								<div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
+								<div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
+								<div className="w-3/5 max-xl:w-3/4 max-md:w-full">
+									<h3 className="mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]">
+										{translation?.questions?.title}
+									</h3>
+								</div>
+								<p className="leading-[190%] tracking-[-0.011em] text-[#474747]">
+									{translation?.questions?.titleText}
+								</p>
+							</div>
+							<div className="relative">
+								<div className="absolute top-5 -left-8 z-[-1] w-6 h-6 animate-ping rounded-full bg-[#E31E24]"></div>
+								<div className="absolute top-5 -left-8 w-6 h-6 rounded-full bg-[#E31E24]"></div>
+								<div className="w-4/5 max-md:w-full">
+									<h3 className="mb-3 font-[MyFontBold] text-[28px] max-lg:text-2xl leading-[115%] tracking-[-0.011em]">
+										{translation?.questions?.title2}
+									</h3>
+								</div>
+								<p className="leading-[190%] tracking-[-0.011em] 32text-[#474747]">
+									{translation?.questions?.titleText}
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="mt-[68px] max-lg:mt-10 max-sm:mt-[35px]">
+						<p className="text-3xl max-md:text-2xl leading-[190%] tracking-[-0.011em]">
+							{translation?.banner?.text2}
+						</p>
+					</div>
+				</div>
+			</section>
 
-      <section className="relative">
-        <div className="overflow-hidden w-full h-[350px] z-[-1] absolute top-0 left-0 py-6">
-          <div className="relative right-5 w-[110%] h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
-        </div>
-        <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0 max-lg:pt-20 flex max-lg:flex-col items-center justify-between gap-[70px] max-2xl:gap-14 max-xl:gap-5 mb-10">
-          <div className="w-2/5 max-lg:w-full max-md:px-5">
-            <div className="w-3/4 mb-3">
-              <h3 className="text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]">
-                {translation?.questions?.questions}
-              </h3>
-            </div>
-            <div className="w-full">
-              <p className="text-xl leading-[190%] tracking-[-0.011em] text-[#FAFAFA]">
-                {translation?.questions?.questions2}
-              </p>
-            </div>
-          </div>
-          <div className="w-3/5 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA]">
-            <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
-              {translation?.modal?.application}
-            </h2>
-            <div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
-              <input
-                type="text"
-                placeholder={translation?.modal?.placeholder}
-                className="w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-              />
-              <input
-                type="text"
-                className="w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-              />
-            </div>
-            <div className="mt-8 flex items-center gap-9 max-xl:gap-5">
-              <div className="h-2/5">
-                <Button>{translation?.modal?.btn}</Button>
-              </div>
-              <div className="w-3/4">
-                <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
-                  {translation?.modal?.text}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+			<section className="relative">
+				<div className="overflow-hidden w-full h-[350px] z-[-1] absolute top-0 left-0 py-6">
+					<div className="relative right-5 w-[110%] h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
+				</div>
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0 max-lg:pt-20 flex max-lg:flex-col items-center justify-between gap-[70px] max-2xl:gap-14 max-xl:gap-5 mb-10">
+					<div className="w-2/5 max-lg:w-full max-md:px-5">
+						<div className="w-3/4 mb-3">
+							<h3 className="text-[28px] font-bold leading-[115%] tracking-[-0.011em] text-[#EEEEEE]">
+								{translation?.questions?.questions}
+							</h3>
+						</div>
+						<div className="w-full">
+							<p className="text-xl leading-[190%] tracking-[-0.011em] text-[#FAFAFA]">
+								{translation?.questions?.questions2}
+							</p>
+						</div>
+					</div>
+					<div className="w-3/5 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA]">
+						<h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
+							{translation?.modal?.application}
+						</h2>
+						<div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
+							<input
+								type="text"
+								placeholder={translation?.modal?.placeholder}
+								className="w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+							/>
+							<input
+								type="text"
+								className="w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+							/>
+						</div>
+						<div className="mt-8 flex items-center gap-9 max-xl:gap-5">
+							<div className="h-2/5">
+								<Button>{translation?.modal?.btn}</Button>
+							</div>
+							<div className="w-3/4">
+								<p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
+									{translation?.modal?.text}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      {/* <section>
+			{/* <section>
 				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0">
 					<div className="mb-6">
 						<h2 className="max-md:text-center text-[64px] max-lg:text-5xl max-md:text-4xl max-sm:text-[32px] font-[MyFontSemiBold] font-bold leading-[105%] tracking-[-0.011em] text-[#E31E24]">

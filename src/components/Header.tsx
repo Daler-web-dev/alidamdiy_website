@@ -83,14 +83,14 @@ const Header: React.FC<HeaderProps> = ({}) => {
             <div className="h-fit flex flex-1 max-lg:flex-none items-center max-lg:items-start justify-center max-lg:mb-7">
               <nav>
                 <ul className="flex max-lg:flex-col gap-7 max-2xl:gap-5 max-lg:gap-3">
-                  <li className="font-medium text-[#474747]">
-                    <Link href={"/catalog"}>{translation.header.catalog}</Link>
+                  <li className="font-medium text-2xl text-[#474747]" >
+                    <Link href={"/catalog"} onClick={() => setHide(false)}>{translation.header.catalog}</Link>
                   </li>
-                  <li className="font-medium text-[#474747]">
-                    <Link href={"#"}>{translation?.header?.drivers}</Link>
+                  <li className="font-medium text-2xl text-[#474747]" >
+                    <Link href={"#"} onClick={() => setHide(false)}>{translation?.header?.drivers}</Link>
                   </li>
-                  <li className="font-medium text-[#474747]">
-                    <Link href={"#"}>{translation?.header?.company}</Link>
+                  <li className="font-medium text-2xl text-[#474747]" >
+                    <Link href={"#"} onClick={() => setHide(false)}>{translation?.header?.company}</Link>
                   </li>
                 </ul>
               </nav>
