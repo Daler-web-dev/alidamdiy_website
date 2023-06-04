@@ -38,7 +38,8 @@ const eng = {
         application: 'Submit your application',
         placeholder: 'Your name',
         btn: 'Send',
-        text: 'By clicking the "Submit" button, I give my consent to the processing and dissemination of personal data.'
+        text: 'By clicking the "Submit" button, I give my consent to the processing and dissemination of personal data.',
+        phoneNumber: 'Phone number'
     },
     footer: {
         menu: 'Меню',
