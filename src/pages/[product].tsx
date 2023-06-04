@@ -1,4 +1,3 @@
-// import Button from "@/components/children/Button";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
@@ -16,6 +15,9 @@ export default function Product(props: IAppProps) {
   const [isActive, setIsActive] = React.useState<string>("characteristic");
   const [isShow, setIsShow] = React.useState<boolean>(false);
   const [success, setSuccess] = React.useState<boolean>(false);
+  const style1 = 'w-3/5 absolute max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200'
+  
+  const animation = 'w-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200 trnst2'
   const nodeRef = React.useRef(null);
   const sbmt = (e: any) => {
     e.preventDefault();
@@ -163,7 +165,7 @@ export default function Product(props: IAppProps) {
             onClick={reset}
           >
             <div
-              className="w-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] trnst"
+            className={isShow ? animation : style1}
               ref={nodeRef}
               onClick={(e) => e.stopPropagation()}
             >
