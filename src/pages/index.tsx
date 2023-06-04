@@ -10,33 +10,34 @@ import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const arr = [
+	{
+		id: 1,
+		title: "Все",
+	},
+	{
+		id: 2,
+		title: "Седаны",
+	},
+	{
+		id: 3,
+		title: "Хетчбэки",
+	},
+	{
+		id: 4,
+		title: "Минивэны",
+	},
+	{
+		id: 5,
+		title: "Лимузины",
+	},
+	{
+		id: 6,
+		title: "Пикапы",
+	},
+];
 export default function Home() {
-	const arr = [
-		{
-			id: 1,
-			title: "Все",
-		},
-		{
-			id: 2,
-			title: "Седаны",
-		},
-		{
-			id: 3,
-			title: "Хетчбэки",
-		},
-		{
-			id: 4,
-			title: "Минивэны",
-		},
-		{
-			id: 5,
-			title: "Лимузины",
-		},
-		{
-			id: 6,
-			title: "Пикапы",
-		},
-	];
+
 	const router = useRouter();
 	const { locale } = router;
 	const translation = useContext<ItranslateData>(Context)

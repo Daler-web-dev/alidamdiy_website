@@ -3,15 +3,15 @@ import Link from "next/link";
 
 import { BiSearch } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
-// import Button from "./children/Button";
+import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/router";
 import uz from "@/languages/uzb/uz";
 import ru from "@/languages/ru/ru";
 import eng from "@/languages/eng/eng";
 import Context from "./useTranslate";
 import { ItranslateData } from "./Types/Types";
-import { useContext } from "react";
-// import Button from "@/components/children/Button";
+import { useContext, useState } from "react";
+
 import Button from "../components/children/button"
 
 interface HeaderProps { }
@@ -19,6 +19,7 @@ interface HeaderProps { }
 const Header: React.FC<HeaderProps> = ({ }) => {
 	const router = useRouter();
 	const { locale } = router;
+	const [hide, setHide] = useState<boolean>(false);
 
 	const changeLang = (e: any) => {
 		const locale = e.target.value;
@@ -58,8 +59,13 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 						/>
 					</Link>
 				</div>
-				<div className="w-full max-lg:absolute max-lg:right-full flex justify-between items-center">
-					<div className="flex flex-1 items-center justify-center">
+
+				<div className={hide ? "w-full max-lg:h-screen max-lg:fixed max-lg:right-0 max-lg:top-0 flex max-lg:flex-col justify-between items-center max-lg:justify-start pt-10 z-50 max-lg:backdrop-blur-md max-lg:bg-white/30 ease-in duration-200" : "w-full max-lg:h-screen max-lg:fixed max-lg:right-full max-lg:top-0 flex max-lg:flex-col justify-between items-center z-50 max-lg:backdrop-blur-md max-lg:bg-white/30 ease-in duration-200"}>
+					<button onClick={() => setHide(false)} className="max-lg:block hidden absolute top-5 right-5 p-3 max-sm:p-2 rounded-md bg-[#E31E24]">
+						<IoMdClose color="white" size={15} />
+					</button>
+					
+					<div className="h-fit flex flex-1 max-lg:flex-none items-center max-lg:items-start justify-center max-lg:mb-7">
 						<nav>
 							<ul className="flex max-lg:flex-col gap-7 max-2xl:gap-5 max-lg:gap-3">
 								<li className="font-medium text-[#474747]">
@@ -94,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 					</div>
 				</div>
 				<div className="max-lg:block hidden">
-					<button className="p-3 max-sm:p-2 rounded-md bg-[#E31E24]">
+					<button onClick={() => setHide(true)} className="p-3 max-sm:p-2 rounded-md bg-[#E31E24]">
 						<GiHamburgerMenu color="white" size={15} />
 					</button>
 				</div>
