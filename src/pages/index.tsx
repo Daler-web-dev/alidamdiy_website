@@ -113,7 +113,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section>
         <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-60">
           <div className="flex items-center gap-14 px-72 max-xl:px-40 max-lg:px-0 max-md:hidden">
