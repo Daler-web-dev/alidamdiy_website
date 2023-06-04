@@ -68,8 +68,7 @@ const Item: React.FC<ItemProps> = ({ item }: ItemProps) => {
 				</div>
 			</div>
 			<div
-				className={`bg-white w-full rounded-b-[15px] px-[20px] pb-[17px] absolute -bottom-36 left-0 z-10 shadow-[0_14px_15px_#00000050] ${hide ? "block" : "hidden"}`}
-			>
+				className={`bg-white w-full rounded-b-[15px] px-[20px] pb-[17px] absolute top-[95%] left-0 z-10 shadow-[0_14px_15px_#00000050] ${hide ? "block" : "hidden"}`}>
 				<div className="mb-[10px]">
 					<ul>
 						<li className=" leading-[190%] tracking-[-0.011em] text-[#474747]">
