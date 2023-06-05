@@ -119,6 +119,7 @@ export default function Product(props: IAppProps) {
                   <button
                     className="px-3 py-2 rounded-md"
                     onClick={() => setDriverStatus("ДА")}
+                    type="button"
                     style={{
                       backgroundColor: driverStatus == "ДА" ? "#D9D9D9" : "",
                     }}
@@ -128,6 +129,7 @@ export default function Product(props: IAppProps) {
                   <button
                     className="px-3 py-2 rounded-md"
                     onClick={() => setDriverStatus("НЕТ")}
+                    type="button"
                     style={{
                       backgroundColor: driverStatus == "НЕТ" ? "#D9D9D9" : "",
                     }}
@@ -143,6 +145,7 @@ export default function Product(props: IAppProps) {
                   <button
                     className="px-3 py-2  rounded-md"
                     onClick={() => setBaggageStatus("ДА")}
+                    type="button"
                     style={{
                       backgroundColor: baggageStatus == "ДА" ? "#D9D9D9" : "",
                     }}
@@ -152,6 +155,7 @@ export default function Product(props: IAppProps) {
                   <button
                     className="px-3 py-2 rounded-md"
                     onClick={() => setBaggageStatus("НЕТ")}
+                    type="button"
                     style={{
                       backgroundColor: baggageStatus == "НЕТ" ? "#D9D9D9" : "",
                     }}
@@ -164,7 +168,9 @@ export default function Product(props: IAppProps) {
               <div className="w-full flex items-center justify-between mb-2">
                 <h1>{translation?.productPage?.passenger}</h1>
                 <div className="flex items-center gap-3">
-                  <button className="px-4 py-2 bg-[#D9D9D9] rounded-md">
+                  <button className="px-4 py-2 bg-[#D9D9D9] rounded-md"
+                  type="button"
+                  >
                     6
                   </button>
                 </div>
@@ -172,7 +178,9 @@ export default function Product(props: IAppProps) {
               <hr className="border-0 h-px bg-[#858585] mb-4" />
               <div className="w-full flex items-center justify-between mb-2">
                 <h1>{translation?.productPage?.fuel}</h1>
-                <button className="h-9 rounded-md">15 л/км</button>
+                <button className="h-9 rounded-md"
+                type="button"
+                >15 л/км</button>
               </div>
               <hr className="border-0 h-px bg-[#858585] mb-4" />
               <div className="w-full flex items-center justify-between mb-2">
@@ -188,7 +196,7 @@ export default function Product(props: IAppProps) {
                 <div onClick={() => setIsShow(true)}>
                   <button type="button" className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">{translation?.header?.orderBtn}</button>
                 </div>
-                <button className="font-medium px-6 py-2 rounded-md border border-[#E31E24] ">
+                <button className="font-medium px-6 py-2 rounded-md border border-[#E31E24] " type="button">
                   {translation?.header?.consult}
                 </button>
               </div>
