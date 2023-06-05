@@ -10,7 +10,7 @@ const Description: React.FC<IDescription> = ({ isActive }) => {
   const translation = React.useContext<ItranslateData>(Context);
   const desc = [
     {
-      title: translation?.productPage.engine,
+      title: translation?.productPage.Engine,
       value: "Турбодвигатель с выприском топлива",
     },
     {
