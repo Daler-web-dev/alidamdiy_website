@@ -40,9 +40,9 @@ export default function Home() {
       title: "Пикапы",
     },
   ];
-  const TOKEN = '6009092319:AAGZU7MAtfd_oAcSbcBrM7iipiDg-n-jjxo'
-  const CHAT_ID = '-1001967268026'
-  const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`
+  // const TOKEN = '6009092319:AAGZU7MAtfd_oAcSbcBrM7iipiDg-n-jjxo'
+  // const CHAT_ID = '-1001967268026'
+  const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
   const sbmt = (e: any) => {
 	e.preventDefault()
 	const data: any = {}
@@ -55,7 +55,7 @@ export default function Home() {
 	msg += `Имя: ${ data?.name } \n`
 	msg += `Номер телефона: ${ data?.phone } \n`
 		axios.post(URL, {
-			chat_id: CHAT_ID,
+			chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
 			parse_mode: 'html',
 			text: msg
 		}) .catch(err => console.log(err))
