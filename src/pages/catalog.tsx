@@ -30,6 +30,31 @@ const Catalog: React.FC<ICarsProducts> = () => {
       desc: "lorem ipsum dolor sit amet",
     },
     {
+      id: 1,
+      name: "Chevrolet Lacetti",
+      type: "Hatchback",
+      price: 50,
+      img: [
+        { firstImg: "images/Cars/lacetti.svg" },
+        { secondImg: "images/Cars/lacetti.svg" },
+      ],
+      description: "lorem ipsum dolor sit amet",
+      countOfPlaces: 4,
+      carNumber: "30D993AA",
+      withDriver: true,
+      fuel: 15,
+      carInfo: [
+        {
+          engine: 'text',
+          engine2: 'text',
+          engine3: 'text',
+          engine4: 'text',
+          engine5: 'text',
+          engine6: 'text',
+        }
+      ]
+    },
+    {
       id: uuidv4(),
       name: "Chevrolet Аveo",
       type: "Sedan",
@@ -95,7 +120,7 @@ const Catalog: React.FC<ICarsProducts> = () => {
     },
   ];
 
-  const translation = useContext<ItranslateData>(Context)
+  const translation = useContext<ItranslateData>(Context);
   const [data, setData] = useState<any>(cars);
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
     setData(
@@ -126,11 +151,17 @@ const Catalog: React.FC<ICarsProducts> = () => {
             <h1 className="text-white font-['MyFont'] text-4xl max-lg:text-3xl max-md:text-2xl">
               {translation?.catalogPage.mainText}
             </h1>
-            <h1 className="text-white text-xl max-md:text-sm">{translation?.catalogPage.linkText}</h1>
+            <h1 className="text-white text-xl max-md:text-sm">
+              {translation?.catalogPage.linkText}
+            </h1>
           </div>
         </div>
       </div>
-      <Search filteredData={filteredData} text={translation?.catalogPage.btn} typeOfCar={translation?.catalogPage.typeOfCar} />
+      <Search
+        filteredData={filteredData}
+        text={translation?.catalogPage.btn}
+        typeOfCar={translation?.catalogPage.typeOfCar}
+      />
       {!data.length ? (
         <>
           <div className="w-full px-24 py-6 flex justify-center mt-4">
@@ -141,7 +172,9 @@ const Catalog: React.FC<ICarsProducts> = () => {
               src="/images/search.png"
             />
           </div>
-          <h1 className="text-center text-xl">{translation?.catalogPage.notFoundText}</h1>
+          <h1 className="text-center text-xl">
+            {translation?.catalogPage.notFoundText}
+          </h1>
         </>
       ) : null}
       <div className="container m-auto grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[30px] max-lg:gap-5 mt-[45px] px-24 max-xl:px-14 max-lg:px-5">

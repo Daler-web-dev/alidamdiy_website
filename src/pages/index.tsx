@@ -3,10 +3,13 @@ import Image from "next/image";
 
 import Item from "@/components/children/Item";
 import Button from "../components/children/button";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { MdClose } from "react-icons/md";
+import axios from "axios";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,9 +40,41 @@ export default function Home() {
 			title: "Пикапы",
 		},
 	];
+	// const TOKEN = '6009092319:AAGZU7MAtfd_oAcSbcBrM7iipiDg-n-jjxo'
+	// const CHAT_ID = '-1001967268026'
+	const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
+	const sbmt = (e: any) => {
+		e.preventDefault();
+		const data: any = {};
+		let fr = new FormData(e.target);
+
+		fr.forEach((value, key) => {
+			data[key] = value;
+		});
+		let msg = `Новая заявка! \n`;
+		msg += `Имя: ${data?.name} \n`;
+		msg += `Номер телефона: ${data?.phone} \n`;
+		axios
+			.post(URL, {
+				chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
+				parse_mode: "html",
+				text: msg,
+			})
+			.catch((err) => console.log(err));
+	};
 	const router = useRouter();
 	const { locale } = router;
 	const translation = useContext<ItranslateData>(Context);
+	const [isShow, setIsShow] = useState<boolean>(false);
+	const [success, setSuccess] = useState<boolean>(false);
+	const style1 =
+		"w-3/5 absolute max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
+	const animation =
+		"w-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200 trnst2";
+	const reset = () => {
+		setSuccess(false);
+		setIsShow(false);
+	};
 	return (
 		<>
 			<section className="relative">
@@ -98,19 +133,21 @@ export default function Home() {
 									</span>
 								</h2>
 							</div>
-							<div className="mb-3 max-md:mb-[5px]">
+							<div className="mb-7 max-md:mb-[7px]">
 								<p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
 									{translation?.banner?.text2}
 								</p>
-							</div>
-							<div className="mb-3">
-								<p className="font-bold text-[#E31E24]">+998 91 123 32 33</p>
+								<p className="text-[#E31E24]">+998 91 123 32 33</p>
 							</div>
 							<div className="flex gap-5">
-								<Button>{translation?.banner?.orderBtn}</Button>
-								<button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
-									{translation?.banner?.infoBtn}
-								</button>
+								<div onClick={() => setIsShow(true)}>
+									<Button>{translation?.banner?.orderBtn}</Button>
+								</div>
+								<Link href="/catalog">
+									<button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
+										{translation?.banner?.infoBtn}
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -147,7 +184,7 @@ export default function Home() {
 								})}
 							</ul>
 						</div>
-						<div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 gap-[30px] max-lg:gap-[20px] mt-[45px]">
+						<div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-[30px] max-lg:gap-[20px] mt-[45px]">
 							{[0, 1, 2, 3].map((item: number) => (
 								<Item key={item} />
 							))}
@@ -155,11 +192,10 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-
 			<section className="bg-[#1E1E1E] mb-[63px] max-lg:mb-14 max-md:mb-[43px]">
 				<div className="relative -top-20 w-full overflow-hidden py-6">
 					<div className="relative right-4 w-[110%] py-10 max-sm:px-5 rotate-[-1.28deg] bg-[#E31E24]">
-						<h2 className="text-center text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px]  max-sm:text-2xl font-[MyFontBoldMega] leading-[105%] tracking-[-0.011em] text-white">
+						<h2 className="text-center text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontBoldMega] leading-[105%] tracking-[-0.011em] text-white">
 							{translation?.statistics?.num}
 						</h2>
 					</div>
@@ -323,6 +359,73 @@ export default function Home() {
 					</div>
 				</div>
 			</section> */}
+			{isShow ? (
+				<div
+					className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
+					onClick={reset}
+				>
+					<div
+						className={isShow ? animation : style1}
+						onClick={(e) => e.stopPropagation()}
+					>
+						<div>
+							<form action="" onSubmit={(e) => sbmt(e)}>
+								<h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
+									{translation?.modal.application}
+								</h2>
+								<div className="absolute top-2 right-2" onClick={reset}>
+									<MdClose size={"30"} />
+								</div>
+								<div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
+									<input
+										type="text"
+										placeholder={translation?.modal.placeholder}
+										className="w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+										name="name"
+									/>
+									<input
+										type="text"
+										className="w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+										placeholder={translation?.modal.phoneNumber}
+										name="phone"
+									/>
+								</div>
+								<div className="mt-8 flex items-center gap-9 max-xl:gap-5">
+									<div className="h-2/5" onClick={() => setSuccess(true)}>
+										<Button>{translation?.modal.btn}</Button>
+									</div>
+									<div className="w-3/4">
+										<p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
+											{translation?.modal.text}
+										</p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					{success ? (
+						<div
+							className={isShow ? animation : style1}
+							onClick={(e) => e.stopPropagation()}
+						>
+							<div>
+								<div className="w-full m-auto flex justify-center">
+									<img src="/images/icons/success.svg" alt="success" />
+								</div>
+								<div className="absolute top-2 right-2" onClick={reset}>
+									<MdClose size={"30"} />
+								</div>
+								<h1 className="text-6xl text-center mt-4">
+									{translation?.productPage?.successText}
+								</h1>
+								<p className="text-center text-xl mt-4">
+									{translation?.productPage?.successText2}
+								</p>
+							</div>
+						</div>
+					) : null}
+				</div>
+			) : null}
 		</>
 	);
 }

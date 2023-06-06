@@ -39,7 +39,8 @@ const uz = {
         application: 'Arizangizni yuboring',
         placeholder: 'Ismingiz',
         btn: 'Yuborish',
-        text: "'Yuborish' tugmasini bosish orqali men shaxsiy ma'lumotlarni qayta ishlash va tarqatishga rozilik beraman."
+        text: "'Yuborish' tugmasini bosish orqali men shaxsiy ma'lumotlarni qayta ishlash va tarqatishga rozilik beraman.",
+        phoneNumber: 'Telefon raqam'
     },
     footer: {
         menu: 'Menu',
