@@ -1,11 +1,11 @@
 import * as React from "react";
 import { BiSearch } from "react-icons/bi";
 
-export interface IAppProps {}
+export interface IAppProps { }
 
 export function SearchInput(props: IAppProps) {
-    const [value, setValue] = React.useState<string>()
-    
+  const [value, setValue] = React.useState<string>()
+
   return (
     <div>
       <div className="w-[80%] m-auto" onClick={(e) => e.stopPropagation()}>
@@ -13,10 +13,10 @@ export function SearchInput(props: IAppProps) {
           <input
             type="text"
             className="w-[90%] h-full rounded-lg outline-none text-xl"
-               value={value}
-               onChange={e => setValue(e.target.value)}
+            value={value}
+            onChange={e => setValue(e.target.value)}
           />
-          <button className="w-fit h-fit p-3 max-sm:p-2 rounded-md bg-[#E31E24]">
+          <button className="w-fit h-fit p-3 max-sm:p-2 rounded-md mr-2 bg-[#E31E24]">
             <BiSearch color="white" size={15} />
           </button>
         </div>
