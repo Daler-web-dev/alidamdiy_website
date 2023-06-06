@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 					<button onClick={() => setHide(false)} className="max-lg:block hidden absolute top-5 right-5 p-3 max-sm:p-2 rounded-md bg-[#E31E24]">
 						<IoMdClose color="white" size={15} />
 					</button>
-					
+
 					<div className="h-fit flex flex-1 max-lg:flex-none items-center max-lg:items-start justify-center max-lg:mb-7">
 						<nav>
 							<ul className="flex max-lg:flex-col gap-7 max-2xl:gap-5 max-lg:gap-3">
@@ -75,6 +75,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 							</ul>
 						</nav>
 					</div>
+					
 					<div className="flex items-center justify-end gap-10 max-2xl:gap-5">
 						<div className="">
 							<select
