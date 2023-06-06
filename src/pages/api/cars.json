@@ -6,10 +6,10 @@
         "type": "Hatchback",
         "price": 50,
         "img": [
-          { "firstImg": "images/Cars/lacetti.svg" },
-          { "secondImg": "images/Cars/lacetti.svg" },
-          { "secondImg": "images/Cars/lacetti.svg" },
-          { "secondImg": "images/Cars/lacetti.svg" }
+            "images/Cars/lacetti.svg",
+            "images/Cars/lacetti.svg",
+            "images/Cars/lacetti.svg",
+            "images/Cars/lacetti.svg" 
         ],
         "description": "lorem ipsum dolor sit amet",
         "advantages": [
@@ -52,9 +52,68 @@
               },
            
             "volume": "1799л",
-            "pwoerSpeed": 187,
+            "powerSpeed": 187,
             "torque": "165 (17) / 4000",
-            "transmission": "МКПП5"
+            "transmission": "MKPP5"
+  
+          }
+        
+      },
+    {
+        "id": 1,
+        "name": "Chevrolet Malibu 2",
+        "type": "Sedan",
+        "price": 75,
+        "img": [
+          "images/Cars/lacetti.svg",
+          "images/Cars/lacetti.svg",
+          "images/Cars/lacetti.svg",
+          "images/Cars/lacetti.svg" 
+      ],
+        "description": "lorem ipsum dolor sit amet",
+        "advantages": [
+          {
+              "ruTitle": [
+                  "Аренда на 24 часа",
+                  "Сопровождение водителя",
+                  "Чистый салон"
+              ],
+              "uzTitle": [
+                  "24 soatga ijaraga oling",
+                  "Xaydovchi qo'llab quvvatlash xizmati",
+                  "Toza salon"
+              ],
+              "engTitle": [
+                  "Rent for 24 hours",
+                   "Driver support",
+                    "Clean interior"
+              ]
+          }
+        ],
+        "countOfPlaces": 5,
+        "carNumber": "30Z777ZZ",
+        "withDriver": true,
+        "fuel": "4.7-14.4 л/100 км",
+        "carInfo": 
+          {
+            "engine": 
+              {
+                  "ruTitle": "GM Ecotec LTG",
+                  "uzTitle": "GM Ecotec LTG",
+                  "engTitle": "GM Ecotec LTG"
+              },
+       
+            "engine2": 
+              {
+                  "ruTitle": "4 цилиндра",
+                  "uzTitle": "4 silindrli",
+                  "engTitle": "4 cylinders"
+              },
+           
+            "volume": "1998л",
+            "powerSpeed": "250 (184) / 5300",
+            "torque": "353 / 2000-5000",
+            "transmission": "AKPP"
   
           }
         
