@@ -4,34 +4,35 @@ import { ItranslateData } from "./Types/Types";
 
 export interface IDescription {
   isActive: string;
+  arr: any
 }
 
-const Description: React.FC<IDescription> = ({ isActive }) => {
+const Description: React.FC<IDescription> = ({ isActive, arr }) => {
   const translation = React.useContext<ItranslateData>(Context);
   const desc = [
     {
       title: translation?.productPage.Engine,
-      value: "Турбодвигатель с выприском топлива",
+      value: arr?.carInfo.engine.ruTitle,
     },
     {
       title: translation?.productPage.count,
-      value: "3 подряд",
+      value: arr?.carInfo.engine2.ruTitle,
     },
     {
       title: translation?.productPage.text,
-      value: "1.2л",
+      value: arr?.carInfo.volume,
     },
     {
       title: translation?.productPage.text2,
-      value: "180 км/ч (1.2л) 11,1 сек",
+      value: arr?.carInfo.powerSpeed,
     },
     {
       title: translation?.productPage.text3,
-      value: "190 при 2000-4000 rpm",
+      value: arr?.carInfo.torque,
     },
     {
       title: translation?.productPage.text4,
-      value: "Автоматическая, 6-ступенчетая",
+      value: arr?.carInfo.transmission,
     },
   ];
   return (
@@ -63,10 +64,7 @@ const Description: React.FC<IDescription> = ({ isActive }) => {
           </div>
           <div className="w-full h-fit py-4 px-4">
             <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              iste quibusdam facere quo reprehenderit, commodi, excepturi ipsum
-              blanditiis dolor temporibus asperiores! Sint, ipsam corporis.
-              Dolores enim tempore accusantium unde sint.
+              { arr.description }
             </h1>
           </div>
         </div>

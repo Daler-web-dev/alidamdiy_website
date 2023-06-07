@@ -43,32 +43,28 @@
                   "uzTitle": "T18SED, F18D3",
                   "engTitle": "T18SED, F18D3"
               },
-       
             "engine2": 
               {
                   "ruTitle": "4 цилиндра",
                   "uzTitle": "4 silindrli",
                   "engTitle": "4 cylinders"
               },
-           
             "volume": "1799л",
             "powerSpeed": 187,
             "torque": "165 (17) / 4000",
             "transmission": "MKPP5"
-  
           }
-        
       },
     {
-        "id": 1,
+        "id": 2,
         "name": "Chevrolet Malibu 2",
         "type": "Sedan",
         "price": 75,
         "img": [
-          "images/Cars/lacetti.svg",
-          "images/Cars/lacetti.svg",
-          "images/Cars/lacetti.svg",
-          "images/Cars/lacetti.svg" 
+          "images/Cars/malibu2.png",
+          "images/Cars/malibu2.png",
+          "images/Cars/malibu2.png",
+          "images/Cars/malibu2.png" 
       ],
         "description": "lorem ipsum dolor sit amet",
         "advantages": [
@@ -94,7 +90,7 @@
         "carNumber": "30Z777ZZ",
         "withDriver": true,
         "fuel": "4.7-14.4 л/100 км",
-        "carInfo": 
+        "carInfo":
           {
             "engine": 
               {
@@ -114,9 +110,7 @@
             "powerSpeed": "250 (184) / 5300",
             "torque": "353 / 2000-5000",
             "transmission": "AKPP"
-  
           }
-        
       }
   ]
 }
