@@ -413,7 +413,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             >
               <div>
                 <div className="w-full m-auto flex justify-center">
-                  <img src="/images/icons/success.svg" alt="success" />
+                <Image src="/images/icons/success.svg" alt="success" width={1000} height={1000}/>
                 </div>
                 <div className="absolute top-2 right-2" onClick={reset}>
                   <MdClose size={"30"} />
