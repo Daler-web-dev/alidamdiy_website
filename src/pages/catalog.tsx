@@ -22,7 +22,7 @@ export interface ICarsProducts {
 
 
 export const getStaticProps = async () => { 
-  const res = await axios.get('https://alidamdiyindustry.com/api/carsApi') 
+  const res = await axios.get('/api/carsApi') 
   
   console.log(res);
   
