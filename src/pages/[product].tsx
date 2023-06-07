@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import Image from "next/image";
-import * as React from "react";
+import  React, { useState } from "react";
 import Description from "@/components/Description";
 import { MdClose } from "react-icons/md";
 import Context from "@/components/useTranslate";
@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 }
 
 export default function Product({ data, query }: any) {
-  const [arr, setArr] = React.useState<any>()
+  const [arr, setArr] = useState<any>()
   React.useEffect(() => {
     data.map((i: any) => {
         if(i.id == query){
