@@ -435,7 +435,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 export default Home;
 
 export const getStaticProps = async () => { 
-  const res = await axios.get('http://localhost:3000/api/carsApi') 
+  const res = await axios.get('https://alidamdiyindustry.com/api/carsApi') 
   
   console.log(res);
   
