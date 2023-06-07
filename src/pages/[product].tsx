@@ -78,7 +78,6 @@ export default function Product({ data, query }: any) {
 
   return (
     <>
-      <form action="" onSubmit={(e) => sbmt(e)}>
         <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
           <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2'>
             { arr?.name }
@@ -257,6 +256,7 @@ export default function Product({ data, query }: any) {
             <Description isActive={isActive} arr={arr} />
           </div>
         </div>
+        <form action="" onSubmit={(e) => sbmt(e)}>
         {isShow ? (
           <div
             className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
@@ -327,7 +327,8 @@ export default function Product({ data, query }: any) {
             ) : null}
           </div>
         ) : null}
-      </form>
+        </form>
+      {/* </form> */}
     </>
   );
 }
