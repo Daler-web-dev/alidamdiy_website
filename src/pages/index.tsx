@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Item from "@/components/children/Item";
 import Button from "../components/children/button";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import { useRouter } from "next/router";
@@ -12,8 +12,13 @@ import { MdClose } from "react-icons/md";
 import axios from "axios";
 
 const inter = Inter({ subsets: ["latin"] });
+interface IMainProps {
 
-export default function Home() {
+}
+const Home: React.FC<IMainProps> = ({ data }: any) => {
+    
+  console.log(data);
+  
   const arr = [
     {
       id: 1,
@@ -40,8 +45,6 @@ export default function Home() {
       title: "Пикапы",
     },
   ];
-  // const TOKEN = '6009092319:AAGZU7MAtfd_oAcSbcBrM7iipiDg-n-jjxo'
-  // const CHAT_ID = '-1001967268026'
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
   const sbmt = (e: any) => {
     e.preventDefault();
@@ -185,8 +188,8 @@ export default function Home() {
               </ul>
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-[30px] max-lg:gap-[20px] mt-[45px]">
-              {[0, 1, 2, 3].map((item: number) => (
-                <Item key={item} />
+              {data.map((item: any) => (
+                <Item key={item} item={item} />
               ))}
             </div>
           </div>
@@ -429,3 +432,19 @@ export default function Home() {
     </>
   );
 }
+export default Home;
+
+export const getStaticProps = async () => { 
+  const res = await axios.get('http://localhost:3000/api/carsApi') 
+  
+  console.log(res);
+  
+  
+  const data = await res.data
+  
+  return { 
+   props: {
+    data: data.cars.cars
+   }
+  } 
+ }
