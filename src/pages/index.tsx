@@ -414,8 +414,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                   <Image
                     src="/images/icons/success.svg"
                     alt="success"
-                    width={1000}
-                    height={1000}
+                    width={110}
+                    height={110}
                   />
                 </div>
                 <div className="absolute top-2 right-2" onClick={reset}>

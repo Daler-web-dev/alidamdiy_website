@@ -311,7 +311,7 @@ export default function Product({ data, query }: any) {
               >
                 <div>
                   <div className="w-full m-auto flex justify-center">
-                    <Image src="/images/icons/success.svg" alt="success" width={1000} height={1000}/>
+                    <Image src="/images/icons/success.svg" alt="success" width={110} height={110}/>
                   </div>
                   <div className="absolute top-2 right-2" onClick={reset}>
                     <MdClose size={"30"} />
