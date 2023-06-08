@@ -6,8 +6,6 @@ export interface IHeadMeta {
 }
 
 const HeadMeta: React.FC<IHeadMeta> = ({ title }) => {
-    console.log(title);
-    
   return (
     <Head>
             <title>{title}</title>
