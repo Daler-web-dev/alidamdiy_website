@@ -46,6 +46,8 @@ export default function Product({ data, query }: any) {
     "w-3/5 absolute max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
   const animation =
     "w-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200 trnst2";
+    const router = useRouter();
+    const { locale } = router;
     
   const sbmt = (e: any) => {
     e.preventDefault();
@@ -79,7 +81,8 @@ export default function Product({ data, query }: any) {
   const translation = React.useContext<ItranslateData>(Context);
   return (
     <>
-    <HeadMeta title={arr?.name} />
+    {/* <HeadMeta title={arr?.name} /> */}
+    <HeadMeta title={`Alidamdiy - ${arr?.name}`} />
         <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
           <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2'>
             { arr?.name }

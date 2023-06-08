@@ -79,7 +79,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 
   return (
     <>
-    <HeadMeta title={''} />
+    <HeadMeta title={locale == 'ru' ? 'Alidamdiy - Главная' : locale == 'uz' ? 'Alidamdiy - Main' : 'Alidamdiy - Bosh sahifa'} />
       <section className="relative">
         <div className="w-full h-full hidden max-sm:block">
           <Image
