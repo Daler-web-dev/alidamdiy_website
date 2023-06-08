@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
   const changeLang = (e: any) => {
     const locale = e.target.value;
 
-    router.push("/", undefined, { locale });
+    router.push("/", "/", { locale });
     setLocaleValue(locale)
   };
   const translation = useContext<ItranslateData>(Context);
