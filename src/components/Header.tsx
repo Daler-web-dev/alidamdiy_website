@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [searchInp, setSearchInp] = useState<boolean>(false)
-  const [localeValue, setLocaleValue] = useState<string>()
+  const [localeValue, setLocaleValue] = useState<any>(locale)
   const style1 =
     "w-3/5 absolute max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
   const animation =

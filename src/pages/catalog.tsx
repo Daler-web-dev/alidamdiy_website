@@ -54,7 +54,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
 
   return (
     <>
-    <HeadMeta title={locale == 'ru' ? 'Alidamdiy - Каталог' : locale == 'uz' ? 'Alidamdiy - Catalog' : 'Alidamdiy - Katalog'} />
+    <HeadMeta title={locale == 'ru' ? 'Alidamdiy - Каталог' : locale == 'uz' ? 'Alidamdiy - Katalog' : 'Alidamdiy - Catalog'} />
       <div
         className="w-full h-[425px] py-6"
         style={{
