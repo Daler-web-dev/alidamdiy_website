@@ -6,6 +6,8 @@ import { MdClose } from "react-icons/md";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import axios from "axios";
+import HeadMeta from "@/components/HeadMeta";
+import { useRouter } from "next/router";
 
 export interface IAppProps {}
 
@@ -75,9 +77,9 @@ export default function Product({ data, query }: any) {
     setIsShow(false);
   };
   const translation = React.useContext<ItranslateData>(Context);
-
   return (
     <>
+    <HeadMeta title={arr?.name} />
         <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
           <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2'>
             { arr?.name }

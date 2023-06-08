@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { MdClose } from "react-icons/md";
 import axios from "axios";
+import HeadMeta from "@/components/HeadMeta";
 
 const inter = Inter({ subsets: ["latin"] });
 interface IMainProps {}
@@ -78,6 +79,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 
   return (
     <>
+    <HeadMeta title={''} />
       <section className="relative">
         <div className="w-full h-full hidden max-sm:block">
           <Image

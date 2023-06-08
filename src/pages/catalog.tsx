@@ -5,6 +5,8 @@ import Image from "next/image";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import axios from "axios";
+import HeadMeta from "@/components/HeadMeta";
+import { Router, useRouter } from "next/router";
 
 export interface ICarsProducts {
   id: string;
@@ -47,9 +49,12 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
       })
     );
   };
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <>
+    <HeadMeta title={locale == 'ru' ? 'Каталог' : locale == 'uz' ? 'Catalog' : 'Katalog'} />
       <div
         className="w-full h-[425px] py-6"
         style={{
