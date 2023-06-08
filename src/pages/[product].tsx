@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 export interface IAppProps {}
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const res = await fetch(`https://alidamdiyindustry.com/api/carsApi`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}`);
   const data = await res.json();
   return {
     props: {

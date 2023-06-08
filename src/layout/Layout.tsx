@@ -1,13 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import axios from "axios";
 
 interface LayoutProps {
 }
 
 type Layout = {
-   children: React.ReactNode
+   children: React.ReactNode;
 }
-
 const Layout = ({ children }: Layout) => {
    return (
       <>

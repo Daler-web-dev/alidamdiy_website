@@ -9,11 +9,13 @@ import { ItranslateData } from "./Types/Types";
 import { useContext, useState } from "react";
 import Button from "../components/children/button";
 import { MdClose } from "react-icons/md";
-import { SearchInput } from "./children/SearchInput";
+
+import axios from "axios";
+import SearchInput from "./children/SearchInput";
 
 interface HeaderProps { }
 
-const Header: React.FC<HeaderProps> = ({ }) => {
+const Header: React.FC<HeaderProps> = ({  }) => {
   const router = useRouter();
   const { locale } = router;
   const [hide, setHide] = useState<boolean>(false);
@@ -37,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
     setLocaleValue(locale)
   };
   const translation = useContext<ItranslateData>(Context);
-
+  
   return (
     <>
       <header className="w-full bg-[#BBBBBB]">
@@ -192,7 +194,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
         </div>
       ) : null}
       <div className={
-        searchInp ? "w-full h-screen absolute top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in" : "w-full h-screen absolute -top-full left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
+        searchInp ? "w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in" : "w-full h-screen absolute -top-full left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
       }
         onClick={reset}
       >
