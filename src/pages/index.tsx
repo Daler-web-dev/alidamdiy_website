@@ -12,13 +12,10 @@ import { MdClose } from "react-icons/md";
 import axios from "axios";
 
 const inter = Inter({ subsets: ["latin"] });
-interface IMainProps {
-
-}
+interface IMainProps {}
 const Home: React.FC<IMainProps> = ({ data }: any) => {
-    
   console.log(data);
-  
+
   const arr = [
     {
       id: 1,
@@ -78,6 +75,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setSuccess(false);
     setIsShow(false);
   };
+
   return (
     <>
       <section className="relative">
@@ -144,7 +142,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
               </div>
               <div className="flex gap-5">
                 <div onClick={() => setIsShow(true)}>
-                <Button>{translation?.banner?.orderBtn}</Button>
+                  <Button>{translation?.banner?.orderBtn}</Button>
                 </div>
                 <Link href="/catalog">
                   <button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
@@ -413,7 +411,12 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             >
               <div>
                 <div className="w-full m-auto flex justify-center">
-                <Image src="/images/icons/success.svg" alt="success" width={1000} height={1000}/>
+                  <Image
+                    src="/images/icons/success.svg"
+                    alt="success"
+                    width={1000}
+                    height={1000}
+                  />
                 </div>
                 <div className="absolute top-2 right-2" onClick={reset}>
                   <MdClose size={"30"} />
@@ -431,20 +434,17 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
       ) : null}
     </>
   );
-}
+};
 export default Home;
 
-export const getStaticProps = async () => { 
-  const res = await axios.get('/api/carsApi')
-  
-  console.log(res);
-  
-  
-  const data = await res.data
-  
-  return { 
-   props: {
-    data: data.cars.cars
-   }
-  } 
- }
+export const getStaticProps = async () => {
+  const res = await axios.get("https://alidamdiyindustry.com/api/carsApi");
+
+  const data = await res.data;
+
+  return {
+    props: {
+      data: data.cars.cars,
+    },
+  };
+};
