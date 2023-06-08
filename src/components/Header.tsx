@@ -20,6 +20,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [searchInp, setSearchInp] = useState<boolean>(false)
+  const [localeValue, setLocaleValue] = useState<string>()
   const style1 =
     "w-3/5 absolute max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
   const animation =
@@ -32,7 +33,8 @@ const Header: React.FC<HeaderProps> = ({}) => {
   const changeLang = (e: any) => {
     const locale = e.target.value;
 
-    router.push("/", "/", { locale });
+    router.push("/", undefined, { locale });
+    setLocaleValue(locale)
   };
   const translation = useContext<ItranslateData>(Context);
 
@@ -107,13 +109,13 @@ const Header: React.FC<HeaderProps> = ({}) => {
                 <select
                   className="font-medium uppercase bg-transparent"
                   name="lang"
-                  value={locale}
+                  value={localeValue}
                   onChange={(e) => changeLang(e)}
-                  defaultValue={locale}
+                  defaultValue={localeValue}
                 >
-                  <option value="ru">🇷🇺 Ru</option>
-                  <option value="uz">🇺🇿 Uz</option>
-                  <option value="en">🇬🇧 En</option>
+                  <option value="ru">Ru</option>
+                  <option value="uz">Uz</option>
+                  <option value="en">En</option>
                 </select>
               </div>
               <div className="" onClick={() => setIsShow(true)}>

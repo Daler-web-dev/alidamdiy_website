@@ -12,13 +12,10 @@ import { MdClose } from "react-icons/md";
 import axios from "axios";
 
 const inter = Inter({ subsets: ["latin"] });
-interface IMainProps {
-
-}
+interface IMainProps {}
 const Home: React.FC<IMainProps> = ({ data }: any) => {
-    
   console.log(data);
-  
+
   const arr = [
     {
       id: 1,
@@ -78,6 +75,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setSuccess(false);
     setIsShow(false);
   };
+
   return (
     <>
       <section className="relative">
@@ -144,7 +142,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
               </div>
               <div className="flex gap-5">
                 <div onClick={() => setIsShow(true)}>
-                <Button>{translation?.banner?.orderBtn}</Button>
+                  <Button>{translation?.banner?.orderBtn}</Button>
                 </div>
                 <Link href="/catalog">
                   <button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
@@ -179,7 +177,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                       key={item.id}
                       className="px-6 leading-[115%] tracking-[-0.011em] last:border-0 border-r border-[#000]"
                     >
-                      <p className="py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#BFBFBF]">
+                      <p key={item.id} className="py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#BFBFBF]">
                         {item.title}
                       </p>
                     </li>
@@ -189,7 +187,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-[30px] max-lg:gap-[20px] mt-[45px]">
               {data.map((item: any) => (
-                <Item key={item} item={item} />
+                <Item key={item.id} item={item} />
               ))}
             </div>
           </div>
@@ -413,7 +411,12 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             >
               <div>
                 <div className="w-full m-auto flex justify-center">
-                <Image src="/images/icons/success.svg" alt="success" width={1000} height={1000}/>
+                  <Image
+                    src="/images/icons/success.svg"
+                    alt="success"
+                    width={1000}
+                    height={1000}
+                  />
                 </div>
                 <div className="absolute top-2 right-2" onClick={reset}>
                   <MdClose size={"30"} />
@@ -431,20 +434,17 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
       ) : null}
     </>
   );
-}
+};
 export default Home;
 
-export const getStaticProps = async () => { 
-  const res = await axios.get('https://alidamdiyindustry.com/api/carsApi') 
-  
-  console.log(res);
-  
-  
-  const data = await res.data
-  
-  return { 
-   props: {
-    data: data.cars.cars
-   }
-  } 
- }
+export const getStaticProps = async () => {
+  const res = await axios.get("https://alidamdiyindustry.com/api/carsApi");
+
+  const data = await res.data;
+
+  return {
+    props: {
+      data: data.cars.cars,
+    },
+  };
+};
