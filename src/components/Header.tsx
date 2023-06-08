@@ -11,9 +11,9 @@ import Button from "../components/children/button";
 import { MdClose } from "react-icons/md";
 import { SearchInput } from "./children/SearchInput";
 
-interface HeaderProps {}
+interface HeaderProps { }
 
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC<HeaderProps> = ({ }) => {
   const router = useRouter();
   const { locale } = router;
   const [hide, setHide] = useState<boolean>(false);
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
               <IoMdClose color="white" size={15} />
             </button>
             <div className="h-fit flex flex-1 max-lg:flex-none items-center max-lg:items-start justify-center max-lg:mb-7"
-            onClick={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               <nav>
                 <ul className="flex max-lg:flex-col gap-7 max-2xl:gap-5 max-lg:gap-3">
@@ -103,7 +103,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
               </nav>
             </div>
             <div className="flex items-center justify-end gap-10 max-2xl:gap-5"
-            onClick={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               <div className="">
                 <select
@@ -191,18 +191,15 @@ const Header: React.FC<HeaderProps> = ({}) => {
           </div>
         </div>
       ) : null}
-      {
-        searchInp ?
-        <div className={
-          searchInp ? "w-full h-screen absolute top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in" : "w-full h-screen absolute -top-6 left-0 bg-[rgba(236,236,236,.8)] z-50"
-        }
-        onClick={reset}
-        >
-            <div className='w-full absolute top-6 ease-in duration-200'>
-               <SearchInput />  
-            </div>
-        </div> : null
+      <div className={
+        searchInp ? "w-full h-screen absolute top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in" : "w-full h-screen absolute -top-full left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
       }
+        onClick={reset}
+      >
+        <div className='w-full absolute top-6 ease-in duration-200'>
+          <SearchInput />
+        </div>
+      </div>
     </>
   );
 };
