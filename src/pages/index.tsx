@@ -11,11 +11,17 @@ import Link from "next/link";
 import { MdClose } from "react-icons/md";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
+import dynamic from "next/dynamic";
+const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 interface IMainProps {}
 const Home: React.FC<IMainProps> = ({ data }: any) => {
-  console.log(data);
+  // const [num, setNum] = useState(120);
+  const num = [120, 1200, 23]
+  // console.log(data);
 
   const arr = [
     {
@@ -79,7 +85,15 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 
   return (
     <>
-    <HeadMeta title={locale == 'ru' ? 'Alidamdiy - Главная' : locale == 'uz' ? 'Alidamdiy - Bosh sahifa' : 'Alidamdiy - Main'} />
+      <HeadMeta
+        title={
+          locale == "ru"
+            ? "Alidamdiy - Главная"
+            : locale == "uz"
+            ? "Alidamdiy - Bosh sahifa"
+            : "Alidamdiy - Main"
+        }
+      />
       <section className="relative">
         <div className="w-full h-full hidden max-sm:block">
           <Image
@@ -179,7 +193,10 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                       key={item.id}
                       className="px-6 leading-[115%] tracking-[-0.011em] last:border-0 border-r border-[#000]"
                     >
-                      <p key={item.id} className="py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#BFBFBF]">
+                      <p
+                        key={item.id}
+                        className="py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#BFBFBF]"
+                      >
                         {item.title}
                       </p>
                     </li>
@@ -209,7 +226,21 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             <div className="w-fit flex flex-col items-center justify-center">
               <div className="py-8 px-8 max-lg:px-5 border-b border-white">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                  120+
+                  {/* <CountUp start={80} end={120} duration={3} />+ */}
+                  <AnimatedNumbers
+                    includeComma
+                    animateToNumber={num[0]}
+                    // fontStyle={{ fontSize: 40 }}
+                    locale="en-US"
+                    configs={[
+                      { mass: 1, tension: 220, friction: 100 },
+                      { mass: 1, tension: 180, friction: 130 },
+                      { mass: 1, tension: 280, friction: 90 },
+                      { mass: 1, tension: 180, friction: 135 },
+                      { mass: 1, tension: 260, friction: 100 },
+                      { mass: 1, tension: 210, friction: 180 },
+                    ]}
+                  ></AnimatedNumbers>
                 </h3>
               </div>
               <div className="p-3 text-white">
@@ -222,7 +253,20 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             <div className="flex flex-col items-center justify-center">
               <div className="py-8 px-8 max-lg:px-5 border-b border-white">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                  1200+
+                <AnimatedNumbers
+                    includeComma
+                    animateToNumber={num[1]}
+                    // fontStyle={{ fontSize: 40 }}
+                    locale="en-US"
+                    configs={[
+                      { mass: 1, tension: 220, friction: 100 },
+                      { mass: 1, tension: 180, friction: 130 },
+                      { mass: 1, tension: 280, friction: 90 },
+                      { mass: 1, tension: 180, friction: 135 },
+                      { mass: 1, tension: 260, friction: 100 },
+                      { mass: 1, tension: 210, friction: 180 },
+                    ]}
+                  ></AnimatedNumbers>
                 </h3>
               </div>
               <div className="text-center p-3 text-white">
@@ -235,7 +279,19 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             <div className="flex flex-col items-center justify-center">
               <div className="py-8 px-8 max-lg:px-5 border-b border-white">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                  23
+                <AnimatedNumbers
+                    includeComma
+                    animateToNumber={num[2]}
+                    locale="en-US"
+                    configs={[
+                      { mass: 1, tension: 220, friction: 100 },
+                      { mass: 1, tension: 180, friction: 130 },
+                      { mass: 1, tension: 280, friction: 90 },
+                      { mass: 1, tension: 180, friction: 135 },
+                      { mass: 1, tension: 260, friction: 100 },
+                      { mass: 1, tension: 210, friction: 180 },
+                    ]}
+                  ></AnimatedNumbers>
                 </h3>
               </div>
               <div className="p-3 text-white">
@@ -440,7 +496,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const res = await axios.get("https://alidamdiyindustry.com/api/carsApi");
+  const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}`);
 
   const data = await res.data;
 

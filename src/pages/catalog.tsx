@@ -18,24 +18,16 @@ export interface ICarsProducts {
 }
 
 
-export const getStaticProps = async () => { 
-  const res = await axios.get("https://alidamdiyindustry.com/api/carsApi");
-  
-  console.log(res);
-  
-  
+export const getStaticProps = async () => {
+  const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}`);
   const data = await res.data
-  
-  return { 
+  return {
    props: {
     data2: data.cars.cars
    }
   } 
- }
-
+}
 const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
-  
-
   const translation = useContext<ItranslateData>(Context);
   const [data, setData] = useState<any>(data2);
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
