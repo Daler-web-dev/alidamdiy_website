@@ -1,9 +1,4 @@
 import React, { useContext, useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-import { Button, Slider } from "@mui/material";
-import { v4 as uuidv4 } from "uuid";
-
-import Products from "@/components/Products";
 import Item from "@/components/children/Item";
 import Search from "@/components/Search";
 import Image from "next/image";
@@ -22,7 +17,7 @@ export interface ICarsProducts {
 
 
 export const getStaticProps = async () => { 
-  const res = await axios.get('/api/carsApi') 
+  const res = await axios.get("https://alidamdiyindustry.com/api/carsApi");
   
   console.log(res);
   

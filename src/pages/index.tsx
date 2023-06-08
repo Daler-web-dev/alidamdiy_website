@@ -177,7 +177,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                       key={item.id}
                       className="px-6 leading-[115%] tracking-[-0.011em] last:border-0 border-r border-[#000]"
                     >
-                      <p className="py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#BFBFBF]">
+                      <p key={item.id} className="py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#BFBFBF]">
                         {item.title}
                       </p>
                     </li>
@@ -187,7 +187,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-[30px] max-lg:gap-[20px] mt-[45px]">
               {data.map((item: any) => (
-                <Item key={item} item={item} />
+                <Item key={item.id} item={item} />
               ))}
             </div>
           </div>

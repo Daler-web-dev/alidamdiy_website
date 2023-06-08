@@ -17,8 +17,6 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ item }) => {
   const [hide, setHide] = useState<boolean>(false);
-  console.log(item?.img[0]);
-  
   return (
     <Link
       href={`/${item?.id}`}

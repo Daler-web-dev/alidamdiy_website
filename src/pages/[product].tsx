@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import Image from "next/image";
-import  React, { useState } from "react";
+import  React, { useEffect, useState } from "react";
 import Description from "@/components/Description";
 import { MdClose } from "react-icons/md";
 import Context from "@/components/useTranslate";
@@ -10,7 +10,7 @@ import axios from "axios";
 export interface IAppProps {}
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const res = await fetch(`http://localhost:3000/api/carsApi`);
+  const res = await fetch(`https://alidamdiyindustry.com/api/carsApi`);
   const data = await res.json();
   return {
     props: {
@@ -22,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
 export default function Product({ data, query }: any) {
   const [arr, setArr] = useState<any>()
-  React.useEffect(() => {
+  useEffect(() => {
     data.map((i: any) => {
         if(i.id == query){
         setArr(i);
