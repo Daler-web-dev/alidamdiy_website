@@ -17,7 +17,7 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
 });
 
 const inter = Inter({ subsets: ["latin"] });
-interface IMainProps {}
+interface IMainProps { }
 const Home: React.FC<IMainProps> = ({ data }: any) => {
   // const [num, setNum] = useState(120);
   const num = [120, 1200, 23]
@@ -90,8 +90,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           locale == "ru"
             ? "Alidamdiy - Главная"
             : locale == "uz"
-            ? "Alidamdiy - Bosh sahifa"
-            : "Alidamdiy - Main"
+              ? "Alidamdiy - Bosh sahifa"
+              : "Alidamdiy - Main"
         }
       />
       <section className="relative">
@@ -204,7 +204,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 })}
               </ul>
             </div>
-            <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-[30px] max-lg:gap-[20px] mt-[45px]">
+            <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-7 max-xl:gap-4 mt-[45px]">
               {data.map((item: any) => (
                 <Item key={item.id} item={item} />
               ))}
@@ -253,7 +253,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             <div className="flex flex-col items-center justify-center">
               <div className="py-8 px-8 max-lg:px-5 border-b border-white">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                <AnimatedNumbers
+                  <AnimatedNumbers
                     includeComma
                     animateToNumber={num[1]}
                     // fontStyle={{ fontSize: 40 }}
@@ -279,7 +279,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             <div className="flex flex-col items-center justify-center">
               <div className="py-8 px-8 max-lg:px-5 border-b border-white">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                <AnimatedNumbers
+                  <AnimatedNumbers
                     includeComma
                     animateToNumber={num[2]}
                     locale="en-US"
@@ -373,22 +373,22 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
               {translation?.modal?.application}
             </h2>
-            <div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
+            <div className="flex max-sm:flex-col items-center gap-6 max-md:gap-4 max-sm:gap-3">
               <input
                 type="text"
                 placeholder={translation?.modal?.placeholder}
-                className="w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
               />
               <input
                 type="text"
-                className="w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
               />
             </div>
-            <div className="mt-8 flex items-center gap-9 max-xl:gap-5">
-              <div className="h-2/5">
+            <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
+              <div className="h-2/5 max-sm:w-full">
                 <Button>{translation?.modal?.btn}</Button>
               </div>
-              <div className="w-3/4">
+              <div className="w-3/4 max-sm:w-full">
                 <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
                   {translation?.modal?.text}
                 </p>
@@ -435,25 +435,25 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 <div className="absolute top-2 right-2" onClick={reset}>
                   <MdClose size={"30"} />
                 </div>
-                <div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
+                <div className="flex max-sm:flex-col items-center gap-6 max-md:gap-4 max-sm:gap-3">
                   <input
                     type="text"
                     placeholder={translation?.modal.placeholder}
-                    className="w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                    className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
                     name="name"
                   />
                   <input
                     type="text"
-                    className="w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                    className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
                     placeholder={translation?.modal.phoneNumber}
                     name="phone"
                   />
                 </div>
-                <div className="mt-8 flex items-center gap-9 max-xl:gap-5">
-                  <div className="h-2/5" onClick={() => setSuccess(true)}>
+                <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
+                  <div className="h-2/5 max-sm:w-full" onClick={() => setSuccess(true)}>
                     <Button>{translation?.modal.btn}</Button>
                   </div>
-                  <div className="w-3/4">
+                  <div className="w-3/4 max-sm:w-full">
                     <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
                       {translation?.modal.text}
                     </p>

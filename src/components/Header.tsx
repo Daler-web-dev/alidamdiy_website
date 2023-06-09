@@ -15,7 +15,7 @@ import SearchInput from "./children/SearchInput";
 
 interface HeaderProps { }
 
-const Header: React.FC<HeaderProps> = ({  }) => {
+const Header: React.FC<HeaderProps> = ({ }) => {
   const router = useRouter();
   const { locale } = router;
   const [hide, setHide] = useState<boolean>(false);
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({  }) => {
     setLocaleValue(locale)
   };
   const translation = useContext<ItranslateData>(Context);
-  
+
   return (
     <>
       <header className="w-full bg-[#BBBBBB]">
@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({  }) => {
             className={
               hide
                 ? "w-full max-lg:h-screen max-lg:fixed max-lg:right-0 max-lg:top-0 flex max-lg:flex-col justify-between items-center max-lg:justify-start pt-10 z-50 max-lg:backdrop-blur-md max-lg:bg-white/30 ease-in duration-200"
-                : "w-full max-lg:h-screen max-lg:fixed max-lg:right-full max-lg:top-0 flex max-lg:flex-col justify-between items-center z-50 max-lg:backdrop-blur-md max-lg:bg-white/30 ease-in duration-200"
+                : "w-full max-lg:h-screen max-lg:fixed max-lg:right-[200%] max-lg:top-0 flex max-lg:flex-col justify-between items-center z-50 max-lg:backdrop-blur-md max-lg:bg-white/30 ease-in duration-200"
             }
             onClick={() => setHide(false)}
           >
@@ -194,7 +194,7 @@ const Header: React.FC<HeaderProps> = ({  }) => {
         </div>
       ) : null}
       <div className={
-        searchInp ? "w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in" : "w-full h-screen absolute -top-full left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
+        searchInp ? "w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in" : "w-full h-screen absolute -top-[200%] left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
       }
         onClick={reset}
       >

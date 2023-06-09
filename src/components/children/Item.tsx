@@ -22,17 +22,17 @@ const Item: React.FC<ItemProps> = ({ item }) => {
       href={`/${item?.id}`}
       onMouseEnter={() => setHide(true)}
       onMouseLeave={() => setHide(false)}
-      className="relative rounded-[15px] ease-in duration-100 hover:shadow-[0_0_15px_#00000050] bg-white"
+      className="relative flex flex-col justify-between rounded-[15px] ease-in duration-100 hover:shadow-[0_0_15px_#00000050] bg-white"
     >
       <div className="px-[15px] py-2 text-[#474747]">
-        <h3 className="text-xl font-bold leading-[190%] tracking-[-0.011em]">
+        <h3 className="text-xl max-xl:text-lg font-bold leading-[190%] tracking-[-0.011em]">
           {item?.name || "Chevrolet Lacetti"}
         </h3>
         <p className="leading-[190%] tracking-[-0.011em]">
           {item?.type || "Хэтчбек"}
         </p>
       </div>
-      <div className="">
+      <div className="w-full">
         <Image
           className="w-full h-full object-cover"
           src={`/${item?.img[0]}`}
@@ -57,15 +57,14 @@ const Item: React.FC<ItemProps> = ({ item }) => {
           </p>
         </div>
         <div className="">
-          <p className="text-xl max-lg:text-base font-semibold leading-[190%] tracking-[-0.011em] text-[#FC0202]">
+          <p className="text-xl max-xl:text-sm max-md:text-base font-semibold leading-[190%] tracking-[-0.011em] text-[#FC0202]">
             {item?.price || 25}$/сутки
           </p>
         </div>
       </div>
       <div
-        className={`bg-white w-full rounded-b-[15px] px-[20px] pb-[17px] absolute top-[95%] left-0 z-10 shadow-[0_14px_15px_#00000050] ${
-          hide ? "block" : "hidden"
-        }`}
+        className={`bg-white w-full rounded-b-[15px] px-[20px] pb-[17px] absolute top-[95%] left-0 z-10 shadow-[0_14px_15px_#00000050] ${hide ? "block" : "hidden"
+          }`}
       >
         <div className="mb-[10px]">
           <ul>
