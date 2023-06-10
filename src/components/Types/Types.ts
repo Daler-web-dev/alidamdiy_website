@@ -26,4 +26,7 @@ export interface ItranslateData {
   productPage: {
     [key: string]: string;
   };
+  errors: {
+    [key: string]: string
+  }
 }

@@ -76,6 +76,10 @@ const uz = {
         text4: 'Transmissiya turi',
         successText: 'MUVAFFAQIYAT',
         successText2: "24 soat ichida qo'ng'iroqimizni kuting"
+    },
+    errors: {
+        NameMsg: "Ism to'ldirilishi kerak!",
+        NumMsg: "Telefon raqami to'ldirilishi shart!",
     }
 }
 export default uz;

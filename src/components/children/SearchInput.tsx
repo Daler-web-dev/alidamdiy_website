@@ -2,7 +2,7 @@ import axios from "axios";
 import { request } from "http";
 // import * as React from "react";
 import React, { useContext } from "react";
-import {  useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
 import Item from "./Item";
 import { SearchResult } from "./SearchResult";
@@ -12,7 +12,7 @@ import { ItranslateData } from "../Types/Types";
 
 export interface IAppProps { }
 
-  const SearchInput: React.FC<IAppProps> = ({ }) => {
+const SearchInput: React.FC<IAppProps> = ({ }) => {
   const [value, setValue] = useState<string>('')
   const [result, setResult] = useState([])
   const [arr, setArr] = useState<any>()
@@ -25,7 +25,7 @@ export interface IAppProps { }
 
   const filterData = () => {
     setResult(arr?.filter((i: any) => {
-      if(i.name.toLowerCase().includes(value.toLowerCase())){
+      if (i.name.toLowerCase().includes(value.toLowerCase())) {
         return i;
       } else {
         setHide(true)
@@ -48,25 +48,25 @@ export interface IAppProps { }
           </button>
         </div>
         {
-          value ? <div className="w-full bg-[#FFFFFF] px-3 py-3 mt-2 rounded-lg">
-          {
-            result.length > 0 ? result.map((i: any) => <SearchResult  key={i.id} item={i} />) : hide ?
-            <div className="mb-4">
-                 <div className="w-full px-24 py-6 flex justify-center mt-4">
-                   <Image
-                     width={100}
-                     height={100}
-                     alt="search"
-                     src="/images/search.png"
-                   />
-                 </div>
-                 <h1 className="text-center text-xl">
-                   {translation?.catalogPage.notFoundText}
-                 </h1>
-               </div>
-             : null
-          }
-      </div> : null
+          value ? <div className="w-full flex flex-col max-sm:gap-3 bg-[#FFFFFF] px-3 py-3 mt-2 rounded-lg">
+            {
+              result.length > 0 ? result.map((i: any) => <SearchResult key={i.id} item={i} />) : hide ?
+                <div className="mb-4">
+                  <div className="w-full px-24 py-6 flex justify-center mt-4">
+                    <Image
+                      width={100}
+                      height={100}
+                      alt="search"
+                      src="/images/search.png"
+                    />
+                  </div>
+                  <h1 className="text-center text-xl">
+                    {translation?.catalogPage.notFoundText}
+                  </h1>
+                </div>
+                : null
+            }
+          </div> : null
         }
       </div>
     </div>
