@@ -3,19 +3,19 @@ import * as React from "react";
 import { Controller, useForm } from "react-hook-form";
 
 export interface ISearch {
-	filteredData: any;
-	text: string,
-	typeOfCar: string,
+  filteredData: any;
+  text: string;
+  typeOfCar: string;
 }
 
 const Search: React.FC<ISearch> = ({ filteredData, text, typeOfCar }) => {
-	const {
-		register,
-		handleSubmit,
-		control,
-		formState: { errors },
-	} = useForm();
-	const submit = (data: any) => filteredData(data);
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
+  const submit = (data: any) => filteredData(data);
 
 	return (
 		<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">

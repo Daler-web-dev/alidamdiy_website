@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Item from "@/components/children/Item";
 import Button from "../components/children/button";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import { useRouter } from "next/router";
@@ -12,17 +12,19 @@ import { MdClose } from "react-icons/md";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
 import dynamic from "next/dynamic";
+import { IMaskInput } from "react-imask";
+import { Modal } from "@/components/Modal";
+import { InputMask } from "primereact/inputmask";
+import { useForm } from "react-hook-form";
+
 const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
   ssr: false,
 });
 
 const inter = Inter({ subsets: ["latin"] });
-interface IMainProps { }
+interface IMainProps {}
 const Home: React.FC<IMainProps> = ({ data }: any) => {
-  // const [num, setNum] = useState(120);
-  const num = [120, 1200, 23]
-  // console.log(data);
-
+  const num = [120, 1200, 23];
   const arr = [
     {
       id: 1,
@@ -50,14 +52,13 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     },
   ];
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
-  const sbmt = (e: any) => {
-    e.preventDefault();
-    const data: any = {};
-    let fr = new FormData(e.target);
-
-    fr.forEach((value, key) => {
-      data[key] = value;
-    });
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
+  const submit = (data: any) => {
     let msg = `Новая заявка! \n`;
     msg += `Имя: ${data?.name} \n`;
     msg += `Номер телефона: ${data?.phone} \n`;
@@ -68,6 +69,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
         text: msg,
       })
       .catch((err) => console.log(err));
+    setSuccess(true);
   };
   const router = useRouter();
   const { locale } = router;
@@ -75,7 +77,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   const [isShow, setIsShow] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const style1 =
-    "w-3/5 absolute max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
+    "w-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
   const animation =
     "w-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200 trnst2";
   const reset = () => {
@@ -83,6 +85,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setIsShow(false);
   };
 
+  const ref = useRef(null);
+  const inputRef = useRef(null);
   return (
     <>
       <HeadMeta
@@ -90,8 +94,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           locale == "ru"
             ? "Alidamdiy - Главная"
             : locale == "uz"
-              ? "Alidamdiy - Bosh sahifa"
-              : "Alidamdiy - Main"
+            ? "Alidamdiy - Bosh sahifa"
+            : "Alidamdiy - Main"
         }
       />
       <section className="relative">
@@ -373,51 +377,46 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
               {translation?.modal?.application}
             </h2>
-            <div className="flex max-sm:flex-col items-center gap-6 max-md:gap-4 max-sm:gap-3">
-              <input
-                type="text"
-                placeholder={translation?.modal?.placeholder}
-                className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-              />
-              <input
-                type="text"
-                className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-              />
-            </div>
-            <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
-              <div className="h-2/5 max-sm:w-full">
-                <Button>{translation?.modal?.btn}</Button>
+            <form action="" onSubmit={handleSubmit(submit)}>
+              <div className="flex max-sm:flex-col  gap-6 max-md:gap-4 max-sm:gap-3">
+                <input
+                  type="text"
+                  placeholder={translation?.modal.placeholder}
+                  className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                  {...register("name", { required: true })}
+                />
+                {errors?.name && (
+                  <p className="text-red-500">{translation.errors.NameMsg}</p>
+                )}
+                <InputMask
+                  mask="+999-(99)-999-99-99"
+                  className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                  unmask={true}
+                  placeholder={translation?.modal.phoneNumber}
+                  {...register("phone", { required: true })}
+                />
+                <div>
+                  {errors?.phone && (
+                    <p className="text-red-500">{translation.errors.NumMsg}</p>
+                  )}
+                </div>
               </div>
-              <div className="w-3/4 max-sm:w-full">
-                <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
-                  {translation?.modal?.text}
-                </p>
+              <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
+                <div
+                  className="h-2/5 max-sm:w-full"
+                >
+                  <Button>{translation?.modal?.btn}</Button>
+                </div>
+                <div className="w-3/4 max-sm:w-full">
+                  <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
+                    {translation?.modal?.text}
+                  </p>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
-
-      {/* <section>
-				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0">
-					<div className="mb-6">
-						<h2 className="max-md:text-center text-[64px] max-lg:text-5xl max-md:text-4xl max-sm:text-[32px] font-[MyFontSemiBold] font-bold leading-[105%] tracking-[-0.011em] text-[#E31E24]">
-							Наш офис
-						</h2>
-					</div>
-					<div className="w-full">
-						<div className="w-full h-[500px] rounded-[15px] overflow-hidden">
-							<iframe
-								className="w-full h-full"
-								src="https://yandex.uz/map-widget/v1/?ll=66.941788%2C39.659413&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgk3NzEyNzc5ODUSF0_Ku3piZWtpc3RvbiwgU2FtYXJxYW5kIgoNoPOFQhUbnh5C&sctx=ZAAAAAgCEAAaKAoSCW3jT1Q2IElAEQe0dAXbnkpAEhIJ5s%2B3BUt13D8RkkHuIkxRxD8iBgABAgMEBSgKOABA3lBIAWI6cmVsZXZfcmFua2luZ19oZWF2eV9yZWxldl9zZXJwX2Zvcm11bGE9MC42OmwzX2RjMTg5MjA3X2V4cGI7cmVsZXZfcmFua2luZ19oZWF2eV9yZWxldl93b3JsZF9mb3JtdWxhPTAuNzpsM19kYzE4OTIwN19leHBiOnJlbGV2X3JhbmtpbmdfaGVhdnlfcmVsZXZfbWFwc19mb3JtdWxhPTAuNjpsM19kYzE4OTIwN19leHBqAnV6nQHNzEw9oAEAqAEAvQH4HQUvwgEqlOSR%2FMQG1qSCw8wFtsnX2MgEmZWj3NsCqrvnqp4Fnaya%2F7oG05rFkZYE6gEA8gEA%2BAEAggIl0KHQsNC80LDRgNC60LDQvdC0INC%2B0LHQu9Cw0YHRgtC90LDRj4oCAJICBTEwMzM0mgIMZGVza3RvcC1tYXBz&sll=66.942032%2C39.661041&sspn=0.001092%2C0.000502&text=%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%BD%D0%B0%D1%8F&z=16.96"
-								width="560"
-								height="400"
-								frameBorder="1"
-							></iframe>
-						</div>
-					</div>
-				</div>
-			</section> */}
       {isShow ? (
         <div
           className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
@@ -427,67 +426,37 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             className={isShow ? animation : style1}
             onClick={(e) => e.stopPropagation()}
           >
-            <div>
-              <form action="" onSubmit={(e) => sbmt(e)}>
-                <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
-                  {translation?.modal.application}
-                </h2>
-                <div className="absolute top-2 right-2" onClick={reset}>
-                  <MdClose size={"30"} />
-                </div>
-                <div className="flex max-sm:flex-col items-center gap-6 max-md:gap-4 max-sm:gap-3">
-                  <input
-                    type="text"
-                    placeholder={translation?.modal.placeholder}
-                    className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-                    name="name"
-                  />
-                  <input
-                    type="text"
-                    className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-                    placeholder={translation?.modal.phoneNumber}
-                    name="phone"
-                  />
-                </div>
-                <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
-                  <div className="h-2/5 max-sm:w-full" onClick={() => setSuccess(true)}>
-                    <Button>{translation?.modal.btn}</Button>
-                  </div>
-                  <div className="w-3/4 max-sm:w-full">
-                    <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
-                      {translation?.modal.text}
-                    </p>
-                  </div>
-                </div>
-              </form>
-            </div>
+            <Modal reset={reset} setSuccess={setSuccess} />
           </div>
-          {success ? (
-            <div
-              className={isShow ? animation : style1}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div>
-                <div className="w-full m-auto flex justify-center">
-                  <Image
-                    src="/images/icons/success.svg"
-                    alt="success"
-                    width={110}
-                    height={110}
-                  />
-                </div>
-                <div className="absolute top-2 right-2" onClick={reset}>
-                  <MdClose size={"30"} />
-                </div>
-                <h1 className="text-6xl text-center mt-4">
-                  {translation?.productPage?.successText}
-                </h1>
-                <p className="text-center text-xl mt-4">
-                  {translation?.productPage?.successText2}
-                </p>
-              </div>
+        </div>
+      ) : null}
+      {success ? (
+        <div
+          className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
+          onClick={reset}
+        >
+          <div
+            className={isShow ? animation : style1}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-full m-auto flex justify-center">
+              <Image
+                src="/images/icons/success.svg"
+                alt="success"
+                width={110}
+                height={110}
+              />
             </div>
-          ) : null}
+            <div className="absolute top-2 right-2" onClick={reset}>
+              <MdClose size={"30"} />
+            </div>
+            <h1 className="text-6xl text-center mt-4">
+              {translation?.productPage?.successText}
+            </h1>
+            <p className="text-center text-xl mt-4">
+              {translation?.productPage?.successText2}
+            </p>
+          </div>
         </div>
       ) : null}
     </>

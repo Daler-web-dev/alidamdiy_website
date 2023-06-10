@@ -12,6 +12,7 @@ import { MdClose } from "react-icons/md";
 
 import axios from "axios";
 import SearchInput from "./children/SearchInput";
+import { Modal } from "./Modal";
 
 interface HeaderProps { }
 
@@ -137,17 +138,28 @@ const Header: React.FC<HeaderProps> = ({ }) => {
       </header>
       {isShow ? (
         <div
-          className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-50"
+          className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
           onClick={reset}
         >
           <div
             className={isShow ? animation : style1}
             onClick={(e) => e.stopPropagation()}
           >
-            {success ? (
+            <Modal reset={reset} setSuccess={setSuccess} />
+          </div>
+          {success ? (
+            <div
+              className={isShow ? animation : style1}
+              onClick={(e) => e.stopPropagation()}
+            >
               <div>
                 <div className="w-full m-auto flex justify-center">
-                  <Image src="/images/icons/success.svg" alt="success" width={110} height={110} />
+                  <Image
+                    src="/images/icons/success.svg"
+                    alt="success"
+                    width={110}
+                    height={110}
+                  />
                 </div>
                 <div className="absolute top-2 right-2" onClick={reset}>
                   <MdClose size={"30"} />
@@ -159,38 +171,8 @@ const Header: React.FC<HeaderProps> = ({ }) => {
                   {translation?.productPage?.successText2}
                 </p>
               </div>
-            ) : (
-              <div>
-                <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
-                  {translation?.modal.application}
-                </h2>
-                <div className="absolute top-2 right-2" onClick={reset}>
-                  <MdClose size={"30"} />
-                </div>
-                <div className="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
-                  <input
-                    type="text"
-                    placeholder={translation?.modal.placeholder}
-                    className="w-3/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-                  />
-                  <input
-                    type="text"
-                    className="w-2/5 px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-                  />
-                </div>
-                <div className="mt-8 flex items-center gap-9 max-xl:gap-5">
-                  <div className="h-2/5" onClick={() => setSuccess(true)}>
-                    <Button>{translation?.modal.btn}</Button>
-                  </div>
-                  <div className="w-3/4">
-                    <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
-                      {translation?.modal.text}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+            </div>
+          ) : null}
         </div>
       ) : null}
       <div className={

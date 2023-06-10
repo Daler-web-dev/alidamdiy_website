@@ -75,6 +75,10 @@ const eng = {
         text4: 'Transmission type',
         successText: 'SUCCESS',
         successText2: 'Expect our call within 24 hours'
+    },
+    errors: {
+        NameMsg: 'Name must be filled!',
+        NumMsg: 'Phone number must be filled!',
     }
 }
 
