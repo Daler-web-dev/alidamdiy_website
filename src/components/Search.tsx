@@ -36,7 +36,7 @@ const Search: React.FC<ISearch> = ({ filteredData, text, typeOfCar }) => {
 						</select>
 					</div>
 					<div className="flex max-sm:flex-col gap-20 max-xl:gap-10 max-sm:gap-5 items-center justify-between max-sm:items-end w-1/2 max-md:w-full">
-						<div className="w-full">
+						<div className="w-[95%]">
 							<div className="flex items-center justify-between">
 								<h1>От: 10</h1>
 								<h1>До: 100</h1>
