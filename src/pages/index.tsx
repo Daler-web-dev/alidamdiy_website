@@ -22,21 +22,21 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
 });
 
 const inter = Inter({ subsets: ["latin"] });
-interface IMainProps {}
+interface IMainProps { }
 const Home: React.FC<IMainProps> = ({ data }: any) => {
   const num = [120, 1200, 23];
   const arr = [
     {
       id: 1,
-      title: "Все",
+      title: "All",
     },
     {
       id: 2,
-      title: "Седаны",
+      title: "Sedan",
     },
     {
       id: 3,
-      title: "Хетчбэки",
+      title: "Hatchback",
     },
     {
       id: 4,
@@ -84,6 +84,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setSuccess(false);
     setIsShow(false);
   };
+  const [typeCar, setTypeCar] = useState<string>('All');
+  console.log(data);
 
   const ref = useRef(null);
   const inputRef = useRef(null);
@@ -94,8 +96,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           locale == "ru"
             ? "Alidamdiy - Главная"
             : locale == "uz"
-            ? "Alidamdiy - Bosh sahifa"
-            : "Alidamdiy - Main"
+              ? "Alidamdiy - Bosh sahifa"
+              : "Alidamdiy - Main"
         }
       />
       <section className="relative">
@@ -191,27 +193,33 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           <div className="">
             <div className="mt-12 flex items-center justify-center">
               <ul className="flex justify-between max-lg:overflow-auto max-lg:pb-2">
-                {arr.map((item: { id: number; title: string }) => {
-                  return (
-                    <li
-                      key={item.id}
-                      className="px-6 leading-[115%] tracking-[-0.011em] last:border-0 border-r border-[#000]"
-                    >
-                      <p
-                        key={item.id}
-                        className="py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#BFBFBF]"
-                      >
-                        {item.title}
-                      </p>
-                    </li>
-                  );
-                })}
+                {
+                  arr.map((item: { id: number; title: string }) => {
+                    return (
+                      <li onClick={() => setTypeCar(item.title)} key={item.id} className="px-6 leading-[115%] tracking-[-0.011em] last:border-0 border-r border-[#000]">
+                        <p key={item.id} className={typeCar === item.title ? "py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer bg-[#BFBFBF]" : "py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#d6d6d6]"}>
+                          {item.title}
+                        </p>
+                      </li>
+                    );
+                  })
+                }
               </ul>
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-7 max-xl:gap-4 mt-[45px]">
-              {data.map((item: any) => (
-                <Item key={item.id} item={item} />
-              ))}
+              {
+                data.map((item: any) => {
+                  if (typeCar == item.type) {
+                    return (
+                      <Item key={item.id} item={item} />
+                    )
+                  } else if (typeCar === 'All') {
+                    return (
+                      <Item key={item.id} item={item} />
+                    )
+                  }
+                })
+              }
             </div>
           </div>
         </div>
