@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
             <div className="max-lg:hidden block w-[170px] max-2xl:w-[150px] max-xl:w-[120px]">
               <Link href={"/"}>
                 <Image
-                  src={"/images/logo.png"}
+                  src={"/images/logo.svg"}
                   width={1000}
                   height={1000}
                   alt="logo"

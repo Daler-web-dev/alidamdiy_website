@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = () => {
       <footer className="w-full mt-[90px] max-lg:mt-20 max-md:mt-10 max-sm:mt-7 rounded-t-[16px] bg-[#BBBBBB]">
          <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 py-[70px] max-lg:py-[60px] flex max-md:flex-col items-start gap-20 max-lg:gap-14 max-md:gap-5 max-sm:gap-0">
             <div className="w-1/2 h-full flex max-md:justify-start max-md:mb-5">
-               <Image className="" src={'/images/logo.png'} width={391} height={105} alt="logo" />
+               <Image className="" src={'/images/logo.svg'} width={391} height={105} alt="logo" />
             </div>
             <div className="w-2/4 max-xl:w-3/5 max-lg:w-full">
                <nav className="grid grid-cols-3 max-sm:grid-cols-2 gap-10 max-md:gap-20 max-sm:gap-5">

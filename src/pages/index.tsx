@@ -40,15 +40,15 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     },
     {
       id: 4,
-      title: "Минивэны",
+      title: "Minivan",
     },
     {
       id: 5,
-      title: "Лимузины",
+      title: "Limousine",
     },
     {
       id: 6,
-      title: "Пикапы",
+      title: "Pickups",
     },
   ];
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
