@@ -1,5 +1,5 @@
-{
-  "cars": [
+
+ export const cars = [
     {
         "id": 1,
         "name": "Chevrolet Lacetti",
@@ -113,4 +113,3 @@
           }
       }
   ]
-}

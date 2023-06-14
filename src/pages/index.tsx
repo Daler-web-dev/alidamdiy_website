@@ -85,10 +85,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setIsShow(false);
   };
   const [typeCar, setTypeCar] = useState<string>('All');
-  console.log(data);
-
-  const ref = useRef(null);
-  const inputRef = useRef(null);
   return (
     <>
       <HeadMeta
@@ -479,7 +475,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      data: data.cars.cars,
+      data: data.cars,
     },
   };
 };
