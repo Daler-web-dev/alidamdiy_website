@@ -16,25 +16,16 @@ import { useForm } from "react-hook-form";
 export interface IAppProps {}
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/${query.product}`);
   const data = await res.json();
   return {
     props: {
-      data: data.cars.cars,
-      query: query.product,
+      data: data,
     },
   };
 };
 
-export default function Product({ data, query }: any) {
-  const [arr, setArr] = useState<any>();
-  useEffect(() => {
-    data.map((i: any) => {
-      if (i.id == query) {
-        setArr(i);
-      }
-    });
-  }, []);
+export default function Product({ data }: any) {
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
 
   const [isActive, setIsActive] = React.useState<string>("characteristic");
@@ -80,10 +71,10 @@ export default function Product({ data, query }: any) {
   const translation = React.useContext<ItranslateData>(Context);
   return (
     <>
-      <HeadMeta title={`Alidamdiy - ${arr?.name}`} />
+      <HeadMeta title={`Alidamdiy - ${data?.name}`} />
       <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
         <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2'>
-          {arr?.name}
+          {data?.name}
         </h1>
         <p className="max-md:text-sm mb-2 text-[#474747]">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum error,
@@ -96,7 +87,7 @@ export default function Product({ data, query }: any) {
                 alt="car"
                 width={1000}
                 height={1000}
-                src={`/${arr?.img[0]}`}
+                src={`/${data?.img[0]}`}
               />
             </div>
             <div className="w-full flex items-center justify-between gap-7 max-lg:gap-6 max-md:gap-4">
@@ -105,7 +96,7 @@ export default function Product({ data, query }: any) {
                   alt="car"
                   width={1000}
                   height={1000}
-                  src={`/${arr?.img[0]}`}
+                  src={`/${data?.img[0]}`}
                 />
               </div>
               <div className="w-full bg-[#D9D9D9] rounded-xl">
@@ -113,7 +104,7 @@ export default function Product({ data, query }: any) {
                   alt="car"
                   width={1000}
                   height={1000}
-                  src={`/${arr?.img[0]}`}
+                  src={`/${data?.img[0]}`}
                 />
               </div>
               <div className="w-full bg-[#D9D9D9] rounded-xl">
@@ -121,7 +112,7 @@ export default function Product({ data, query }: any) {
                   alt="car"
                   width={1000}
                   height={1000}
-                  src={`/${arr?.img[0]}`}
+                  src={`/${data?.img[0]}`}
                 />
               </div>
             </div>
@@ -254,7 +245,7 @@ export default function Product({ data, query }: any) {
             </button>
           </div>
           <hr className="border-0 h-px bg-[#858585] mb-4" />
-          <Description isActive={isActive} arr={arr} />
+          <Description isActive={isActive} arr={data} />
         </div>
       </div>
       <form action="" onSubmit={handleSubmit(submit)}>
