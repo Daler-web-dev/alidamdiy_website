@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 
-import Item from "@/components/children/Item";
-import Button from "../components/children/button";
-import { useContext, useEffect, useRef, useState } from "react";
+const Item = dynamic(() => import('@/components/children/Item'))
+const Button = dynamic(() => import('../components/children/button'))
+import { useContext, useState } from "react";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import { useRouter } from "next/router";
@@ -12,7 +12,6 @@ import { MdClose } from "react-icons/md";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
 import dynamic from "next/dynamic";
-import { IMaskInput } from "react-imask";
 import { Modal } from "@/components/Modal";
 import { InputMask } from "primereact/inputmask";
 import { useForm } from "react-hook-form";

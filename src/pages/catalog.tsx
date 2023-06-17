@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
-import Item from "@/components/children/Item";
-import Search from "@/components/Search";
+const Item = dynamic(() => import('@/components/children/Item'))
+const Search = dynamic(() => import('@/components/Search'))
 import Image from "next/image";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
 import { Router, useRouter } from "next/router";
+import dynamic from "next/dynamic";
 
 export interface ICarsProducts {
   id: string;
