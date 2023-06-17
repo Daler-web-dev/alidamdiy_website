@@ -1,16 +1,13 @@
 import { GetServerSideProps } from "next";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Description from "@/components/Description";
 import { MdClose } from "react-icons/md";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
-import { useRouter } from "next/router";
-import { Modal } from "@/components/Modal";
 import { InputMask } from "primereact/inputmask";
-import Button from "@/components/children/button";
 import { useForm } from "react-hook-form";
 
 export interface IAppProps {}
