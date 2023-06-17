@@ -11,7 +11,7 @@ const HeadMeta: React.FC<IHeadMeta> = ({ title }) => {
             <title>{title}</title>
             <meta
                 name="keywords"
-                content="Аренда автомобилей, Аренда автомобилей Самарканд, арендовать авто, арендовать машину Самарканд"
+                content="аренда автомобилей, аренда автомобилей самарканд, арендовать авто, арендовать машину самарканд, прокат машин, автопрокат, alidamdiy"
             />
             <meta
                 name="description"
@@ -21,6 +21,9 @@ const HeadMeta: React.FC<IHeadMeta> = ({ title }) => {
                 property="og:title"
                 content="Alidamdiyindustry.com — онлайн-аренда автомобилей в Самарканде | Арендовать машину онлайн в Самарканде."
             />
+            <meta name="robots" content="index, follow" />
+            <meta name="author" content="Alidamdiy" />
+            <meta name="google-site-verification" content="da3HAE5N-JeHaSqIZ8t-gKW8-mzjv0hedsgDXEpo2uc" />
             <link rel="icon" type="image/svg" href="images/logo2.svg" />
         </Head>
   );
