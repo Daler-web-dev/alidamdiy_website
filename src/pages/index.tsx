@@ -1,8 +1,6 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 
-const Item = dynamic(() => import('@/components/children/Item'))
-const Button = dynamic(() => import('../components/children/button'))
 import { useContext, useState } from "react";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
@@ -15,6 +13,7 @@ import dynamic from "next/dynamic";
 import { Modal } from "@/components/Modal";
 import { InputMask } from "primereact/inputmask";
 import { useForm } from "react-hook-form";
+import Item from "@/components/children/Item";
 
 const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
   ssr: false,
@@ -50,6 +49,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
       title: "Pickups",
     },
   ];
+  console.log(data);
+  
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
   const {
     register,
@@ -159,7 +160,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
               </div>
               <div className="flex gap-5">
                 <div onClick={() => setIsShow(true)}>
-                  <Button>{translation?.banner?.orderBtn}</Button>
+                  {/* <Button>{translation?.banner?.orderBtn}</Button> */}
+                  <button className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">{translation?.banner?.orderBtn}</button>
                 </div>
                 <Link href="/catalog">
                   <button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
@@ -203,22 +205,14 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-7 max-xl:gap-4 mt-[45px]">
               {
-                data.map((item: any) => {
-                  if (typeCar == item.type) {
-                    return (
-                      <Item key={item.id} item={item} />
-                    )
-                  } else if (typeCar === 'All') {
-                    return (
-                      <Item key={item.id} item={item} />
-                    )
-                  }
-                })
+                data.map((item: any) => <Item key={item.id} item={item} />)
               }
             </div>
           </div>
         </div>
       </section>
+
+
       <section className="bg-[#1E1E1E] mb-[63px] max-lg:mb-14 max-md:mb-[43px]">
         <div className="relative -top-20 w-full overflow-hidden py-6">
           <div className="relative right-4 w-[110%] py-10 max-sm:px-5 rotate-[-1.28deg] bg-[#E31E24]">
@@ -408,7 +402,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 <div
                   className="h-2/5 max-sm:w-full"
                 >
-                  <Button>{translation?.modal?.btn}</Button>
+                  <button className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">{translation?.modal?.btn}</button>
                 </div>
                 <div className="w-3/4 max-sm:w-full">
                   <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
@@ -420,6 +414,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           </div>
         </div>
       </section>
+      
       {isShow ? (
         <div
           className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
@@ -466,6 +461,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   );
 };
 export default Home;
+
 
 export const getStaticProps = async () => {
   const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}`);
