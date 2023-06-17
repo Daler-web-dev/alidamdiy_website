@@ -156,7 +156,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 <p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
                   {translation?.banner?.text2}
                 </p>
-                <p className="text-[#E31E24]">+998 91 123 32 33</p>
+                <a href="#" className="text-[#E31E24]">+998 91 123 32 33</a>
               </div>
               <div className="flex gap-5">
                 <div onClick={() => setIsShow(true)}>
