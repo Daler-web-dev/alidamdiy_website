@@ -66,7 +66,7 @@ const Search: React.FC<ISearch> = ({ filteredData, text, typeOfCar }) => {
 										aria-label="Temperature"
 										defaultValue={30}
 										valueLabelDisplay="auto"
-										step={10}
+										step={5}
 										marks
 										min={10}
 										max={100}

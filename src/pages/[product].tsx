@@ -1,16 +1,24 @@
 import { GetServerSideProps } from "next";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Description from "@/components/Description";
 import { MdClose } from "react-icons/md";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
-import { InputMask } from "primereact/inputmask";
+import InputMask from 'react-input-mask';
 import { useForm } from "react-hook-form";
-
-export interface IAppProps {}
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { useRouter } from "next/router";
+export interface IAppProps {
+   data: any
+}
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/${query.product}`);
@@ -22,18 +30,27 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   };
 };
 
-export default function Product({ data }: any) {
+export default function Product({ data }: IAppProps) {
+  
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
 
-  const [isActive, setIsActive] = React.useState<string>("characteristic");
+  const [isActive, setIsActive] = useState<string>("characteristic");
 
-  const [isShow, setIsShow] = React.useState<boolean>(false);
+  const [isShow, setIsShow] = useState<boolean>(false);
 
-  const [success, setSuccess] = React.useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
 
-  const [driverStatus, setDriverStatus] = React.useState<string>("ДА");
+  const [driverStatus, setDriverStatus] = useState<string>("ДА");
 
-  const [baggageStatus, setBaggageStatus] = React.useState<string>("ДА");
+  const [baggageStatus, setBaggageStatus] = useState<string>("ДА");
+  
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+
+  const price = driverStatus == 'ДА' ? data?.priceWithDriver : data?.priceWithoutDriver
+  
+
+  const router = useRouter()
+  console.log(router);
   const style1 =
     "w-3/5 fixed max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200 z-10";
   const animation =
@@ -45,21 +62,21 @@ export default function Product({ data }: any) {
     formState: { errors },
   } = useForm();
   const submit = (data: any) => {
-      let msg = `Новый заказ! \n`;
+    let msg = `Новый заказ! \n`;
     msg += `Имя: ${data?.name} \n`;
     msg += `Номер телефона: ${data?.phone} \n`;
     msg += `Тип машины: Орландо \n`;
     msg += `С водителем: ${driverStatus} \n`;
     msg += `С багажом: ${baggageStatus} \n`;
-    msg += `Стоимость: 250$ \n`;
-    axios
+    msg += `Стоимость: ${price}$ \n`;
+      axios
       .post(URL, {
         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
         parse_mode: "html",
         text: msg,
       })
       .catch((err) => console.log(err));
-      setSuccess(true)
+    setSuccess(true);
   };
   const reset = () => {
     setSuccess(false);
@@ -70,7 +87,7 @@ export default function Product({ data }: any) {
     <>
       <HeadMeta title={`Alidamdiy - ${data?.name}`} />
       <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
-        <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2'>
+        <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2' onClick={() => router.back()}>
           {data?.name}
         </h1>
         <p className="max-md:text-sm mb-2 text-[#474747]">
@@ -78,42 +95,115 @@ export default function Product({ data }: any) {
           mollitia
         </p>
         <div className="w-full flex max-lg:flex-col gap-8 justify-between">
-          <div className="w-1/2 max-lg:w-full">
-            <div className="w-full rounded-xl bg-[#D9D9D9] mb-8">
+        <div className="w-1/2 h-[600px] max-lg:w-full select-none flex flex-col gap-3">
+        <Swiper
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+        loop={true}
+        spaceBetween={10}
+        navigation={true}
+        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className="mySwiper2"
+      > 
+            <SwiperSlide>
+            <div className="w-full h-full rounded-xl bg-[#ffff] mb-8">
               <Image
                 alt="car"
                 width={1000}
                 height={1000}
-                src={`/${data?.img[0]}`}
+                src={`/${data?.img[1]}`}
               />
             </div>
-            <div className="w-full flex items-center justify-between gap-7 max-lg:gap-6 max-md:gap-4">
-              <div className="w-full bg-[#D9D9D9] rounded-xl">
-                <Image
-                  alt="car"
-                  width={1000}
-                  height={1000}
-                  src={`/${data?.img[0]}`}
-                />
-              </div>
-              <div className="w-full bg-[#D9D9D9] rounded-xl">
-                <Image
-                  alt="car"
-                  width={1000}
-                  height={1000}
-                  src={`/${data?.img[0]}`}
-                />
-              </div>
-              <div className="w-full bg-[#D9D9D9] rounded-xl">
-                <Image
-                  alt="car"
-                  width={1000}
-                  height={1000}
-                  src={`/${data?.img[0]}`}
-                />
-              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8">
+              <Image
+                alt="car"
+                width={1000}
+                height={1000}
+                src={`/${data?.img[2]}`}
+              />
             </div>
-          </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8">
+              <Image
+                alt="car"
+                width={1000}
+                height={1000}
+                src={`/${data?.img[3]}`}
+              />
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8">
+              <Image
+                alt="car"
+                width={1000}
+                height={1000}
+                src={`/${data?.img[4]}`}
+              />
+            </div>
+            </SwiperSlide>
+      </Swiper>
+      <Swiper
+      onSwiper={setThumbsSwiper}
+      spaceBetween={10}
+      slidesPerView={4}
+      freeMode={true}
+      watchSlidesProgress={true}
+      modules={[FreeMode, Navigation, Thumbs]}
+      className="mySwiper"
+      >
+        <div className="w-full flex items-center justify-between gap-7 max-lg:gap-6 max-md:gap-4">
+            <SwiperSlide> 
+              <div className="w-full h-full bg-[#D9D9D9] rounded-xl">
+                <Image
+                  alt="car"
+                  width={1000}
+                  height={1000}
+                  src={`/${data?.img[1]}`}
+                  className="object-cover"
+                />
+              </div>
+              </SwiperSlide>
+            <SwiperSlide> 
+            <div className="w-full h-full bg-[#D9D9D9] rounded-xl object-cover">
+                <Image
+                  alt="car"
+                  width={1000}
+                  height={1000}
+                  src={`/${data?.img[2]}`}
+                  className="object-cover"
+                />
+              </div>
+              </SwiperSlide>
+            <SwiperSlide> 
+            <div className="w-full h-full bg-[#D9D9D9] rounded-xl">
+                <Image
+                  alt="car"
+                  width={1000}
+                  height={1000}
+                  src={`/${data?.img[3]}`}
+                />
+              </div>
+              </SwiperSlide>
+            <SwiperSlide> 
+            <div className="w-full h-full bg-[#D9D9D9] rounded-xl">
+                <Image
+                  alt="car"
+                  width={1000}
+                  height={1000}
+                  src={`/${data?.img[4]}`}
+                />
+              </div>
+              </SwiperSlide>
+            </div>
+      </Swiper>
+                </div>
           <div className="w-1/2 max-lg:w-full">
             <h1 className='text-3xl font-["MyFont"] mb-4'>
               {translation?.productPage?.parametres}
@@ -132,7 +222,8 @@ export default function Product({ data }: any) {
                 >
                   {translation?.productPage?.yesText}
                 </button>
-                <button
+                {
+                  data?.priceWithoutDriver == 0 ? null : <button
                   className="px-3 py-2 rounded-md"
                   onClick={() => setDriverStatus("НЕТ")}
                   type="button"
@@ -142,6 +233,7 @@ export default function Product({ data }: any) {
                 >
                   {translation?.productPage?.noText}
                 </button>
+                }
               </div>
             </div>
             <hr className="border-0 h-px bg-[#858585] mb-4" />
@@ -178,16 +270,9 @@ export default function Product({ data }: any) {
                   className="px-4 py-2 bg-[#D9D9D9] rounded-md"
                   type="button"
                 >
-                  6
+                  { data?.countOfPlaces }
                 </button>
               </div>
-            </div>
-            <hr className="border-0 h-px bg-[#858585] mb-4" />
-            <div className="w-full flex items-center justify-between mb-2">
-              <h1>{translation?.productPage?.fuel}</h1>
-              <button className="h-9 rounded-md" type="button">
-                15 л/км
-              </button>
             </div>
             <hr className="border-0 h-px bg-[#858585] mb-4" />
             <div className="w-full flex items-center justify-between mb-2">
@@ -195,7 +280,7 @@ export default function Product({ data }: any) {
                 {translation?.productPage?.price}:
               </h1>
               <h1 className='font-["MyFont"] text-3xl max-lg:text-2xl max-md:text-xl text-[#E31E24]'>
-                250$
+                { driverStatus === 'ДА' ? data?.priceWithDriver : data?.priceWithoutDriver }$
               </h1>
             </div>
             <hr className="border-0 h-px bg-[#858585]" />
@@ -256,79 +341,81 @@ export default function Product({ data }: any) {
               onClick={(e) => e.stopPropagation()}
             >
               <div>
-                  <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
-                    {translation?.modal.application}
-                  </h2>
-                  <div className="absolute top-2 right-2" onClick={reset}>
-                    <MdClose size={"30"} />
+                <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
+                  {translation?.modal.application}
+                </h2>
+                <div className="absolute top-2 right-2" onClick={reset}>
+                  <MdClose size={"30"} />
+                </div>
+                <div className="flex max-sm:flex-col  gap-6 max-md:gap-4 max-sm:gap-3">
+                  <input
+                    type="text"
+                    placeholder={translation?.modal.placeholder}
+                    className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                    {...register("name", { required: true })}
+                  />
+                  {errors?.name && (
+                    <p className="text-red-500">{translation.errors.NameMsg}</p>
+                  )}
+                  <InputMask
+                    mask="+\9\98-(99)-999-99-99"
+                    className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                    placeholder={translation?.modal.phoneNumber}
+                    {...register("phone", { required: true })}
+                  />
+                  <div>
+                    {errors?.phone && (
+                      <p className="text-red-500">
+                        {translation.errors.NumMsg}
+                      </p>
+                    )}
                   </div>
-                  <div className="flex max-sm:flex-col  gap-6 max-md:gap-4 max-sm:gap-3">
-          <input
-            type="text"
-            placeholder={translation?.modal.placeholder}
-            className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-            {...register("name", { required: true})}
-          />
-          {errors?.name && <p className="text-red-500">{translation.errors.NameMsg}</p>}
-          <InputMask
-            mask="+999-(99)-999-99-99"
-            className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-            unmask={true}
-            placeholder={translation?.modal.phoneNumber}
-            {...register("phone", { required: true })}
-          />
+                </div>
+                <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
+                  <div className="h-2/5 max-sm:w-full">
+                    <button
+                      type="submit"
+                      className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white" >
+                      {translation?.modal.btn}
+                    </button>
+                  </div>
+                  <div className="w-3/4 max-sm:w-full">
+                    <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
+                      {translation?.modal.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+      </form>
+      {success ? (
+        <div
+          className={isShow ? animation : style1}
+          onClick={(e) => e.stopPropagation()}
+        >
           <div>
-          {errors?.phone && <p className="text-red-500">{translation.errors.NumMsg}</p>}
+            <div className="w-full m-auto flex justify-center">
+              <Image
+                src="/images/icons/success.svg"
+                alt="success"
+                width={110}
+                height={110}
+              />
+            </div>
+            <div className="absolute top-2 right-2" onClick={reset}>
+              <MdClose size={"30"} />
+            </div>
+            <h1 className="text-6xl text-center mt-4">
+              {translation?.productPage?.successText}
+            </h1>
+            <p className="text-center text-xl mt-4">
+              {translation?.productPage?.successText2}
+            </p>
           </div>
         </div>
-                  <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
-                    <div
-                      className="h-2/5 max-sm:w-full"
-                    >
-                      <button
-                        type="submit"
-                        className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white"
-                      >
-                        {translation?.modal.btn}
-                      </button>
-                    </div>
-                    <div className="w-3/4 max-sm:w-full">
-                      <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
-                        {translation?.modal.text}
-                      </p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        ) : null}
-        </form>
-        {success ? (
-          <div
-            className={isShow ? animation : style1}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div>
-              <div className="w-full m-auto flex justify-center">
-                <Image
-                  src="/images/icons/success.svg"
-                  alt="success"
-                  width={110}
-                  height={110}
-                />
-              </div>
-              <div className="absolute top-2 right-2" onClick={reset}>
-                <MdClose size={"30"} />
-              </div>
-              <h1 className="text-6xl text-center mt-4">
-                {translation?.productPage?.successText}
-              </h1>
-              <p className="text-center text-xl mt-4">
-                {translation?.productPage?.successText2}
-              </p>
-            </div>
-          </div>
-        ) : null}
+      ) : null}
     </>
   );
 }

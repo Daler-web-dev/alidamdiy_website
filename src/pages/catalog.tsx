@@ -19,8 +19,6 @@ export interface ICarsProducts {
   img: string;
   desc: string;
 }
-
-
 export const getStaticProps = async () => {
   const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}`);
   const data = await res.data
@@ -36,7 +34,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
     setData(
       data2.filter((item: any) => {
-        if (arg.type === item.type && arg.range == item.price) {
+        if (arg.type === item.type && arg.range == item.priceWithDriver) {
           return item;
         } else if (arg.type === "All") {
           return item;
@@ -46,7 +44,6 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
   };
   const router = useRouter();
   const { locale } = router;
-
   return (
     <>
     <HeadMeta title={locale == 'ru' ? 'Alidamdiy - Каталог' : locale == 'uz' ? 'Alidamdiy - Katalog' : 'Alidamdiy - Catalog'} />

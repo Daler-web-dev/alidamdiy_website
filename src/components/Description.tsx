@@ -1,6 +1,7 @@
 import * as React from "react";
 import Context from "./useTranslate";
 import { ItranslateData } from "./Types/Types";
+import { useRouter } from "next/router";
 
 export interface IDescription {
   isActive: string;
@@ -9,6 +10,8 @@ export interface IDescription {
 
 const Description: React.FC<IDescription> = ({ isActive, arr }) => {
   const translation = React.useContext<ItranslateData>(Context);
+  const router = useRouter();
+  const { locale } = router;
   const desc = [
     {
       title: translation?.productPage.Engine,
@@ -60,11 +63,11 @@ const Description: React.FC<IDescription> = ({ isActive, arr }) => {
       ) : (
         <div className="w-full mt-8 h-fit bg-[#fffffe] max-xl:overflow-y-scroll">
           <div className="w-full h-14 bg-[#f5f5f5] py-4">
-            <h1 className="text-center">Chevrolet Orlando</h1>
+            <h1 className="text-center">{arr.name}</h1>
           </div>
           <div className="w-full h-fit py-4 px-4">
             <h1>
-              { arr.description }
+              { locale == 'ru' ? arr.descriptionRU : locale == 'uz' ? arr.descriptionRU : arr.descriptionEN }
             </h1>
           </div>
         </div>

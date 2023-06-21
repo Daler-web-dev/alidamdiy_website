@@ -8,7 +8,7 @@ interface ItemProps {
     id?: number;
     name?: string;
     type?: string;
-    price?: number;
+    priceWithDriver?: number;
     img: any;
     desc?: string;
     countOfPlaces: number;
@@ -53,12 +53,12 @@ const Item: React.FC<ItemProps> = ({ item }) => {
             />
           </div>
           <p className="leading-[190%] tracking-[-0.011em] text-[#474747]">
-            {item?.countOfPlaces} места
+            {item?.countOfPlaces} мест
           </p>
         </div>
         <div className="">
           <p className="text-xl max-xl:text-sm max-md:text-base font-semibold leading-[190%] tracking-[-0.011em] text-[#FC0202]">
-            {item?.price || 25}$/сутки
+            {item?.priceWithDriver || 25}$/сутки
           </p>
         </div>
       </div>

@@ -24,7 +24,7 @@ const uz = {
         num: 'Biz raqamlarda',
         cars: 'Mavjud avtomobillar soni',
         rentedCars: '1 yilga ijaraga olingan mashinalar',
-        count: 'Kontragentlar soni',
+        count: 'Turistik xizmatlar taqdim etiladi',
         text: "Qiziqarli sarguzashtga borishga tayyormisiz? Bizning kompaniyamiz sayohatlar uchun maxsus mo'ljallangan ijara mashinalarining keng assortimentini taklif etadi!"
     },
     questions: {

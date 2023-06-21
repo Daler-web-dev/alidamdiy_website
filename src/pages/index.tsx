@@ -11,7 +11,7 @@ import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
 import dynamic from "next/dynamic";
 import { Modal } from "@/components/Modal";
-import { InputMask } from "primereact/inputmask";
+import InputMask from 'react-input-mask';
 import { useForm } from "react-hook-form";
 import Item from "@/components/children/Item";
 
@@ -22,7 +22,7 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
 const inter = Inter({ subsets: ["latin"] });
 interface IMainProps { }
 const Home: React.FC<IMainProps> = ({ data }: any) => {
-  const num = [120, 1200, 23];
+  const num = [40, 952, 70];
   const arr = [
     {
       id: 1,
@@ -49,7 +49,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
       title: "Pickups",
     },
   ];
-  console.log(data);
   
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
   const {
@@ -73,6 +72,9 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   };
   const router = useRouter();
   const { locale } = router;
+  router.query.name = 'Main'
+  console.log(router);
+  
   const translation = useContext<ItranslateData>(Context);
   const [isShow, setIsShow] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
@@ -156,11 +158,10 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 <p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
                   {translation?.banner?.text2}
                 </p>
-                <a href="#" className="text-[#E31E24]">+998 91 123 32 33</a>
+                <a href="#" className="text-[#E31E24]">+998(55)701-11-99</a>
               </div>
               <div className="flex gap-5">
                 <div onClick={() => setIsShow(true)}>
-                  {/* <Button>{translation?.banner?.orderBtn}</Button> */}
                   <button className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">{translation?.banner?.orderBtn}</button>
                 </div>
                 <Link href="/catalog">
@@ -205,7 +206,13 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-7 max-xl:gap-4 mt-[45px]">
               {
-                data.map((item: any) => <Item key={item.id} item={item} />)
+                data.map((item: any) => {
+                  if(item.type == typeCar){
+                    return <Item key={item.id} item={item} />
+                  } else if(typeCar == 'All'){
+                    return <Item key={item.id} item={item} />
+                  }
+                })
               }
             </div>
           </div>
@@ -225,13 +232,11 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
         <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5">
           <div className="flex flex-wrap justify-center items-center gap-20 max-xl:gap-10 max-md:gap-[35px]">
             <div className="w-fit flex flex-col items-center justify-center">
-              <div className="py-8 px-8 max-lg:px-5 border-b border-white">
+              <div className="py-8 px-8 max-lg:px-5 border-b border-white select-none">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
-                  {/* <CountUp start={80} end={120} duration={3} />+ */}
                   <AnimatedNumbers
                     includeComma
                     animateToNumber={num[0]}
-                    // fontStyle={{ fontSize: 40 }}
                     locale="en-US"
                     configs={[
                       { mass: 1, tension: 220, friction: 100 },
@@ -252,7 +257,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             </div>
 
             <div className="flex flex-col items-center justify-center">
-              <div className="py-8 px-8 max-lg:px-5 border-b border-white">
+              <div className="py-8 px-8 max-lg:px-5 border-b border-white select-none">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
                   <AnimatedNumbers
                     includeComma
@@ -278,7 +283,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             </div>
 
             <div className="flex flex-col items-center justify-center">
-              <div className="py-8 px-8 max-lg:px-5 border-b border-white">
+              <div className="py-8 px-8 max-lg:px-5 border-b border-white select-none">
                 <h3 className="text-center text-8xl font-semibold leading-[115%] tracking-[-0.011em] text-[#E31E24]">
                   <AnimatedNumbers
                     includeComma
@@ -386,12 +391,11 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                   <p className="text-red-500">{translation.errors.NameMsg}</p>
                 )}
                 <InputMask
-                  mask="+999-(99)-999-99-99"
-                  className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-                  unmask={true}
-                  placeholder={translation?.modal.phoneNumber}
-                  {...register("phone", { required: true })}
-                />
+                    mask="+\9\98-(99)-999-99-99"
+                    className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                    placeholder={translation?.modal.phoneNumber}
+                    {...register("phone", { required: true })}
+                  />
                 <div>
                   {errors?.phone && (
                     <p className="text-red-500">{translation.errors.NumMsg}</p>
@@ -465,9 +469,7 @@ export default Home;
 
 export const getStaticProps = async () => {
   const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}`);
-
   const data = await res.data;
-
   return {
     props: {
       data: data.cars,

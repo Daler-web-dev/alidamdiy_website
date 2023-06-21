@@ -23,7 +23,7 @@ const eng = {
     statistics: {
         num: 'We are in numbers',
         cars: 'Available number of cars',
-        rentedCars: 'Rented cars for 1 year',
+        rentedCars: 'Tourism services provided',
         count: 'Number of counterparties'
     },
     questions: {
