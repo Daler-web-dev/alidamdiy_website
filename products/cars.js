@@ -228,4 +228,42 @@ export const cars = [
             "transmission": "MT6"
           }
       },
+      {
+        "id": 7,
+        "name": "Mercedes-Benz S-class (W221)",
+        "type": "Sedan",
+        "priceWithDriver": 120,
+        "priceWithoutDriver": 0,
+        "img": [
+          "images/Cars/benz-main.png",
+          "images/Cars/benz.jpeg",
+          "images/Cars/Mercedes-Benz-S-Class.png",
+          "images/Cars/mercedes-benz-inside.jpg",
+          "images/Cars/mercedes-benz.jpg",
+      ],
+      "descriptionEN": "The Mercedes-Benz S-Class W221 is a luxury sedan that offers an exceptional driving experience. It features a sleek and elegant design with a powerful engine that provides impressive performance. The interior is spacious and comfortable, with high-quality materials and advanced technology. The S-Class W221 offers a smooth and refined ride, with excellent handling and a range of safety features. With its luxurious amenities and attention to detail, the Mercedes-Benz S-Class W221 is the epitome of automotive excellence.",
+        "descriptionRU": "Mercedes-Benz S-Class W221 - это роскошный седан, который предлагает исключительный опыт вождения. Он имеет изящный и элегантный дизайн с мощным двигателем, обеспечивающим впечатляющую производительность. Интерьер просторный и комфортный, с использованием высококачественных материалов и передовых технологий. S-Class W221 обеспечивает плавную и изысканную поездку, отличную управляемость и ряд функций безопасности. С роскошными удобствами и вниманием к деталям, Mercedes-Benz S-Class W221 является воплощением автомобильного совершенства.",
+        "descriptionUZ": "Mercedes-Benz S-Class W221 - bu raqamli sedan, hayratlanadigan haydovchi tajribasi taklif qiladi. U kuchli motor bilan joylashtirilgan yorqin va zarif dizayn, impresionli ishlanishni ta'minlaydi. Interer keng va qulay, yuqori sifatli materiallardan foydalanish va yuqori texnologiyalarni o'z ichiga oladi. S-Class W221 yumshoq va zarif sayohat, ajoyib boshqaruv va himoya xususiyatlari bilan ta'minlaydi. O'zining ilovali imkoniyatlar va tafsilotlarga e'tibor berish bilan, Mercedes-Benz S-Class W221 avtomobil ajoyibligining namunasi.",
+        "countOfPlaces": 4,
+        "withDriver": true,
+        "carInfo":
+          {
+            "engine":
+              {
+                  "ruTitle": "V6",
+                  "uzTitle": "V6",
+                  "engTitle": "V6"
+              },
+            "engine2": 
+              {
+                  "ruTitle": "3 цилиндра",
+                  "uzTitle": "3 silindrli",
+                  "engTitle": "3 cylinders"
+              },
+            "volume": "2987",
+            "powerSpeed": "258/190/3600",
+            "torque": " 620/2400",
+            "transmission": "АКПП"
+          }
+      }
 ]
