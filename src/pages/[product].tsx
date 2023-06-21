@@ -98,10 +98,6 @@ export default function Product({ data }: IAppProps) {
         <div className="w-full flex max-lg:flex-col gap-8 justify-between">
         <div className="w-1/2 h-[600px] max-lg:w-full select-none flex flex-col gap-3">
         <Swiper
-        style={{
-          // "--swiper-navigation-color": "#fff",
-          // "--swiper-pagination-color": "#fff",
-        }}
         loop={true}
         spaceBetween={10}
         navigation={true}

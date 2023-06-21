@@ -31,6 +31,7 @@ export const getStaticProps = async () => {
 const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
   const translation = useContext<ItranslateData>(Context);
   const [data, setData] = useState<any>(data2);
+  
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
     setData(
       data2.filter((item: any) => {

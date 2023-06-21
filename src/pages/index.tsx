@@ -73,7 +73,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   const router = useRouter();
   const { locale } = router;
   router.query.name = 'Main'
-  console.log(router);
+  console.log(data);
   
   const translation = useContext<ItranslateData>(Context);
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -206,7 +206,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-7 max-xl:gap-4 mt-[45px]">
               {
-                data.map((item: any) => {
+                data?.map((item: any) => {
                   if(item.type == typeCar){
                     return <Item key={item.id} item={item} />
                   } else if(typeCar == 'All'){
