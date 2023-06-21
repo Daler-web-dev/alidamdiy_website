@@ -11,7 +11,7 @@ import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
 import dynamic from "next/dynamic";
 import { Modal } from "@/components/Modal";
-import InputMask from 'react-input-mask';
+import InputMask from "react-input-mask";
 import { useForm } from "react-hook-form";
 import Item from "@/components/children/Item";
 
@@ -20,7 +20,7 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
 });
 
 const inter = Inter({ subsets: ["latin"] });
-interface IMainProps { }
+interface IMainProps {}
 const Home: React.FC<IMainProps> = ({ data }: any) => {
   const num = [40, 952, 70];
   const arr = [
@@ -49,7 +49,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
       title: "Pickups",
     },
   ];
-  
+
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
   const {
     register,
@@ -72,9 +72,9 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   };
   const router = useRouter();
   const { locale } = router;
-  router.query.name = 'Main'
-  console.log(router);
-  
+  router.query.name = "Main";
+  console.log(data);
+
   const translation = useContext<ItranslateData>(Context);
   const [isShow, setIsShow] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
@@ -86,7 +86,12 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setSuccess(false);
     setIsShow(false);
   };
-  const [typeCar, setTypeCar] = useState<string>('All');
+  const [typeCar, setTypeCar] = useState<string>("All");
+  const { isFallback } = useRouter();
+
+  if (isFallback) {
+    return <h1>Fallback</h1>;
+  }
   return (
     <>
       <HeadMeta
@@ -94,8 +99,8 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           locale == "ru"
             ? "Alidamdiy - Главная"
             : locale == "uz"
-              ? "Alidamdiy - Bosh sahifa"
-              : "Alidamdiy - Main"
+            ? "Alidamdiy - Bosh sahifa"
+            : "Alidamdiy - Main"
         }
       />
       <section className="relative">
@@ -158,11 +163,15 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 <p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
                   {translation?.banner?.text2}
                 </p>
-                <a href="#" className="text-[#E31E24]">+998(55)701-11-99</a>
+                <a href="#" className="text-[#E31E24]">
+                  +998(55)701-11-99
+                </a>
               </div>
               <div className="flex gap-5">
                 <div onClick={() => setIsShow(true)}>
-                  <button className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">{translation?.banner?.orderBtn}</button>
+                  <button className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">
+                    {translation?.banner?.orderBtn}
+                  </button>
                 </div>
                 <Link href="/catalog">
                   <button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
@@ -191,34 +200,40 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           <div className="">
             <div className="mt-12 flex items-center justify-center">
               <ul className="flex justify-between max-lg:overflow-auto max-lg:pb-2">
-                {
-                  arr.map((item: { id: number; title: string }) => {
-                    return (
-                      <li onClick={() => setTypeCar(item.title)} key={item.id} className="px-6 leading-[115%] tracking-[-0.011em] last:border-0 border-r border-[#000]">
-                        <p key={item.id} className={typeCar === item.title ? "py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer bg-[#BFBFBF]" : "py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#d6d6d6]"}>
-                          {item.title}
-                        </p>
-                      </li>
-                    );
-                  })
-                }
+                {arr.map((item: { id: number; title: string }) => {
+                  return (
+                    <li
+                      onClick={() => setTypeCar(item.title)}
+                      key={item.id}
+                      className="px-6 leading-[115%] tracking-[-0.011em] last:border-0 border-r border-[#000]"
+                    >
+                      <p
+                        key={item.id}
+                        className={
+                          typeCar === item.title
+                            ? "py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer bg-[#BFBFBF]"
+                            : "py-2 px-[19px] rounded-[5px] ease-in duration-100 cursor-pointer hover:bg-[#d6d6d6]"
+                        }
+                      >
+                        {item.title}
+                      </p>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className="w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 gap-7 max-xl:gap-4 mt-[45px]">
-              {
-                data.map((item: any) => {
-                  if(item.type == typeCar){
-                    return <Item key={item.id} item={item} />
-                  } else if(typeCar == 'All'){
-                    return <Item key={item.id} item={item} />
-                  }
-                })
-              }
+              {data?.map((item: any) => {
+                if (item.type == typeCar) {
+                  return <Item key={item.id} item={item} />;
+                } else if (typeCar == "All") {
+                  return <Item key={item.id} item={item} />;
+                }
+              })}
             </div>
           </div>
         </div>
       </section>
-
 
       <section className="bg-[#1E1E1E] mb-[63px] max-lg:mb-14 max-md:mb-[43px]">
         <div className="relative -top-20 w-full overflow-hidden py-6">
@@ -391,11 +406,11 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                   <p className="text-red-500">{translation.errors.NameMsg}</p>
                 )}
                 <InputMask
-                    mask="+\9\98-(99)-999-99-99"
-                    className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
-                    placeholder={translation?.modal.phoneNumber}
-                    {...register("phone", { required: true })}
-                  />
+                  mask="+\9\98-(99)-999-99-99"
+                  className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                  placeholder={translation?.modal.phoneNumber}
+                  {...register("phone", { required: true })}
+                />
                 <div>
                   {errors?.phone && (
                     <p className="text-red-500">{translation.errors.NumMsg}</p>
@@ -403,10 +418,10 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 </div>
               </div>
               <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
-                <div
-                  className="h-2/5 max-sm:w-full"
-                >
-                  <button className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">{translation?.modal?.btn}</button>
+                <div className="h-2/5 max-sm:w-full">
+                  <button className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white">
+                    {translation?.modal?.btn}
+                  </button>
                 </div>
                 <div className="w-3/4 max-sm:w-full">
                   <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
@@ -418,7 +433,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           </div>
         </div>
       </section>
-      
+
       {isShow ? (
         <div
           className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
@@ -465,7 +480,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   );
 };
 export default Home;
-
 
 export const getStaticProps = async () => {
   const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}`);

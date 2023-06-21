@@ -31,6 +31,13 @@ export const getStaticProps = async () => {
 const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
   const translation = useContext<ItranslateData>(Context);
   const [data, setData] = useState<any>(data2);
+  const router = useRouter();
+  const { locale, isFallback } = router;
+  // const { isFallback } = useRouter();
+  if (isFallback) {
+    return <h1>Fallback</h1>;
+  }
+  
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
     setData(
       data2.filter((item: any) => {
@@ -42,8 +49,6 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
       })
     );
   };
-  const router = useRouter();
-  const { locale } = router;
   return (
     <>
     <HeadMeta title={locale == 'ru' ? 'Alidamdiy - Каталог' : locale == 'uz' ? 'Alidamdiy - Katalog' : 'Alidamdiy - Catalog'} />
@@ -61,6 +66,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
           <div className="flex flex-col gap-3">
             <h1 className="text-white font-['MyFont'] text-4xl max-lg:text-3xl max-md:text-2xl">
               {translation?.catalogPage.mainText}
+              
             </h1>
             <h1 className="text-white text-xl max-md:text-sm">
               {translation?.catalogPage.linkText}

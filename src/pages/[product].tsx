@@ -47,7 +47,7 @@ export default function Product({ data }: IAppProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   const price = driverStatus == 'ДА' ? data?.priceWithDriver : data?.priceWithoutDriver
-  
+  const name = data?.name
 
   const router = useRouter()
   console.log(router);
@@ -62,13 +62,14 @@ export default function Product({ data }: IAppProps) {
     formState: { errors },
   } = useForm();
   const submit = (data: any) => {
-    let msg = `Новый заказ! \n`;
-    msg += `Имя: ${data?.name} \n`;
-    msg += `Номер телефона: ${data?.phone} \n`;
-    msg += `Тип машины: Орландо \n`;
-    msg += `С водителем: ${driverStatus} \n`;
-    msg += `С багажом: ${baggageStatus} \n`;
-    msg += `Стоимость: ${price}$ \n`;
+    let msg = `🆕 Новый заказ! \n`;
+    msg += `👨 Имя клиента: ${data?.name} \n`;
+    msg += `📞 Номер телефона: ${data?.phone} \n\n`;
+    msg += `📋 Данные машины👇: \n`;
+    msg += `🚘 Марка машины: ${name} \n`;
+    msg += `👨‍🦰 С водителем: ${driverStatus} \n`;
+    msg += `🧳 С багажом: ${baggageStatus} \n`;
+    msg += `💰 Стоимость: ${price}$ \n`;
       axios
       .post(URL, {
         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
@@ -97,10 +98,6 @@ export default function Product({ data }: IAppProps) {
         <div className="w-full flex max-lg:flex-col gap-8 justify-between">
         <div className="w-1/2 h-[600px] max-lg:w-full select-none flex flex-col gap-3">
         <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
         loop={true}
         spaceBetween={10}
         navigation={true}
