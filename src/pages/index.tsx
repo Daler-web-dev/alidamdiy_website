@@ -72,7 +72,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   };
   const router = useRouter();
   const { locale } = router;
-  router.query.name = "Main";
   console.log(data);
 
   const translation = useContext<ItranslateData>(Context);
@@ -200,7 +199,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           <div className="">
             <div className="mt-12 flex items-center justify-center">
               <ul className="flex justify-between max-lg:overflow-auto max-lg:pb-2">
-                {arr.map((item: { id: number; title: string }) => {
+                {arr?.map((item: { id: number; title: string }) => {
                   return (
                     <li
                       onClick={() => setTypeCar(item.title)}

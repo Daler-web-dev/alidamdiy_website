@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 // const Item = dynamic(() => import('@/components/children/Item'))
 // const Search = dynamic(() => import('@/components/Search'))
 import Image from "next/image";
@@ -30,14 +30,17 @@ export const getStaticProps = async () => {
 }
 const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
   const translation = useContext<ItranslateData>(Context);
-  const [data, setData] = useState<any>(data2);
+  const [data, setData] = useState<any>();
+  useEffect(() => {
+    setData(data2)
+  }, [])
   const router = useRouter();
   const { locale, isFallback } = router;
   // const { isFallback } = useRouter();
   if (isFallback) {
     return <h1>Fallback</h1>;
   }
-  console.log(data2);
+  console.log(data);
   
   
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
@@ -81,7 +84,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
         text={translation?.catalogPage.btn}
         typeOfCar={translation?.catalogPage.typeOfCar}
       />
-      {!data.length ? (
+      {!data?.length ? (
         <>
           <div className="w-full px-24 py-6 flex justify-center mt-4">
             <Image
