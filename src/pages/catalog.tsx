@@ -37,6 +37,8 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
   if (isFallback) {
     return <h1>Fallback</h1>;
   }
+  console.log(data2);
+  
   
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
     setData(
@@ -95,7 +97,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
         </>
       ) : null}
       <div className="container m-auto grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[30px] max-lg:gap-5 mt-[45px] px-24 max-xl:px-14 max-lg:px-5">
-        {data.map((i: any) => (
+        {data?.map((i: any) => (
           <Item key={i.id} item={i} />
         ))}
       </div>
