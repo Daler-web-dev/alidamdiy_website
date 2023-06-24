@@ -93,5 +93,4 @@ const Search: React.FC<ISearch> = ({ filteredData, text, typeOfCar }) => {
     </div>
   );
 };
-
 export default Search;

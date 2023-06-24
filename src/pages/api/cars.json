@@ -1,4 +1,5 @@
-export const cars = [
+{
+  "cars": [
     {
         "id": 1,
         "name": "Chevrolet Gentra",
@@ -87,7 +88,7 @@ export const cars = [
           "images/Cars/vito.jpg",
           "images/Cars/vito-salon.jpg",
           "images/Cars/vito-salon2.jpg",
-          "images/Cars/vito-salon3.jpg",
+          "images/Cars/vito-salon3.jpg"
       ],
       "descriptionEN": "Mercedes Vita is a luxury car that combines elegance, sportiness, and cutting-edge technology. It features a sleek and aerodynamic design, with smooth lines and a distinctive front grille. The interior is crafted with premium materials and offers a comfortable and luxurious driving experience. The car is equipped with advanced safety features and innovative technology, including a high-resolution touchscreen display, voice control, and a state-of-the-art sound system. With powerful performance and precise handling, the Mercedes Vita delivers a thrilling driving experience.",
         "descriptionRU": "Mercedes Vita - это роскошный автомобиль, который сочетает в себе элегантность, спортивность и передовые технологии. Он имеет стильный и аэродинамичный дизайн с плавными линиями и характерной передней решеткой. Интерьер выполнен из высококачественных материалов и предлагает комфортабельное и роскошное вождение. Автомобиль оснащен передовыми системами безопасности и инновационной технологией, включая сенсорный дисплей высокого разрешения, голосовое управление и современную аудиосистему. Благодаря мощным характеристикам и точному управлению, Mercedes Vita доставляет захватывающие ощущения от вождения.",
@@ -110,7 +111,7 @@ export const cars = [
               },
             "volume": "2792л",
             "powerSpeed": "174 (128) / 6000",
-            "torque": "	237 (24) / 3200",
+            "torque": "237 (24) / 3200",
             "transmission": "AKPP"
           }
       },
@@ -125,7 +126,7 @@ export const cars = [
           "images/Cars/carnival.jpg",
           "images/Cars/carnival2.jpg",
           "images/Cars/carnival-inside.jpg",
-          "images/Cars/carnival-inside2.jpg",
+          "images/Cars/carnival-inside2.jpg"
       ],
       "descriptionEN": "The Kia Carnival is a minivan manufactured by Kia Motors. It offers spacious seating for up to eight passengers and is known for its comfortable and versatile interior. The Carnival features a sleek and modern design, with a wide grille and stylish headlights. It is equipped with advanced safety features such as blind-spot detection, lane-keeping assist, and rearview camera. The engine options vary, but typically include a powerful V6 engine that provides ample performance and smooth driving experience. The Kia Carnival is a reliable and family-friendly vehicle, perfect for long trips and daily commuting.",
         "descriptionRU": "Kia Carnival - это минивэн, производимый компанией Kia Motors. Он предлагает просторные сидения для восьми пассажиров и известен своим комфортным и универсальным интерьером. Carnival имеет элегантный и современный дизайн, с широкой решеткой и стильными фарами. Он оснащен передовыми системами безопасности, такими как система контроля слепых зон, помощник удержания полосы и камера заднего вида. Варианты двигателя могут различаться, но обычно включают мощный V6-двигатель, который обеспечивает достаточную производительность и плавную поездку. Kia Carnival - надежный и подходящий для семейных поездок автомобиль, идеально подходящий для дальних поездок и ежедневных поездок.",
@@ -163,7 +164,7 @@ export const cars = [
           "images/Cars/captiva4.jpg",
           "images/Cars/captiva1.jpg",
           "images/Cars/captiva4-inside.jpg",
-          "images/Cars/captiva-inside2.jpg",
+          "images/Cars/captiva-inside2.jpg"
       ],
       "descriptionEN": "The Chevrolet Captiva 4 is an SUV manufactured by Chevrolet. It offers a stylish and modern design, with sleek lines and a bold front grille. The Captiva 4 provides comfortable seating for up to seven passengers and has a spacious interior with ample cargo space. It is equipped with advanced safety features, such as electronic stability control, anti-lock brakes, and multiple airbags. The Captiva 4 is powered by a range of efficient engines, providing good fuel economy and a smooth driving experience. With its versatile features and reliable performance, the Chevrolet Captiva 4 is a popular choice for those seeking a practical and stylish SUV.",
         "descriptionRU": "Chevrolet Captiva 4 - это внедорожник, производимый компанией Chevrolet. Он предлагает стильный и современный дизайн, с гладкими линиями и смелой передней решеткой. Captiva 4 обеспечивает комфортные сидения для семи пассажиров и имеет просторный интерьер с достаточным пространством для грузов. Он оснащен передовыми системами безопасности, такими как электронная система стабилизации, антиблокировочные тормоза и множеством подушек безопасности. Captiva 4 оснащен различными эффективными двигателями, обеспечивающими хорошую экономию топлива и плавную поездку. C его универсальными характеристиками и надежной производительностью Chevrolet Captiva 4 является популярным выбором для тех, кто ищет практичный и стильный внедорожник.",
@@ -201,7 +202,7 @@ export const cars = [
           "images/Cars/toyota.jpg",
           "images/Cars/toyota-inside.jpg",
           "images/Cars/toyota-inside2.jpg",
-          "images/Cars/Inside-Land Cruiser.jpeg",
+          "images/Cars/Inside-Land Cruiser.jpeg"
       ],
       "descriptionEN": "The Chevrolet Captiva 4 is an SUV manufactured by Chevrolet. It offers a stylish and modern design, with sleek lines and a bold front grille. The Captiva 4 provides comfortable seating for up to seven passengers and has a spacious interior with ample cargo space. It is equipped with advanced safety features, such as electronic stability control, anti-lock brakes, and multiple airbags. The Captiva 4 is powered by a range of efficient engines, providing good fuel economy and a smooth driving experience. With its versatile features and reliable performance, the Chevrolet Captiva 4 is a popular choice for those seeking a practical and stylish SUV.",
         "descriptionRU": "Chevrolet Captiva 4 - это внедорожник, производимый компанией Chevrolet. Он предлагает стильный и современный дизайн, с гладкими линиями и смелой передней решеткой. Captiva 4 обеспечивает комфортные сидения для семи пассажиров и имеет просторный интерьер с достаточным пространством для грузов. Он оснащен передовыми системами безопасности, такими как электронная система стабилизации, антиблокировочные тормоза и множеством подушек безопасности. Captiva 4 оснащен различными эффективными двигателями, обеспечивающими хорошую экономию топлива и плавную поездку. C его универсальными характеристиками и надежной производительностью Chevrolet Captiva 4 является популярным выбором для тех, кто ищет практичный и стильный внедорожник.",
@@ -236,10 +237,10 @@ export const cars = [
         "priceWithoutDriver": 0,
         "img": [
           "images/Cars/benz-main.png",
-          "images/Cars/benz.jpeg",
-          "images/Cars/Mercedes-Benz-S-Class.png",
+          "images/Cars/benz.jpg",
+          "images/Cars/Mercedes-Benz-S.jpeg",
           "images/Cars/mercedes-benz-inside.jpg",
-          "images/Cars/mercedes-benz.jpg",
+          "images/Cars/merc.jpeg"
       ],
       "descriptionEN": "The Mercedes-Benz S-Class W221 is a luxury sedan that offers an exceptional driving experience. It features a sleek and elegant design with a powerful engine that provides impressive performance. The interior is spacious and comfortable, with high-quality materials and advanced technology. The S-Class W221 offers a smooth and refined ride, with excellent handling and a range of safety features. With its luxurious amenities and attention to detail, the Mercedes-Benz S-Class W221 is the epitome of automotive excellence.",
         "descriptionRU": "Mercedes-Benz S-Class W221 - это роскошный седан, который предлагает исключительный опыт вождения. Он имеет изящный и элегантный дизайн с мощным двигателем, обеспечивающим впечатляющую производительность. Интерьер просторный и комфортный, с использованием высококачественных материалов и передовых технологий. S-Class W221 обеспечивает плавную и изысканную поездку, отличную управляемость и ряд функций безопасности. С роскошными удобствами и вниманием к деталям, Mercedes-Benz S-Class W221 является воплощением автомобильного совершенства.",
@@ -277,7 +278,7 @@ export const cars = [
           "images/Cars/viano3.jpeg",
           "images/Cars/viano1.jpeg",
           "images/Cars/viano-inside.jpeg",
-          "images/Cars/viano2.jpeg",
+          "images/Cars/viano2.jpeg"
       ],
       "descriptionEN": "Mercedes Viano is a luxury multi-purpose vehicle (MPV) produced by the German automaker Mercedes-Benz. It offers a spacious and comfortable interior with seating for up to eight passengers. The Viano features a sleek and stylish design, with a modern and aerodynamic body shape. It is equipped with advanced technology and safety features, such as a touchscreen infotainment system, leather seats, multiple airbags, and driver-assist systems. The Viano is powered by a range of efficient diesel and petrol engines, providing both power and fuel economy. Overall, the Mercedes Viano offers a luxurious and practical driving experience.",
         "descriptionRU": "Mercedes Viano - это роскошный многоцелевой автомобиль (MPV), производимый немецким автопроизводителем Mercedes-Benz. Он предлагает просторный и комфортабельный интерьер с возможностью размещения до восьми пассажиров. Viano имеет элегантный и стильный дизайн с современной и аэродинамической формой кузова. Он оснащен передовыми технологиями и системами безопасности, такими как сенсорная система развлечений, кожаные сиденья, множественные подушки безопасности и системы помощи водителю. Viano оснащен диапазоном эффективных дизельных и бензиновых двигателей, обеспечивающих мощность и экономичность топлива. В целом, Mercedes Viano предлагает роскошный и практичный опыт вождения.",
@@ -305,3 +306,4 @@ export const cars = [
           }
         }
 ]
+}

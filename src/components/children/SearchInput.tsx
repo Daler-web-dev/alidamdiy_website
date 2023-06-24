@@ -20,7 +20,7 @@ const SearchInput: React.FC<IAppProps> = ({ }) => {
   const translation = useContext<ItranslateData>(Context);
   useEffect(() => {
     axios.get(`${process.env.NEXT_PUBLIC_URL}`)
-      .then(res => setArr(res.data.cars))
+      .then(res => setArr(res.data.cars.cars))
   }, [])
 
   const filterData = () => {

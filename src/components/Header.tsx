@@ -126,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
                   defaultValue={localeValue}
                   style={{ width: 100 }}
                   value={localeValue}
-                  onChange={(e) => changeLang(e)}
+                  onChange={(e: any) => changeLang(e)}
                   options={[
                     { value: "ru", label: (
                       <span className="flex items-center gap-1">

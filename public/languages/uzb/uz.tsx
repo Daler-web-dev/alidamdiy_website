@@ -80,6 +80,9 @@ const uz = {
     errors: {
         NameMsg: "Ism to'ldirilishi kerak!",
         NumMsg: "Telefon raqami to'ldirilishi shart!",
+    },
+    map: {
+        adress: "Bizning manzil - O‘zbekiston ko‘chasi, 41-uy"
     }
 }
 export default uz;
