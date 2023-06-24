@@ -24,7 +24,7 @@ export const getStaticProps = async () => {
 	const data = await res.data;
 	return {
 		props: {
-			data2: data.cars,
+			data2: data.cars.cars,
 		},
 	};
 };

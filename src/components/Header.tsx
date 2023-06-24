@@ -9,21 +9,21 @@ import { ItranslateData } from "./Types/Types";
 import { useContext, useState } from "react";
 import Button from "../components/children/button";
 import { MdClose } from "react-icons/md";
-
+import { Select } from "antd";
 import axios from "axios";
 import SearchInput from "./children/SearchInput";
 import { Modal } from "./Modal";
 
-interface HeaderProps { }
+interface HeaderProps {}
 
-const Header: React.FC<HeaderProps> = ({ }) => {
+const Header: React.FC<HeaderProps> = ({}) => {
   const router = useRouter();
   const { locale } = router;
   const [hide, setHide] = useState<boolean>(false);
   const [isShow, setIsShow] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
-  const [searchInp, setSearchInp] = useState<boolean>(false)
-  const [localeValue, setLocaleValue] = useState<any>(locale)
+  const [searchInp, setSearchInp] = useState<boolean>(false);
+  const [localeValue, setLocaleValue] = useState<any>(locale);
   const style1 =
     "w-3/5 absolute max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
   const animation =
@@ -31,13 +31,15 @@ const Header: React.FC<HeaderProps> = ({ }) => {
   const reset = () => {
     setSuccess(false);
     setIsShow(false);
-    setSearchInp(false)
+    setSearchInp(false);
   };
   const changeLang = (e: any) => {
-    const locale = e.target.value;
+    const locale = e;
+    // console.log(e);
+    
 
     router.push("/", "/", { locale });
-    setLocaleValue(locale)
+    setLocaleValue(locale);
   };
   const translation = useContext<ItranslateData>(Context);
 
@@ -57,7 +59,10 @@ const Header: React.FC<HeaderProps> = ({ }) => {
               </Link>
             </div>
             <div className="flex gap-5 max-sm:gap-2">
-              <button className="w-fit h-fit p-3 max-sm:p-2 rounded-md bg-[#E31E24]" onClick={() => setSearchInp(true)}>
+              <button
+                className="w-fit h-fit p-3 max-sm:p-2 rounded-md bg-[#E31E24]"
+                onClick={() => setSearchInp(true)}
+              >
                 <BiSearch color="white" size={15} />
               </button>
             </div>
@@ -88,38 +93,58 @@ const Header: React.FC<HeaderProps> = ({ }) => {
             >
               <IoMdClose color="white" size={15} />
             </button>
-            <div className="h-fit flex flex-1 max-lg:flex-none items-center max-lg:items-start justify-center max-lg:mb-7"
+            <div
+              className="h-fit flex flex-1 max-lg:flex-none items-center max-lg:items-start justify-center max-lg:mb-7"
               onClick={(e) => e.stopPropagation()}
             >
               <nav>
                 <ul className="flex max-lg:flex-col gap-7 max-2xl:gap-5 max-lg:gap-3">
-                  <li className="font-medium max-lg:text-2xl text-[#474747]" >
-                    <Link href={"/catalog"} onClick={() => setHide(false)}>{translation.header.catalog}</Link>
+                  <li className="font-medium max-lg:text-2xl text-[#474747]">
+                    <Link href={"/catalog"} onClick={() => setHide(false)}>
+                      {translation.header.catalog}
+                    </Link>
                   </li>
-                  <li className="font-medium max-lg:text-2xl  text-[#474747]" >
-                    <Link href={"#"} onClick={() => setHide(false)}>{translation?.header?.drivers}</Link>
+                  <li className="font-medium max-lg:text-2xl  text-[#474747]">
+                    <Link href={"#"} onClick={() => setHide(false)}>
+                      {translation?.header?.drivers}
+                    </Link>
                   </li>
-                  <li className="font-medium max-lg:text-2xl text-[#474747]" >
-                    <Link href={"#"} onClick={() => setHide(false)}>{translation?.header?.company}</Link>
+                  <li className="font-medium max-lg:text-2xl text-[#474747]">
+                    <Link href={"#"} onClick={() => setHide(false)}>
+                      {translation?.header?.company}
+                    </Link>
                   </li>
                 </ul>
               </nav>
             </div>
-            <div className="flex items-center justify-end gap-10 max-2xl:gap-5"
+            <div
+              className="flex items-center justify-end gap-10 max-2xl:gap-5"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="">
-                <select
-                  className="font-medium uppercase bg-transparent"
-                  name="lang"
-                  value={localeValue}
-                  onChange={(e) => changeLang(e)}
+              <div className="px-1 py-1 rounded-[5px] hover:shadow-[0_0_10px_#E31E24] selectBoi bg-[#E31E24]">
+                <Select
                   defaultValue={localeValue}
-                >
-                  <option value="ru">Ru</option>
-                  <option value="uz">Uz</option>
-                  <option value="en">En</option>
-                </select>
+                  style={{ width: 100 }}
+                  value={localeValue}
+                  onChange={(e: any) => changeLang(e)}
+                  options={[
+                    { value: "ru", label: (
+                      <span className="flex items-center gap-1">
+                      <img src="/Images/Flags/russia.svg" alt="russia" className="w-[20px]" /> {"RU"}
+                      </span>
+                    ) },
+                    { value: "uz", label: (
+                      <span className="flex items-center gap-1">
+                      <img src="/Images/Flags/uzb.png" alt="uzb" className="w-[20px]" /> {"UZ"}
+                      </span>
+                    ) },
+                    { value: "en", label: (
+                      <span className="flex items-center gap-1">
+                      <img src="/Images/Flags/usa.png" alt="usa" className="w-[20px]" /> {"USA"}
+                      </span>
+                    ) },
+                  ]}
+                />
               </div>
               <div className="" onClick={() => setIsShow(true)}>
                 <Button>{translation?.header?.orderBtn}</Button>
@@ -175,12 +200,15 @@ const Header: React.FC<HeaderProps> = ({ }) => {
           ) : null}
         </div>
       ) : null}
-      <div className={
-        searchInp ? "w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in" : "w-full h-screen absolute -top-[200%] left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
-      }
+      <div
+        className={
+          searchInp
+            ? "w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
+            : "w-full h-screen absolute -top-[200%] left-0 bg-[rgba(236,236,236,.8)] z-50 duration-200 ease-in"
+        }
         onClick={reset}
       >
-        <div className='w-full absolute top-6 ease-in duration-200'>
+        <div className="w-full absolute top-6 ease-in duration-200">
           <SearchInput />
         </div>
       </div>

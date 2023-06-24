@@ -15,27 +15,27 @@ const Description: React.FC<IDescription> = ({ isActive, arr }) => {
   const desc = [
     {
       title: translation?.productPage.Engine,
-      value: arr?.carInfo.engine.ruTitle,
+      value: arr?.carInfo?.engine.ruTitle,
     },
     {
       title: translation?.productPage.count,
-      value: arr?.carInfo.engine2.ruTitle,
+      value: arr?.carInfo?.engine2.ruTitle,
     },
     {
       title: translation?.productPage.text,
-      value: arr?.carInfo.volume,
+      value: arr?.carInfo?.volume,
     },
     {
       title: translation?.productPage.text2,
-      value: arr?.carInfo.powerSpeed,
+      value: arr?.carInfo?.powerSpeed,
     },
     {
       title: translation?.productPage.text3,
-      value: arr?.carInfo.torque,
+      value: arr?.carInfo?.torque,
     },
     {
       title: translation?.productPage.text4,
-      value: arr?.carInfo.transmission,
+      value: arr?.carInfo?.transmission,
     },
   ];
   return (

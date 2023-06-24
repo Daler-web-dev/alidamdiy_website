@@ -42,7 +42,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     },
     {
       id: 5,
-      title: "Limousine",
+      title: "Сrossover",
     },
     {
       id: 6,
@@ -72,7 +72,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   };
   const router = useRouter();
   const { locale } = router;
-  router.query.name = "Main";
   console.log(data);
 
   const translation = useContext<ItranslateData>(Context);
@@ -200,7 +199,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           <div className="">
             <div className="mt-12 flex items-center justify-center">
               <ul className="flex justify-between max-lg:overflow-auto max-lg:pb-2">
-                {arr.map((item: { id: number; title: string }) => {
+                {arr?.map((item: { id: number; title: string }) => {
                   return (
                     <li
                       onClick={() => setTypeCar(item.title)}
@@ -434,6 +433,38 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
         </div>
       </section>
 
+      <section>
+        <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0 max-lg:pt-20">
+          <div className="flex max-md:flex-col gap-2">
+            <div className="flex w-3/5 max-md:w-full h-full gap-2">
+              <div className="w-60 max-xl:w-40 max-md:w-full h-72 max-xl:h-48 max-md:h-80" style={{
+                backgroundImage: `url("/images/licenze1.png")`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                objectFit: 'contain'
+              }}>
+              </div>
+              <div className="w-60 max-md:w-full max-xl:w-48 max-xl:h-48 max-md:h-80" style={{
+                backgroundImage: `url("/images/licenze2.png")`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                objectFit: 'contain'
+              }}>
+              </div>
+            </div>
+            
+            <div className="w-1/2 max-md:w-full">
+              <iframe
+              src="https://yandex.uz/map-widget/v1/?ll=66.954045%2C39.646820&mode=whatshere&whatshere%5Bpoint%5D=66.953648%2C39.646765&whatshere%5Bzoom%5D=17&z=19.6"
+              className="w-full"
+              height="420"
+              frameBorder="1"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {isShow ? (
         <div
           className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
@@ -486,7 +517,7 @@ export const getStaticProps = async () => {
   const data = await res.data;
   return {
     props: {
-      data: data.cars,
+      data: data.cars.cars,
     },
   };
 };

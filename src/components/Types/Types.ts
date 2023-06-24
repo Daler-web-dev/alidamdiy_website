@@ -28,5 +28,8 @@ export interface ItranslateData {
   };
   errors: {
     [key: string]: string
+  },
+  map: {
+    [key: string]: string
   }
 }

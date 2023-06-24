@@ -79,6 +79,9 @@ const eng = {
     errors: {
         NameMsg: 'Name must be filled!',
         NumMsg: 'Phone number must be filled!',
+    },
+    map: {
+        adress: 'Our adress - Uzbekistan street 41'
     }
 }
 

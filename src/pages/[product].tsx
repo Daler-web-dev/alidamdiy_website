@@ -17,20 +17,30 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { useRouter } from "next/router";
 export interface IAppProps {
-   data: any
+   data: any, 
+   query: number
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/${query.product}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}`);
   const data = await res.json();
   return {
     props: {
-      data: data,
+      data: data.cars.cars,
+      query: query.product
     },
   };
 };
 
-export default function Product({ data }: IAppProps) {
+export default function Product({ data, query }: IAppProps) {
+  const [arr, setArr] = useState<any>();
+  useEffect(() => {
+    data.map((i: any) => {
+      if (i.id == query) {
+        setArr(i);
+      }
+    });
+  }, []);
   
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
 
@@ -46,8 +56,8 @@ export default function Product({ data }: IAppProps) {
   
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
-  const price = driverStatus == 'ДА' ? data?.priceWithDriver : data?.priceWithoutDriver
-  const name = data?.name
+  const price = driverStatus == 'ДА' ? arr?.priceWithDriver : arr?.priceWithoutDriver
+  const name = arr?.name
 
   const router = useRouter()
   console.log(router);
@@ -63,8 +73,8 @@ export default function Product({ data }: IAppProps) {
   } = useForm();
   const submit = (data: any) => {
     let msg = `🆕 Новый заказ! \n`;
-    msg += `👨 Имя клиента: ${data?.name} \n`;
-    msg += `📞 Номер телефона: ${data?.phone} \n\n`;
+    msg += `👨 Имя клиента: ${arr?.name} \n`;
+    msg += `📞 Номер телефона: ${arr?.phone} \n\n`;
     msg += `📋 Данные машины👇: \n`;
     msg += `🚘 Марка машины: ${name} \n`;
     msg += `👨‍🦰 С водителем: ${driverStatus} \n`;
@@ -86,10 +96,10 @@ export default function Product({ data }: IAppProps) {
   const translation = React.useContext<ItranslateData>(Context);
   return (
     <>
-      <HeadMeta title={`Alidamdiy - ${data?.name}`} />
+      <HeadMeta title={`Alidamdiy - ${arr?.name}`} />
       <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
         <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2' onClick={() => router.back()}>
-          {data?.name}
+          {arr?.name}
         </h1>
         <p className="max-md:text-sm mb-2 text-[#474747]">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum error,
@@ -111,7 +121,7 @@ export default function Product({ data }: IAppProps) {
                 alt="car"
                 width={1000}
                 height={1000}
-                src={`/${data?.img[1]}`}
+                src={`/${arr?.img[1]}`}
               />
             </div>
             </SwiperSlide>
@@ -121,7 +131,7 @@ export default function Product({ data }: IAppProps) {
                 alt="car"
                 width={1000}
                 height={1000}
-                src={`/${data?.img[2]}`}
+                src={`/${arr?.img[2]}`}
               />
             </div>
             </SwiperSlide>
@@ -131,7 +141,7 @@ export default function Product({ data }: IAppProps) {
                 alt="car"
                 width={1000}
                 height={1000}
-                src={`/${data?.img[3]}`}
+                src={`/${arr?.img[3]}`}
               />
             </div>
             </SwiperSlide>
@@ -141,7 +151,7 @@ export default function Product({ data }: IAppProps) {
                 alt="car"
                 width={1000}
                 height={1000}
-                src={`/${data?.img[4]}`}
+                src={`/${arr?.img[4]}`}
               />
             </div>
             </SwiperSlide>
@@ -162,7 +172,7 @@ export default function Product({ data }: IAppProps) {
                   alt="car"
                   width={1000}
                   height={1000}
-                  src={`/${data?.img[1]}`}
+                  src={`/${arr?.img[1]}`}
                   className="object-cover"
                 />
               </div>
@@ -173,7 +183,7 @@ export default function Product({ data }: IAppProps) {
                   alt="car"
                   width={1000}
                   height={1000}
-                  src={`/${data?.img[2]}`}
+                  src={`/${arr?.img[2]}`}
                   className="object-cover"
                 />
               </div>
@@ -184,7 +194,7 @@ export default function Product({ data }: IAppProps) {
                   alt="car"
                   width={1000}
                   height={1000}
-                  src={`/${data?.img[3]}`}
+                  src={`/${arr?.img[3]}`}
                 />
               </div>
               </SwiperSlide>
@@ -194,7 +204,7 @@ export default function Product({ data }: IAppProps) {
                   alt="car"
                   width={1000}
                   height={1000}
-                  src={`/${data?.img[4]}`}
+                  src={`/${arr?.img[4]}`}
                 />
               </div>
               </SwiperSlide>
@@ -220,7 +230,7 @@ export default function Product({ data }: IAppProps) {
                   {translation?.productPage?.yesText}
                 </button>
                 {
-                  data?.priceWithoutDriver == 0 ? null : <button
+                  arr?.priceWithoutDriver == 0 ? null : <button
                   className="px-3 py-2 rounded-md"
                   onClick={() => setDriverStatus("НЕТ")}
                   type="button"
@@ -267,7 +277,7 @@ export default function Product({ data }: IAppProps) {
                   className="px-4 py-2 bg-[#D9D9D9] rounded-md"
                   type="button"
                 >
-                  { data?.countOfPlaces }
+                  { arr?.countOfPlaces }
                 </button>
               </div>
             </div>
@@ -277,7 +287,7 @@ export default function Product({ data }: IAppProps) {
                 {translation?.productPage?.price}:
               </h1>
               <h1 className='font-["MyFont"] text-3xl max-lg:text-2xl max-md:text-xl text-[#E31E24]'>
-                { driverStatus === 'ДА' ? data?.priceWithDriver : data?.priceWithoutDriver }$
+                { driverStatus === 'ДА' ? arr?.priceWithDriver : arr?.priceWithoutDriver }$
               </h1>
             </div>
             <hr className="border-0 h-px bg-[#858585]" />
@@ -324,7 +334,7 @@ export default function Product({ data }: IAppProps) {
             </button>
           </div>
           <hr className="border-0 h-px bg-[#858585] mb-4" />
-          <Description isActive={isActive} arr={data} />
+          <Description isActive={isActive} arr={arr} />
         </div>
       </div>
       <form action="" onSubmit={handleSubmit(submit)}>
