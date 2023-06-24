@@ -42,7 +42,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     },
     {
       id: 5,
-      title: "Limousine",
+      title: "Сrossover",
     },
     {
       id: 6,

@@ -265,5 +265,43 @@ export const cars = [
             "torque": " 620/2400",
             "transmission": "АКПП"
           }
-      }
+      },
+      {
+        "id": 8,
+        "name": "Mercedes Viano",
+        "type": "Minivan",
+        "priceWithDriver": 100,
+        "priceWithoutDriver": 0,
+        "img": [
+          "images/Cars/viano.png",
+          "images/Cars/viano3.jpeg",
+          "images/Cars/viano1.jpeg",
+          "images/Cars/viano-inside.jpeg",
+          "images/Cars/viano2.jpeg",
+      ],
+      "descriptionEN": "Mercedes Viano is a luxury multi-purpose vehicle (MPV) produced by the German automaker Mercedes-Benz. It offers a spacious and comfortable interior with seating for up to eight passengers. The Viano features a sleek and stylish design, with a modern and aerodynamic body shape. It is equipped with advanced technology and safety features, such as a touchscreen infotainment system, leather seats, multiple airbags, and driver-assist systems. The Viano is powered by a range of efficient diesel and petrol engines, providing both power and fuel economy. Overall, the Mercedes Viano offers a luxurious and practical driving experience.",
+        "descriptionRU": "Mercedes Viano - это роскошный многоцелевой автомобиль (MPV), производимый немецким автопроизводителем Mercedes-Benz. Он предлагает просторный и комфортабельный интерьер с возможностью размещения до восьми пассажиров. Viano имеет элегантный и стильный дизайн с современной и аэродинамической формой кузова. Он оснащен передовыми технологиями и системами безопасности, такими как сенсорная система развлечений, кожаные сиденья, множественные подушки безопасности и системы помощи водителю. Viano оснащен диапазоном эффективных дизельных и бензиновых двигателей, обеспечивающих мощность и экономичность топлива. В целом, Mercedes Viano предлагает роскошный и практичный опыт вождения.",
+        "descriptionUZ": "Mercedes Viano - bu Germaniya avtomobil ishlab chiqaruvchisi Mercedes-Benz tomonidan ishlab chiqarilgan yuqori sifatli ko'p maqsadli transport vositasi (MPV). U sizga yetti joyli, keng va qulay interior taklif qiladi. Viano-iq stil va dizaynli ko'rinishga ega, modern va aerodinamik karobka shaklida. U yaqinlashgan texnologiyalar va xavfsizlik tizimlari, masalan, sensorli infotainment tizimi, dermantirlovchi o'rindlar, bir nechta podushek va haydovchi yordam tizimlari bilan jihozlangan. Viano-iq, samarali dizel va benzinli motorlar diapazoni bilan jihozlangan, kuch va yanadaqiyatni ta'minlaydi. Umumiy holatda, Mercedes Viano sizga yuksak sifatli va amaliyotli haydovchi tajribasi taqdim etadi.",
+        "countOfPlaces": 6,
+        "withDriver": true,
+        "carInfo":
+          {
+            "engine":
+              {
+                  "ruTitle": "W639",
+                  "uzTitle": "W639",
+                  "engTitle": "W639"
+              },
+            "engine2": 
+              {
+                  "ruTitle": "4 цилиндра",
+                  "uzTitle": "4 silindrli",
+                  "engTitle": "4 cylinders"
+              },
+            "volume": "2143 ",
+            "powerSpeed": "3 800",
+            "torque": " 1400/2600",
+            "transmission": "W639"
+          }
+        }
 ]

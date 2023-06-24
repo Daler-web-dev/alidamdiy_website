@@ -40,9 +40,6 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
   if (isFallback) {
     return <h1>Fallback</h1>;
   }
-  console.log(data);
-  
-  
   const filteredData = (arg: { mark: string; type: string; range: string }) => {
     setData(
       data2.filter((item: any) => {
@@ -71,7 +68,6 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
           <div className="flex flex-col gap-3">
             <h1 className="text-white font-['MyFont'] text-4xl max-lg:text-3xl max-md:text-2xl">
               {translation?.catalogPage.mainText}
-              
             </h1>
             <h1 className="text-white text-xl max-md:text-sm">
               {translation?.catalogPage.linkText}
