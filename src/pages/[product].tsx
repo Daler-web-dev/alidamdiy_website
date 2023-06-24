@@ -101,10 +101,6 @@ export default function Product({ data, query }: IAppProps) {
         <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2' onClick={() => router.back()}>
           {arr?.name}
         </h1>
-        <p className="max-md:text-sm mb-2 text-[#474747]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum error,
-          mollitia
-        </p>
         <div className="w-full flex max-lg:flex-col gap-8 justify-between">
         <div className="w-1/2 h-[600px] max-lg:w-full select-none flex flex-col gap-3">
         <Swiper
@@ -312,22 +308,8 @@ export default function Product({ data, query }: IAppProps) {
         <div className="w-full mt-8">
           <div className="flex items-center  gap-3 mb-3">
             <button
-              className="px-3 py-1 h-9 rounded-md"
-              style={{
-                backgroundColor: isActive === "characteristic" ? "#D9D9D9" : "",
-              }}
-              onClick={() => setIsActive("characteristic")}
               type="submit"
-            >
-              {translation?.productPage?.characteristic}
-            </button>
-            <hr className="w-5 border-0 h-px bg-[#858585] rotate-90" />
-            <button
-              type="submit"
-              className="px-3 py-2 rounded-md"
-              style={{
-                backgroundColor: isActive === "characteristic" ? "" : "#D9D9D9",
-              }}
+              className="px-3 py-2 rounded-md bg-[#D9D9D9]"
               onClick={() => setIsActive("description")}
             >
               {translation?.productPage?.description}

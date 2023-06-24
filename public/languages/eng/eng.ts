@@ -9,7 +9,10 @@ const eng = {
     banner: {
         rentText: "Rent the best cars",
         text: "Discover the world of Uzbekistan with us!",
-        text2: "Ready to go on an exciting adventure? Our company offers a wide range of rental cars specially designed for travel!",
+        text2: "Trips to all regions",
+        text3: "Tours in the mountains",
+        text4: "Transfer to the airport or railway station",
+        text5: "Tourist tours and excursions to the ancient cities of Uzbekistan: Samarkand, Khiva, Bukhara and Shakhrisabz",
         orderBtn: "Order",
         infoBtn: "More",
         mainText: "Discover the world of",

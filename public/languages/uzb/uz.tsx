@@ -8,8 +8,11 @@ const uz = {
     },
     banner: {
         rentText: "Eng yaxshi mashinalarni ijaraga oling",
-        text: "O'zbekistoni biz bilan kashf eting!",
-        text2: "Qiziqarli sarguzashtga borishga tayyormisiz? Bizning kompaniyamiz sayohatlar uchun maxsus mo'ljallangan ijara mashinalarining keng assortimentini taklif etadi!",
+        text: "'Alidamdiy' transport kompaniyasi harakatlanish erkinligini ta'minlaydi",
+        text2: "Barcha hududlarga sayohatlar",
+        text3: "Tog'larda sayohatlar",
+        text4: "Aeroportga yoki temir yo'l stantsiyasiga o'tkazish",
+        text5: "O‘zbekistonning qadimiy shaharlari: Samarqand, Xiva, Buxoro va Shahrisabzga turistik sayohatlar va ekskursiyalar",
         orderBtn: "Buyurtma berish ",
         infoBtn: "Batafsil",
         mainText: "O'zbekistoni biz",

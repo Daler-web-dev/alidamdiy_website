@@ -123,45 +123,36 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
             />
           </div>
           <div className="w-full py-24 max-lg:py-14 max-md:py-10 max-sm:py-[14px] flex items-center justify-start">
-            <div className="max-w-[623px] w-full px-[39px] max-sm:px-0 py-[33px] max-sm:py-0 rounded-[15px] backdrop-blur bg-[#ffffff99] max-sm:bg-transparent">
+            <div className="max-w-[700px] w-full px-[39px] max-sm:px-0 py-[33px] max-sm:py-0 rounded-[15px] backdrop-blur bg-[#ffffff99] max-sm:bg-transparent">
               <div className="mb-3 max-sm:mb-0">
                 <p className="text-xl font-semibold">
                   {translation?.banner?.rentText}
                 </p>
               </div>
               <div className="mb-3 max-sm:mb-0">
-                <h2 className="font-[MyFont] text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                  {locale === "uz" ? (
-                    <span className="font-[MyFont] text-[#E31E24]">
-                      O&apos;zbekiston
-                    </span>
-                  ) : (
-                    translation?.banner?.mainText
-                  )}
-                  <span className="font-[MyFont] text-[#E31E24]">
-                    {" "}
-                    {locale === "uz" ? (
-                      <span className="font-[MyFont] text-[#E31E24]">
-                        dunyosini biz
-                      </span>
-                    ) : (
-                      translation?.banner?.world
-                    )}{" "}
+                {
+                  locale == 'uz' ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+                    <h1 className="text-[#E31E24]">"Alidamdiy"</h1> transport kompaniyasi harakatlanish erkinligini ta'minlaydi
+                  </span> : locale == "ru" ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+                     Транспортная компания <h1 className="text-[#E31E24]">"Alidamdiy"</h1> обеспечивает свободу передвижения
+                  </span> : <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+                     Transport company <h1 className="text-[#E31E24]">"Alidamdiy"</h1> provides freedom of movement
                   </span>
-                  <span className="font-[MyFont] text-[#211F20]">
-                    {locale === "uz" ? (
-                      <span className="font-[MyFont]">bilan oching</span>
-                    ) : (
-                      translation?.banner?.us
-                    )}
-                    !
-                  </span>
-                </h2>
+                }
               </div>
               <div className="mb-7 max-md:mb-[7px]">
-                <p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+                <li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
                   {translation?.banner?.text2}
-                </p>
+                </li>
+                <li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+                  {translation?.banner?.text3}
+                </li>
+                <li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+                  {translation?.banner?.text4}
+                </li>
+                <li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+                  {translation?.banner?.text5}
+                </li>
                 <a href="#" className="text-[#E31E24]">
                   +998(55)701-11-99
                 </a>
