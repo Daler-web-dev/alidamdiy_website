@@ -48,7 +48,7 @@ const SearchInput: React.FC<IAppProps> = ({ }) => {
           </button>
         </div>
         {
-          value ? <div className="w-full flex flex-col max-sm:gap-3 bg-[#FFFFFF] px-3 py-3 mt-2 rounded-lg">
+          value ? <div className="w-full h-[70vh] flex flex-col max-sm:gap-3 overflow-y-scroll bg-[#FFFFFF] px-3 py-3 mt-2 rounded-lg">
             {
               result.length > 0 ? result.map((i: any) => <SearchResult key={i.id} item={i} />) : hide ?
                 <div className="mb-4">

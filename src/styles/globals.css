@@ -185,3 +185,10 @@ body {
   .selectBoi > div > span{
     color: white !important;
   }
+
+.overflow {
+  overflow: hidden !important;
+}
+.overflowY {
+  overflow-y: scroll;
+}
