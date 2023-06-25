@@ -138,6 +138,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                   </span> : <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
                      Transport company <h1 className="text-[#E31E24]">"Alidamdiy"</h1> provides freedom of movement
                   </span>
+                  
                 }
               </div>
               <div className="mb-7 max-md:mb-[7px]">

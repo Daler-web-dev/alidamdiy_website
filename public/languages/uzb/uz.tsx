@@ -10,6 +10,7 @@ const uz = {
         rentText: "Eng yaxshi mashinalarni ijaraga oling",
         text: "'Alidamdiy' transport kompaniyasi harakatlanish erkinligini ta'minlaydi",
         text2: "Barcha hududlarga sayohatlar",
+        
         text3: "Tog'larda sayohatlar",
         text4: "Aeroportga yoki temir yo'l stantsiyasiga o'tkazish",
         text5: "O‘zbekistonning qadimiy shaharlari: Samarqand, Xiva, Buxoro va Shahrisabzga turistik sayohatlar va ekskursiyalar",

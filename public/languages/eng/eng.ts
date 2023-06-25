@@ -10,6 +10,7 @@ const eng = {
         rentText: "Rent the best cars",
         text: "Discover the world of Uzbekistan with us!",
         text2: "Trips to all regions",
+        
         text3: "Tours in the mountains",
         text4: "Transfer to the airport or railway station",
         text5: "Tourist tours and excursions to the ancient cities of Uzbekistan: Samarkand, Khiva, Bukhara and Shakhrisabz",
