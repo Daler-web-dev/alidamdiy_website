@@ -212,6 +212,7 @@
         {
           "id": 12,
           "name": "Mercedes-Benz W223",
+          
           "type": "Sedan",
           "priceWithDriver": 500,
           "priceWithoutDriver": 0,
