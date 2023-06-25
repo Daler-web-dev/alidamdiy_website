@@ -58,9 +58,9 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 		formState: { errors },
 	} = useForm();
 	const submit = (data: any) => {
-		let msg = `Новая заявка! \n`;
-		msg += `Имя: ${data?.name} \n`;
-		msg += `Номер телефона: ${data?.phone} \n`;
+		let msg = `🆕 Новая заявка! \n`;
+		msg += `👨 Имя: ${data?.name} \n`;
+		msg += `📞 Номер телефона: ${data?.phone} \n`;
 		axios
 			.post(URL, {
 				chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
@@ -86,11 +86,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 		setIsShow(false);
 	};
 	const [typeCar, setTypeCar] = useState<string>("All");
-	const { isFallback } = useRouter();
-
-	if (isFallback) {
-		return <h1>Fallback</h1>;
-	}
 	return (
 		<>
 			<HeadMeta
@@ -106,7 +101,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 				<div className="w-full h-full hidden max-sm:block">
 					<Image
 						className="w-full h-full object-cover"
-						src={"/images/car.png"}
+						src={"/images/bg.jpg"}
 						width={1000}
 						height={1000}
 						alt="car"
@@ -116,52 +111,44 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 					<div className="w-full h-full absolute left-0 z-[-1] rounded-b-3xl overflow-hidden max-sm:hidden">
 						<Image
 							className="w-full h-full object-cover"
-							src={"/images/car.png"}
+							src={"/images/bg.jpg"}
 							width={1000}
 							height={1000}
 							alt="car"
 						/>
 					</div>
 					<div className="w-full py-24 max-lg:py-14 max-md:py-10 max-sm:py-[14px] flex items-center justify-start">
-						<div className="max-w-[623px] w-full px-[39px] max-sm:px-0 py-[33px] max-sm:py-0 rounded-[15px] backdrop-blur bg-[#ffffff99] max-sm:bg-transparent">
+						<div className="max-w-[700px] w-full px-[39px] max-sm:px-0 py-[33px] max-sm:py-0 rounded-[15px] backdrop-blur bg-[#ffffff99] max-sm:bg-transparent">
 							<div className="mb-3 max-sm:mb-0">
 								<p className="text-xl font-semibold">
 									{translation?.banner?.rentText}
 								</p>
 							</div>
 							<div className="mb-3 max-sm:mb-0">
-								<h2 className="font-[MyFont] text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-									{locale === "uz" ? (
-										<span className="font-[MyFont] text-[#E31E24]">
-											O&apos;zbekiston
-										</span>
-									) : (
-										translation?.banner?.mainText
-									)}
-									<span className="font-[MyFont] text-[#E31E24]">
-										{" "}
-										{locale === "uz" ? (
-											<span className="font-[MyFont] text-[#E31E24]">
-												dunyosini biz
-											</span>
-										) : (
-											translation?.banner?.world
-										)}{" "}
+								{
+									locale == 'uz' ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+										<h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> transport kompaniyasi harakatlanish erkinligini taminlaydi
+									</span> : locale == "ru" ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+										Транспортная компания <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> обеспечивает свободу передвижения
+									</span> : <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+										Transport company <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> provides freedom of movement
 									</span>
-									<span className="font-[MyFont] text-[#211F20]">
-										{locale === "uz" ? (
-											<span className="font-[MyFont]">bilan oching</span>
-										) : (
-											translation?.banner?.us
-										)}
-										!
-									</span>
-								</h2>
+
+								}
 							</div>
 							<div className="mb-7 max-md:mb-[7px]">
-								<p className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+								<li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
 									{translation?.banner?.text2}
-								</p>
+								</li>
+								<li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+									{translation?.banner?.text3}
+								</li>
+								<li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+									{translation?.banner?.text4}
+								</li>
+								<li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
+									{translation?.banner?.text5}
+								</li>
 								<a href="#" className="text-[#E31E24]">
 									+998(55)701-11-99
 								</a>
@@ -330,7 +317,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-[30px]">
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5">
 					<div className="flex max-md:flex-col max-md:gap-5">
 						<div className="w-3/5 max-xl:w-1/2 max-md:w-full max-md:px-5">
 							<h3 className="text-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-[32px] font-[MyFontSemiBold] leading-[105%] tracking-[-0.011em] text-[#E31E24]">
@@ -364,15 +351,10 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 							</div>
 						</div>
 					</div>
-					<div className="mt-[68px] max-lg:mt-10 max-sm:mt-[35px]">
-						<p className="text-3xl max-md:text-2xl leading-[190%] tracking-[-0.011em]">
-							{translation?.banner?.text2}
-						</p>
-					</div>
 				</div>
 			</section>
 
-			<section className="relative">
+			<section className="relative mt-20 max-md:mt-10">
 				<div className="overflow-hidden w-full h-[350px] z-[-1] absolute top-0 left-0 py-6">
 					<div className="relative right-5 w-[110%] h-[300px] rotate-[-1.28deg] bg-[#E31E24]"></div>
 				</div>
@@ -434,7 +416,15 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 			</section>
 
 			<section>
-				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0 max-lg:pt-20">
+				<div className="container m-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0">
+					<div className="w-full">
+						<Image className="w-full h-full" src={'/images/mapali.JPEG'} width={500} height={500} alt="map" />
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 max-md:px-0 pt-20 max-md:pt-10">
 					<div className="flex max-md:flex-col gap-5">
 						<div className="w-2/5 max-md:w-full flex items-center justify-center gap-2 max-md:px-5">
 							<div className="w-48 max-md:w-full">

@@ -17,26 +17,7 @@
         "descriptionRU": "Chevrolet Gentra - компактный автомобиль, выпускаемый американским производителем Chevrolet. Он имеет современный и стильный дизайн с гладкими линиями и аэродинамическим профилем. Интерьер Gentra просторный и комфортный, обеспечивая достаточное место для ног и головы как водителя, так и пассажиров. Автомобиль оснащен передовыми технологическими функциями, включая сенсорную систему информационно-развлекательного комплекса, подключение Bluetooth и камеру заднего вида для повышения безопасности и удобства. Gentra оснащен надежным и экономичным двигателем, обеспечивающим плавное и приятное вождение. Это популярный выбор для тех, кто ищет практичный и доступный автомобиль.",
         "descriptionUZ": "Chevrolet Gentra - Amerika avtomobil ishlab chiqaruvchisi Chevrolet tomonidan ishlab chiqarilgan kompak mashina. U yengil chiziq va aerodinamik profil bilan hodisadir. Gentra ichki interer keng va qulay, haydashlar va ona haydashlarga to'g'ri keladigan yoki tushadigan oyoq va bosh joylar bo'yicha ko'p joy beradi. Avtomobil yuqori texnologik imkoniyatlarga ega, masalan, sensorli ma'lumotlar ta'minot tizimi, Bluetooth bog'lanishi va yorug'lik kamerasi kabi. Gentra ishonchli va boy o'qituvchisiz motor bilan ta'minlanadi, bu hamda sport mashinalarga qaraganda yaxshi to'xtatish va qiziqishni ta'minlaydi. Bu, praktik va arzon avtomobil qidiruvchilar uchun mashhur tanlovdir.",
         "countOfPlaces": 4,
-        "withDriver": true,
-        "carInfo": 
-          {
-            "engine": 
-              {
-                  "ruTitle": "T18SED, F18D3",
-                  "uzTitle": "T18SED, F18D3",
-                  "engTitle": "T18SED, F18D3"
-              },
-            "engine2": 
-              {
-                  "ruTitle": "4 цилиндра",
-                  "uzTitle": "4 silindrli",
-                  "engTitle": "4 cylinders"
-              },
-            "volume": "1799л",
-            "powerSpeed": 187,
-            "torque": "165 (17) / 4000",
-            "transmission": "MKPP5"
-          }
+        "withDriver": true
       },
     {
         "id": 2,
@@ -55,27 +36,7 @@
         "descriptionRU": "Chevrolet Malibu 2 - это среднеразмерный автомобиль, производимый General Motors под брендом Chevrolet. Он известен своим элегантным и стильным дизайном, с современным и аэродинамическим экстерьером. Автомобиль предлагает комфортабельный и просторный интерьер, оснащенный передовыми технологиями и функциями для удобного вождения. Chevrolet Malibu 2 оснащен рядом эффективных двигателей, которые обеспечивают баланс мощности и экономичности топлива. Он также предлагает плавную и отзывчивую управляемость, делая его приятным автомобилем для вождения. В целом Chevrolet Malibu 2 - надежный и стильный выбор для тех, кто ищет среднеразмерный автомобиль.",
         "descriptionUZ": "Chevrolet Malibu 2 - Chevrolet brendi ostida General Motors tomonidan ishlab chiqarilgan o'rta o'lchamdagi avtomobil. U, uning jasur va stil dizayni bilan mashhur, zamonaviy va aerodinamik tashqi qismlari bilan tanishilgan. Avtomobil, qulay va keng joyli interer bilan ta'minlangan, qulay haydovchilik tajribasi uchun modern texnologiyalar va imkoniyatlarga ega. Chevrolet Malibu 2, kuch va to'qimachilikni samarali kombinatsiyasini ta'minlaydigan qulay motorlar bilan jihozlangan. U shuningdek, mavjud va boshlanuvchilikni qo'llab-quvvatlaydigan boshqaruvni taklif etadi, unda hayotga ishlab chiqarish qulayligi mavjud. Umumiy holda, Chevrolet Malibu 2, o'rta o'lchamdagi avtomobil qidiruvchi uchun ishonchli va stilli tanlovdir.",
         "countOfPlaces": 5,
-        "withDriver": true,
-        "carInfo":
-          {
-            "engine": 
-              {
-                  "ruTitle": "GM Ecotec LTG",
-                  "uzTitle": "GM Ecotec LTG",
-                  "engTitle": "GM Ecotec LTG"
-              },
-       
-            "engine2": 
-              {
-                  "ruTitle": "4 цилиндра",
-                  "uzTitle": "4 silindrli",
-                  "engTitle": "4 cylinders"
-              },
-            "volume": "1998л",
-            "powerSpeed": "250 (184) / 5300",
-            "torque": "353 / 2000-5000",
-            "transmission": "AKPP"
-          }
+        "withDriver": true
       },
     {
         "id": 3,
@@ -94,26 +55,7 @@
         "descriptionRU": "Mercedes Vita - это роскошный автомобиль, который сочетает в себе элегантность, спортивность и передовые технологии. Он имеет стильный и аэродинамичный дизайн с плавными линиями и характерной передней решеткой. Интерьер выполнен из высококачественных материалов и предлагает комфортабельное и роскошное вождение. Автомобиль оснащен передовыми системами безопасности и инновационной технологией, включая сенсорный дисплей высокого разрешения, голосовое управление и современную аудиосистему. Благодаря мощным характеристикам и точному управлению, Mercedes Vita доставляет захватывающие ощущения от вождения.",
         "descriptionUZ": "Mercedes Vita - bu zarafatli avtomobil, jamlanish, sportliklik va so'nggi texnologiyalarni birgalikda olgan bir mashinadir. U yassi va aerodinamik dizayn bilan, yumshoq chizg'ilar va xususiy old tarqatgan to'lqincha bilan ajralib turadi. Ichki interyer yuqori sifatli materiallardan ishlab chiqilgan bo'lib, qulay va zarafatli haydash imkoniyatini taklif etadi. Mashina advanced xavfsizlik tizimlari va innovatsion texnologiyalar, mazkur kabi kengaytirish ekrani, tinglovchi boshqarish va so'nggi yillarning audio tizimi kabi, bilan ta'minlangan. Kuchli ish unchalik jiddiy qidiruv tartibi, Mercedes Vita haydash o'zgartirish uchun hayajonli tajribalar yetkazadi.",
         "countOfPlaces": 9,
-        "withDriver": true,
-        "carInfo":
-          {
-            "engine":
-              {
-                  "ruTitle": "M 104.900",
-                  "uzTitle": "M 104.900",
-                  "engTitle": "M 104.900"
-              },
-            "engine2": 
-              {
-                  "ruTitle": "4 цилиндра",
-                  "uzTitle": "4 silindrli",
-                  "engTitle": "4 cylinders"
-              },
-            "volume": "2792л",
-            "powerSpeed": "174 (128) / 6000",
-            "torque": "237 (24) / 3200",
-            "transmission": "AKPP"
-          }
+        "withDriver": true
       },
       {
         "id": 4,
@@ -132,26 +74,7 @@
         "descriptionRU": "Kia Carnival - это минивэн, производимый компанией Kia Motors. Он предлагает просторные сидения для восьми пассажиров и известен своим комфортным и универсальным интерьером. Carnival имеет элегантный и современный дизайн, с широкой решеткой и стильными фарами. Он оснащен передовыми системами безопасности, такими как система контроля слепых зон, помощник удержания полосы и камера заднего вида. Варианты двигателя могут различаться, но обычно включают мощный V6-двигатель, который обеспечивает достаточную производительность и плавную поездку. Kia Carnival - надежный и подходящий для семейных поездок автомобиль, идеально подходящий для дальних поездок и ежедневных поездок.",
         "descriptionUZ": "Kia Carnival - Kia Motors tomonidan ishlab chiqarilgan miniven. U to'qqizta yo'lovchilar uchun keng o'tirish imkonini taklif qiladi va uning rahat va kengayadigan intereri bilan mashhur. Carnival keng va modern dizaynga ega, keng panjara va chiroyli faroqlari bilan taniladi. U quyi yo'qolganlarini aniqlash, yo'lni saqlash yordamchisi va orqa ko'rsatkich kamerasi kabi yuqori darajadagi xavfsizlik imkoniyatlariga egadir. Motor variantlari farqli bo'lishi mumkin, lekin odatda yetarli samaradorlik va yumsha hayot ta'minlovchi kuchli V6-motorini o'z ichiga oladi. Kia Carnival ishonchli va oilaviy mehmonxona uchun mo'ljallangan avtomobil, uzoq sayohatlar va kunlik sayohatlar uchun idealdir.",
         "countOfPlaces": 8,
-        "withDriver": true,
-        "carInfo":
-          {
-            "engine":
-              {
-                  "ruTitle": "D4HE",
-                  "uzTitle": "D4HE",
-                  "engTitle": "D4HE"
-              },
-            "engine2": 
-              {
-                  "ruTitle": "4 цилиндра",
-                  "uzTitle": "4 silindrli",
-                  "engTitle": "4 cylinders"
-              },
-            "volume": "2199л",
-            "powerSpeed": "199",
-            "torque": " 331,5 Hm",
-            "transmission": "АКПП"
-          }
+        "withDriver": true
       },
       {
         "id": 5,
@@ -170,26 +93,7 @@
         "descriptionRU": "Chevrolet Captiva 4 - это внедорожник, производимый компанией Chevrolet. Он предлагает стильный и современный дизайн, с гладкими линиями и смелой передней решеткой. Captiva 4 обеспечивает комфортные сидения для семи пассажиров и имеет просторный интерьер с достаточным пространством для грузов. Он оснащен передовыми системами безопасности, такими как электронная система стабилизации, антиблокировочные тормоза и множеством подушек безопасности. Captiva 4 оснащен различными эффективными двигателями, обеспечивающими хорошую экономию топлива и плавную поездку. C его универсальными характеристиками и надежной производительностью Chevrolet Captiva 4 является популярным выбором для тех, кто ищет практичный и стильный внедорожник.",
         "descriptionUZ": "Chevrolet Captiva 4 - Chevrolet tomonidan ishlab chiqarilgan SUV. U stilniy va modern dizaynga ega, yalg';iz chiziq va jasur old panel bilan taniladi. Captiva 4 yetti yo';lovchilarni qulay joylashish imkonini taklif qiladi va yuklarni olib borish uchun keng interier bilan ta';mirlangan. U elektron stabilizatsiya tizimi, antiblok qilib turgan frenlar va bir nechta havo yastiklari kabi yuqori darajadagi xavfsizlik imkoniyatlari bilan ta';minlangan. Captiva 4 samarali motor variantlari bilan ta';minlangan, bu samaradorlik va yumsha hayot ta';minlovchisi bilan yaxshi yakit isrofdan foydalanish va yumsha hayot ta';minlash imkoniyatlarini beradi. Uning keng foydali xususiyatlari va ishonchli ishlovchi Chevrolet Captiva 4, amaliy va stilli SUV izlayotganlar uchun mashhur tanlovdir.",
         "countOfPlaces": 6,
-        "withDriver": true,
-        "carInfo":
-          {
-            "engine":
-              {
-                  "ruTitle": "2.4 MT",
-                  "uzTitle": "2.4 MT",
-                  "engTitle": "2.4 MT"
-              },
-            "engine2": 
-              {
-                  "ruTitle": "4 цилиндра",
-                  "uzTitle": "4 silindrli",
-                  "engTitle": "4 cylinders"
-              },
-            "volume": "2384л",
-            "powerSpeed": "220 (22) / 2200",
-            "torque": " 230 @ 4600",
-            "transmission": "MT6"
-          }
+        "withDriver": true
       },
       {
         "id": 6,
@@ -208,26 +112,7 @@
         "descriptionRU": "Chevrolet Captiva 4 - это внедорожник, производимый компанией Chevrolet. Он предлагает стильный и современный дизайн, с гладкими линиями и смелой передней решеткой. Captiva 4 обеспечивает комфортные сидения для семи пассажиров и имеет просторный интерьер с достаточным пространством для грузов. Он оснащен передовыми системами безопасности, такими как электронная система стабилизации, антиблокировочные тормоза и множеством подушек безопасности. Captiva 4 оснащен различными эффективными двигателями, обеспечивающими хорошую экономию топлива и плавную поездку. C его универсальными характеристиками и надежной производительностью Chevrolet Captiva 4 является популярным выбором для тех, кто ищет практичный и стильный внедорожник.",
         "descriptionUZ": "Chevrolet Captiva 4 - Chevrolet tomonidan ishlab chiqarilgan SUV. U stilniy va modern dizaynga ega, yalg';iz chiziq va jasur old panel bilan taniladi. Captiva 4 yetti yo';lovchilarni qulay joylashish imkonini taklif qiladi va yuklarni olib borish uchun keng interier bilan ta';mirlangan. U elektron stabilizatsiya tizimi, antiblok qilib turgan frenlar va bir nechta havo yastiklari kabi yuqori darajadagi xavfsizlik imkoniyatlari bilan ta';minlangan. Captiva 4 samarali motor variantlari bilan ta';minlangan, bu samaradorlik va yumsha hayot ta';minlovchisi bilan yaxshi yakit isrofdan foydalanish va yumsha hayot ta';minlash imkoniyatlarini beradi. Uning keng foydali xususiyatlari va ishonchli ishlovchi Chevrolet Captiva 4, amaliy va stilli SUV izlayotganlar uchun mashhur tanlovdir.",
         "countOfPlaces": 6,
-        "withDriver": true,
-        "carInfo":
-          {
-            "engine":
-              {
-                  "ruTitle": "2.4 MT",
-                  "uzTitle": "2.4 MT",
-                  "engTitle": "2.4 MT"
-              },
-            "engine2": 
-              {
-                  "ruTitle": "4 цилиндра",
-                  "uzTitle": "4 silindrli",
-                  "engTitle": "4 cylinders"
-              },
-            "volume": "2384л",
-            "powerSpeed": "220 (22) / 2200",
-            "torque": " 230 @ 4600",
-            "transmission": "MT6"
-          }
+        "withDriver": true
       },
       {
         "id": 7,
@@ -246,26 +131,7 @@
         "descriptionRU": "Mercedes-Benz S-Class W221 - это роскошный седан, который предлагает исключительный опыт вождения. Он имеет изящный и элегантный дизайн с мощным двигателем, обеспечивающим впечатляющую производительность. Интерьер просторный и комфортный, с использованием высококачественных материалов и передовых технологий. S-Class W221 обеспечивает плавную и изысканную поездку, отличную управляемость и ряд функций безопасности. С роскошными удобствами и вниманием к деталям, Mercedes-Benz S-Class W221 является воплощением автомобильного совершенства.",
         "descriptionUZ": "Mercedes-Benz S-Class W221 - bu raqamli sedan, hayratlanadigan haydovchi tajribasi taklif qiladi. U kuchli motor bilan joylashtirilgan yorqin va zarif dizayn, impresionli ishlanishni ta'minlaydi. Interer keng va qulay, yuqori sifatli materiallardan foydalanish va yuqori texnologiyalarni o'z ichiga oladi. S-Class W221 yumshoq va zarif sayohat, ajoyib boshqaruv va himoya xususiyatlari bilan ta'minlaydi. O'zining ilovali imkoniyatlar va tafsilotlarga e'tibor berish bilan, Mercedes-Benz S-Class W221 avtomobil ajoyibligining namunasi.",
         "countOfPlaces": 4,
-        "withDriver": true,
-        "carInfo":
-          {
-            "engine":
-              {
-                  "ruTitle": "V6",
-                  "uzTitle": "V6",
-                  "engTitle": "V6"
-              },
-            "engine2": 
-              {
-                  "ruTitle": "3 цилиндра",
-                  "uzTitle": "3 silindrli",
-                  "engTitle": "3 cylinders"
-              },
-            "volume": "2987",
-            "powerSpeed": "258/190/3600",
-            "torque": " 620/2400",
-            "transmission": "АКПП"
-          }
+        "withDriver": true
       },
       {
         "id": 8,
@@ -284,26 +150,25 @@
         "descriptionRU": "Mercedes Viano - это роскошный многоцелевой автомобиль (MPV), производимый немецким автопроизводителем Mercedes-Benz. Он предлагает просторный и комфортабельный интерьер с возможностью размещения до восьми пассажиров. Viano имеет элегантный и стильный дизайн с современной и аэродинамической формой кузова. Он оснащен передовыми технологиями и системами безопасности, такими как сенсорная система развлечений, кожаные сиденья, множественные подушки безопасности и системы помощи водителю. Viano оснащен диапазоном эффективных дизельных и бензиновых двигателей, обеспечивающих мощность и экономичность топлива. В целом, Mercedes Viano предлагает роскошный и практичный опыт вождения.",
         "descriptionUZ": "Mercedes Viano - bu Germaniya avtomobil ishlab chiqaruvchisi Mercedes-Benz tomonidan ishlab chiqarilgan yuqori sifatli ko'p maqsadli transport vositasi (MPV). U sizga yetti joyli, keng va qulay interior taklif qiladi. Viano-iq stil va dizaynli ko'rinishga ega, modern va aerodinamik karobka shaklida. U yaqinlashgan texnologiyalar va xavfsizlik tizimlari, masalan, sensorli infotainment tizimi, dermantirlovchi o'rindlar, bir nechta podushek va haydovchi yordam tizimlari bilan jihozlangan. Viano-iq, samarali dizel va benzinli motorlar diapazoni bilan jihozlangan, kuch va yanadaqiyatni ta'minlaydi. Umumiy holatda, Mercedes Viano sizga yuksak sifatli va amaliyotli haydovchi tajribasi taqdim etadi.",
         "countOfPlaces": 6,
-        "withDriver": true,
-        "carInfo":
-          {
-            "engine":
-              {
-                  "ruTitle": "W639",
-                  "uzTitle": "W639",
-                  "engTitle": "W639"
-              },
-            "engine2": 
-              {
-                  "ruTitle": "4 цилиндра",
-                  "uzTitle": "4 silindrli",
-                  "engTitle": "4 cylinders"
-              },
-            "volume": "2143 ",
-            "powerSpeed": "3,800",
-            "torque": " 1400/2600",
-            "transmission": "W639"
-          }
-        }
+        "withDriver": true
+        },
+        {
+          "id": 9,
+          "name": "Range Rover 2016",
+          "type": "Luxury SUV",
+          "priceWithDriver": 80,
+          "priceWithoutDriver": 0,
+          "img": [
+            "images/Cars/range-rover.png",
+            "images/Cars/vito.jpg",
+            "images/Cars/vito-salon.jpg",
+            "images/Cars/vito-salon2.jpg",
+            "images/Cars/vito-salon3.jpg"
+        ],
+        "descriptionEN": "The Range Rover 2016 is a luxury SUV that offers a perfect blend of comfort, style, and off-road capability. It features a sleek and elegant design with a commanding presence on the road. The interior is spacious and opulent, with premium leather upholstery and high-quality materials. The Range Rover 2016 comes equipped with advanced technology and safety features, including a touchscreen infotainment system, adaptive cruise control, and blind spot monitoring. Under the hood, it offers powerful engine options, providing excellent performance both on and off the road. Overall, the Range Rover 2016 is a top-tier vehicle that offers the ultimate driving experience.",
+          "descriptionRU": "Range Rover 2016 - это роскошный внедорожник, который предлагает идеальное сочетание комфорта, стиля и возможностей для бездорожья. Он имеет элегантный и изысканный дизайн с внушительным внешним видом. Интерьер просторный и роскошный, с премиальной кожаной обивкой и высококачественными материалами. Range Rover 2016 оснащен передовыми технологиями и системами безопасности, включая сенсорную систему информационно-развлекательного комплекса, адаптивный круиз-контроль и систему контроля слепых зон. Под капотом он предлагает мощные варианты двигателей, обеспечивая отличную производительность как на дороге, так и в бездорожье. В целом Range Rover 2016 - это автомобиль премиум-класса, предлагающий непревзойденные впечатления от вождения.",
+          "descriptionUZ": "Range Rover 2016 - bu qulaylik, stiil va off-road imkoniyatlari ideal birlashmasini taklif qiladigan luxury SUV. U yo'l ostida ta'sirchan tahlilga ega bo'lgan yengil va zarafatli dizayn bilan ta'minlangan. Ichki dizayn keng va sog'liqni oshirgan, premium deri kaptanlik va yuqori sifatli materiallardan tashkil topgan. Range Rover 2016 ustida eng so'nggi texnologiyalarga va xavfsizlik tizimlari, jamiyat ta'sirchanlikni tekshiradigan sensorli infotainment tizimi, adaptiv kruiz nazorati va ko'prikli nuqsonlarni nazorat qiluvchi tizimlar kiritilgan. Kapotning ostida uning etkazib beruvchisi kuchli motor variantlarini taklif qiladi, yo'l ostida va off-roadda ajoyib ish bajarish imkoniyatini ta'minlaydi. Umumiy holatda, Range Rover 2016 eng yuqori sinf avtomobil, hayotga doir ajoyib tajriba taklif qiladi.",
+          "countOfPlaces": 6,
+          "withDriver": true}
 ]
 }

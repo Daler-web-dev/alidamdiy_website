@@ -32,9 +32,12 @@ const Item: React.FC<ItemProps> = ({ item }) => {
           {item?.type || "Хэтчбек"}
         </p>
       </div>
-      <div className="w-full">
+      <div className="w-full relative ">
+        <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <span className="loader2"></span>
+        </div>
         <Image
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover relative z-10"
           src={`/${item?.img[0]}`}
           width={100}
           height={100}
