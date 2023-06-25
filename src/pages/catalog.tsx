@@ -43,12 +43,13 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
 					arg.range == item.priceWithDriver
 				) {
 					return item;
-				} else if (arg.type === "All") {
-					return item;
+				} else if (arg.type == "All" && item.priceWithDriver >= arg.range ) {
+					return item
 				}
 			})
 		);
 	};
+	
 	return (
 		<>
 			<HeadMeta
@@ -98,7 +99,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
 					</div>
 					<h1 className="text-center text-xl">
 						{translation?.catalogPage.notFoundText}
-						
+
 					</h1>
 				</>
 			) : null}

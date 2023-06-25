@@ -14,7 +14,6 @@ interface ItemProps {
     countOfPlaces: number;
   };
 }
-
 const Item: React.FC<ItemProps> = ({ item }) => {
   const [hide, setHide] = useState<boolean>(false);
   return (
@@ -86,5 +85,4 @@ const Item: React.FC<ItemProps> = ({ item }) => {
     </Link>
   );
 };
-
 export default Item;

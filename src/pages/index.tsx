@@ -316,7 +316,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
         </div>
       </section>
 
-      <section>
+      <section id="questions">
         <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mb-[30px]">
           <div className="flex max-md:flex-col max-md:gap-5">
             <div className="w-3/5 max-xl:w-1/2 max-md:w-full max-md:px-5">
@@ -439,7 +439,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
               }}>
               </div>
             </div>
-            
             <div className="w-1/2 max-md:w-full">
               <iframe
               src="https://yandex.uz/map-widget/v1/?ll=66.954045%2C39.646820&mode=whatshere&whatshere%5Bpoint%5D=66.953648%2C39.646765&whatshere%5Bzoom%5D=17&z=19.6"

@@ -30,6 +30,7 @@
    padding: 0;
    box-sizing: border-box;
    font-family: MyFontLight;
+   scroll-behavior: smooth !important;
 }
 body {
    background: #EEEEEE;
