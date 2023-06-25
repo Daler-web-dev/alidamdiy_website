@@ -127,11 +127,11 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
               <div className="mb-3 max-sm:mb-0">
                 {
                   locale == 'uz' ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                    <h1 className="text-[#E31E24]">"Alidamdiy"</h1> transport kompaniyasi harakatlanish erkinligini ta&quot;minlaydi
+                    <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> transport kompaniyasi harakatlanish erkinligini taminlaydi
                   </span> : locale == "ru" ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                     Транспортная компания <h1 className="text-[#E31E24]">"Alidamdiy"</h1> обеспечивает свободу передвижения
+                     Транспортная компания <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> обеспечивает свободу передвижения
                   </span> : <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                     Transport company <h1 className="text-[#E31E24]">"Alidamdiy"</h1> provides freedom of movement
+                     Transport company <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> provides freedom of movement
                   </span>
                   
                 }
