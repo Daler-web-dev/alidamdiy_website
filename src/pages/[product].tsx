@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Description from "@/components/Description";
 import { MdClose } from "react-icons/md";
 import Context from "@/components/useTranslate";
@@ -74,8 +74,8 @@ export default function Product({ data, query }: IAppProps) {
   } = useForm();
   const submit = (data: any) => {
     let msg = `🆕 Новый заказ! \n`;
-    msg += `👨 Имя клиента: ${arr?.name} \n`;
-    msg += `📞 Номер телефона: ${arr?.phone} \n\n`;
+    msg += `👨 Имя клиента: ${data?.name} \n`;
+    msg += `📞 Номер телефона: ${data?.phone} \n\n`;
     msg += `📋 Данные машины👇: \n`;
     msg += `🚘 Марка машины: ${name} \n`;
     msg += `👨‍🦰 С водителем: ${driverStatus} \n`;

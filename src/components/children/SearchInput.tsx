@@ -1,10 +1,7 @@
 import axios from "axios";
-import { request } from "http";
-// import * as React from "react";
 import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
-import Item from "./Item";
 import { SearchResult } from "./SearchResult";
 import Image from "next/image";
 import Context from "../useTranslate";

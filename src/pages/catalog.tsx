@@ -1,13 +1,10 @@
 import React, { useContext, useState } from "react";
-// const Item = dynamic(() => import('@/components/children/Item'))
-// const Search = dynamic(() => import('@/components/Search'))
 import Image from "next/image";
 import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
-import { Router, useRouter } from "next/router";
-import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 import Search from "@/components/Search";
 import Item from "@/components/children/Item";
 
@@ -32,11 +29,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
 	const translation = useContext<ItranslateData>(Context);
 	const [data, setData] = useState<any>(data2);
 	const router = useRouter();
-	const { locale, isFallback } = router;
-	// const { isFallback } = useRouter();
-	if (isFallback) {
-		return <h1>Fallback</h1>;
-	}
+	const { locale } = router;
 
 	const filteredData = (arg: {
 		mark: string;

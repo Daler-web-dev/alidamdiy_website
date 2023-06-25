@@ -58,9 +58,9 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     formState: { errors },
   } = useForm();
   const submit = (data: any) => {
-    let msg = `Новая заявка! \n`;
-    msg += `Имя: ${data?.name} \n`;
-    msg += `Номер телефона: ${data?.phone} \n`;
+    let msg = `🆕 Новая заявка! \n`;
+    msg += `👨 Имя: ${data?.name} \n`;
+    msg += `📞 Номер телефона: ${data?.phone} \n`;
     axios
       .post(URL, {
         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
@@ -86,11 +86,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setIsShow(false);
   };
   const [typeCar, setTypeCar] = useState<string>("All");
-  const { isFallback } = useRouter();
-
-  if (isFallback) {
-    return <h1>Fallback</h1>;
-  }
   return (
     <>
       <HeadMeta
