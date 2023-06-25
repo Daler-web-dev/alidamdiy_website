@@ -7,7 +7,7 @@ import Context from "@/components/useTranslate";
 import { ItranslateData } from "@/components/Types/Types";
 import axios from "axios";
 import HeadMeta from "@/components/HeadMeta";
-import InputMask from 'react-input-mask';
+import InputMask from "react-input-mask";
 import { useForm } from "react-hook-form";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
@@ -17,8 +17,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { useRouter } from "next/router";
 export interface IAppProps {
-   data: any, 
-   query: number
+  data: any;
+  query: number;
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
@@ -27,7 +27,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   return {
     props: {
       data: data.cars.cars,
-      query: query.product
+      query: query.product,
     },
   };
 };
@@ -41,7 +41,7 @@ export default function Product({ data, query }: IAppProps) {
       }
     });
   }, []);
-  
+
   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
 
   const [isActive, setIsActive] = useState<string>("characteristic");
@@ -53,13 +53,14 @@ export default function Product({ data, query }: IAppProps) {
   const [driverStatus, setDriverStatus] = useState<string>("ДА");
 
   const [baggageStatus, setBaggageStatus] = useState<string>("ДА");
-  
+
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
-  const price = driverStatus == 'ДА' ? arr?.priceWithDriver : arr?.priceWithoutDriver
-  const name = arr?.name
+  const price =
+    driverStatus == "ДА" ? arr?.priceWithDriver : arr?.priceWithoutDriver;
+  const name = arr?.name;
 
-  const router = useRouter()
+  const router = useRouter();
   console.log(router);
   const style1 =
     "w-3/5 fixed max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200 z-10";
@@ -80,7 +81,7 @@ export default function Product({ data, query }: IAppProps) {
     msg += `👨‍🦰 С водителем: ${driverStatus} \n`;
     msg += `🧳 С багажом: ${baggageStatus} \n`;
     msg += `💰 Стоимость: ${price}$ \n`;
-      axios
+    axios
       .post(URL, {
         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
         parse_mode: "html",
@@ -98,115 +99,151 @@ export default function Product({ data, query }: IAppProps) {
     <>
       <HeadMeta title={`Alidamdiy - ${arr?.name}`} />
       <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
-        <h1 className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2' onClick={() => router.back()}>
+        <h1
+          className='text-3xl max-lg:text-2xl font-["MyFont"] mb-2'
+          onClick={() => router.back()}
+        >
           {arr?.name}
         </h1>
         <div className="w-full flex max-lg:flex-col gap-8 justify-between">
-        <div className="w-1/2 h-[600px] max-lg:w-full select-none flex flex-col gap-3">
-        <Swiper
-        loop={true}
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
-      > 
-            <SwiperSlide>
-            <div className="w-full h-full rounded-xl bg-[#ffff] mb-8">
-              <Image
-                alt="car"
-                width={1000}
-                height={1000}
-                src={`/${arr?.img[1]}`}
-              />
-            </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8">
-              <Image
-                alt="car"
-                width={1000}
-                height={1000}
-                src={`/${arr?.img[2]}`}
-              />
-            </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8">
-              <Image
+          <div className="w-1/2 h-[600px] max-lg:w-full select-none flex flex-col gap-3">
+            <Swiper
+              loop={true}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={{
+                swiper:
+                  thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+              }}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper2"
+            >
+              <SwiperSlide>
+                <div className="w-full h-full rounded-xl bg-[#ffff] mb-8 relative">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                  <Image
+                    alt="car"
+                    width={1000}
+                    height={1000}
+                    src={`/${arr?.img[1]}`}
+                    className="z-1 relative"
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8 relative">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                  <Image
+                    alt="car"
+                    width={1000}
+                    height={1000}
+                    src={`/${arr?.img[2]}`}
+                    className="z-1 relative"
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8 relative">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                  <Image
                 alt="car"
                 width={1000}
                 height={1000}
                 src={`/${arr?.img[3]}`}
+                className="z-1 relative"
               />
-            </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8">
-              <Image
-                alt="car"
-                width={1000}
-                height={1000}
-                src={`/${arr?.img[4]}`}
-              />
-            </div>
-            </SwiperSlide>
-      </Swiper>
-      <Swiper
-      onSwiper={setThumbsSwiper}
-      spaceBetween={10}
-      slidesPerView={4}
-      freeMode={true}
-      watchSlidesProgress={true}
-      modules={[FreeMode, Navigation, Thumbs]}
-      className="mySwiper"
-      >
-        <div className="w-full flex items-center justify-between gap-7 max-lg:gap-6 max-md:gap-4">
-            <SwiperSlide> 
-              <div className="w-full h-full bg-[#D9D9D9] rounded-xl">
-                <Image
-                  alt="car"
-                  width={1000}
-                  height={1000}
-                  src={`/${arr?.img[1]}`}
-                  className="object-cover"
-                />
-              </div>
+                </div>
               </SwiperSlide>
-            <SwiperSlide> 
-            <div className="w-full h-full bg-[#D9D9D9] rounded-xl object-cover">
-                <Image
-                  alt="car"
-                  width={1000}
-                  height={1000}
-                  src={`/${arr?.img[2]}`}
-                  className="object-cover"
-                />
-              </div>
+              <SwiperSlide>
+                <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8 relative">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                  <Image
+                    alt="car"
+                    width={1000}
+                    height={1000}
+                    src={`/${arr?.img[4]}`}
+                    className="z-1 relative"
+                  />
+                </div>
               </SwiperSlide>
-            <SwiperSlide> 
-            <div className="w-full h-full bg-[#D9D9D9] rounded-xl">
-                <Image
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              spaceBetween={10}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper"
+            >
+              <div className="w-full flex items-center justify-between gap-7 max-lg:gap-6 max-md:gap-4">
+                <SwiperSlide>
+                  <div className="w-full h-full bg-[#D9D9D9] rounded-xl relative">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                    <Image
+                      alt="car"
+                      width={1000}
+                      height={1000}
+                      src={`/${arr?.img[1]}`}
+                      className="object-cover z-1 relative"
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-[#D9D9D9] rounded-xl object-cover relative">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                    <Image
+                      alt="car"
+                      width={1000}
+                      height={1000}
+                      src={`/${arr?.img[2]}`}
+                      className="object-cover z-1 relative"
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-[#D9D9D9] rounded-xl relative">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                    <Image
                   alt="car"
                   width={1000}
                   height={1000}
                   src={`/${arr?.img[3]}`}
+                  className="object-cover z-1 relative"
                 />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="w-full h-full bg-[#D9D9D9] rounded-xl relative">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="loader2"></span>
+                  </div>
+                    <Image
+                      alt="car"
+                      width={1000}
+                      height={1000}
+                      src={`/${arr?.img[4]}`}
+                      className="object-cover z-1 relative"
+                    />
+                  </div>
+                </SwiperSlide>
               </div>
-              </SwiperSlide>
-            <SwiperSlide> 
-            <div className="w-full h-full bg-[#D9D9D9] rounded-xl">
-                <Image
-                  alt="car"
-                  width={1000}
-                  height={1000}
-                  src={`/${arr?.img[4]}`}
-                />
-              </div>
-              </SwiperSlide>
-            </div>
-      </Swiper>
-                </div>
+            </Swiper>
+          </div>
           <div className="w-1/2 max-lg:w-full">
             <h1 className='text-3xl font-["MyFont"] mb-4'>
               {translation?.productPage?.parametres}
@@ -225,18 +262,18 @@ export default function Product({ data, query }: IAppProps) {
                 >
                   {translation?.productPage?.yesText}
                 </button>
-                {
-                  arr?.priceWithoutDriver == 0 ? null : <button
-                  className="px-3 py-2 rounded-md"
-                  onClick={() => setDriverStatus("НЕТ")}
-                  type="button"
-                  style={{
-                    backgroundColor: driverStatus == "НЕТ" ? "#D9D9D9" : "",
-                  }}
-                >
-                  {translation?.productPage?.noText}
-                </button>
-                }
+                {arr?.priceWithoutDriver == 0 ? null : (
+                  <button
+                    className="px-3 py-2 rounded-md"
+                    onClick={() => setDriverStatus("НЕТ")}
+                    type="button"
+                    style={{
+                      backgroundColor: driverStatus == "НЕТ" ? "#D9D9D9" : "",
+                    }}
+                  >
+                    {translation?.productPage?.noText}
+                  </button>
+                )}
               </div>
             </div>
             <hr className="border-0 h-px bg-[#858585] mb-4" />
@@ -273,7 +310,7 @@ export default function Product({ data, query }: IAppProps) {
                   className="px-4 py-2 bg-[#D9D9D9] rounded-md"
                   type="button"
                 >
-                  { arr?.countOfPlaces }
+                  {arr?.countOfPlaces}
                 </button>
               </div>
             </div>
@@ -283,7 +320,10 @@ export default function Product({ data, query }: IAppProps) {
                 {translation?.productPage?.price}:
               </h1>
               <h1 className='font-["MyFont"] text-3xl max-lg:text-2xl max-md:text-xl text-[#E31E24]'>
-                { driverStatus === 'ДА' ? arr?.priceWithDriver : arr?.priceWithoutDriver }$
+                {driverStatus === "ДА"
+                  ? arr?.priceWithDriver
+                  : arr?.priceWithoutDriver}
+                $
               </h1>
             </div>
             <hr className="border-0 h-px bg-[#858585]" />
@@ -364,7 +404,8 @@ export default function Product({ data, query }: IAppProps) {
                   <div className="h-2/5 max-sm:w-full">
                     <button
                       type="submit"
-                      className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white" >
+                      className="font-medium leading-[150%] tracking-[-0.011em] px-6 max-lg:px-4 py-2 rounded-[5px] ease-in duration-150 hover:shadow-[0_0_10px_#E31E24] bg-[#E31E24] text-white"
+                    >
                       {translation?.modal.btn}
                     </button>
                   </div>
