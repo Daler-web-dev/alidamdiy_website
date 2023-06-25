@@ -189,6 +189,44 @@
           "descriptionUZ": "Hyundai Staria - bu yuqori darajadagi va funksional miniven, qulaylik va ish qobiliyatni birgalikda taklif etadi. Uqsonli va mustaqil dizayni bilan Staria yo'lida ajralib turadi. Keng bo'sh joyi 11 yo'lloqni yoki guruh sayohatlarni qabul qilish uchun mos keladi. Boshqaruvchi yordam sistemasiga ega, masalan, sensorli ma'lumotlar-tarqatish tizimi va haydovchilik yordam tizimlari kabi, ilgari sadoqat va yoqimli haydash imkonini ta'minlaydi. Staria ayniqsa samaradorlik va yumshoq haydash bilan, uning yaxshi tanlov bo'lganlar uchun boy bo'lib turadi, universal va amaliy transport vositasini qidirayotganlar uchun mo'ljallangan.",
           "countOfPlaces": 8,
           "withDriver": true
+        },
+        {
+          "id": 11,
+          "name": "Mercedes S222",
+          "type": "Sedan",
+          "priceWithDriver": 200,
+          "priceWithoutDriver": 0,
+          "img": [
+            "images/Cars/merc-s222.webp",
+            "images/Cars/merc-222-car.jpg",
+            "images/Cars/2018-mercedes-s-class.webp",
+            "images/Cars/foto-mercedes-s.jpeg",
+            "images/Cars/merc-back.jpeg"
+        ],
+        "descriptionEN": "Mercedes S222, also known as the Mercedes-Benz S-Class, is a luxury sedan that sets new standards in comfort, technology, and performance. With its elegant and timeless design, the S-Class exudes sophistication and prestige. The interior is meticulously crafted with high-quality materials and offers a spacious and luxurious cabin that pampers both the driver and passengers. Advanced features such as a cutting-edge infotainment system, intelligent safety systems, and a smooth and powerful engine make the S-Class a true masterpiece of automotive engineering.",
+          "descriptionRU": "Mercedes S222, также известный как Mercedes-Benz S-Class, является роскошным седаном, который устанавливает новые стандарты комфорта, технологий и производительности. Своим элегантным и вечным дизайном S-Class излучает утонченность и престиж. Интерьер тщательно выполнен из высококачественных материалов и предлагает просторный и роскошный салон, который балует как водителя, так и пассажиров. Передовые функции, такие как передовая информационно-развлекательная система, интеллектуальные системы безопасности и плавный и мощный двигатель, делают S-Class настоящим шедевром автомобильной инженерии.",
+          "descriptionUZ": "Mercedes S222, Mercedes-Benz S-Class deb nomlanadi, qulaylik, texnologiya va ishlab chiqarishda yangi standartlar qo';yadi. Uning zarafatli va abadiy dizayni bilan S-Class zarafat va prestijni nazarda tutadi. Ichki dizayn yuqori sifatli materiallar bilan xushobcha ishlab chiqilgan va vodiy va yo';lloqlarni qutb-xona bilan shod qiladi. Sensatsionellik, xavfsizlik tizimlari va yumshoq, kuchli dvigatel kabi ilgari imkoniyatlarga ega bo';lgan S-Class avtomobil muhandisligining ajoyib namunasi bo';lib hisoblanadi.",
+          "countOfPlaces": 5,
+          "withDriver": true
+        },
+        {
+          "id": 12,
+          "name": "Mercedes-Benz W223",
+          "type": "Sedan",
+          "priceWithDriver": 500,
+          "priceWithoutDriver": 0,
+          "img": [
+            "images/Cars/merc23-main.jpg",
+            "images/Cars/merc23-inside.jpg",
+            "images/Cars/merc23.jpg",
+            "images/Cars/mers233.jpg",
+            "images/Cars/merclast.jpg"
+        ],
+        "descriptionEN": "The Mercedes-Benz S-Class W223 is a luxury sedan that offers an exceptional driving experience. It features a sleek and elegant design with a powerful engine that provides impressive performance. The interior is spacious and comfortable, with high-quality materials and advanced technology. The S-Class W223 offers a smooth and refined ride, with excellent handling and a range of safety features. With its luxurious amenities and attention to detail, the Mercedes-Benz S-Class W223 is the epitome of automotive excellence.",
+          "descriptionRU": "Mercedes-Benz S-Class W223 - это роскошный седан, который предлагает исключительный опыт вождения. Он имеет изящный и элегантный дизайн с мощным двигателем, обеспечивающим впечатляющую производительность. Интерьер просторный и комфортный, с использованием высококачественных материалов и передовых технологий. S-Class W223 обеспечивает плавную и изысканную поездку, отличную управляемость и ряд функций безопасности. С роскошными удобствами и вниманием к деталям, Mercedes-Benz S-Class W223 является воплощением автомобильного совершенства.",
+          "descriptionUZ": "Mercedes-Benz S-Class W223 - bu raqamli sedan, hayratlanadigan haydovchi tajribasi taklif qiladi. U kuchli motor bilan joylashtirilgan yorqin va zarif dizayn, impresionli ishlanishni ta'minlaydi. Interer keng va qulay, yuqori sifatli materiallardan foydalanish va yuqori texnologiyalarni o'z ichiga oladi. S-Class W223 yumshoq va zarif sayohat, ajoyib boshqaruv va himoya xususiyatlari bilan ta'minlaydi. O'zining ilovali imkoniyatlar va tafsilotlarga e'tibor berish bilan, Mercedes-Benz S-Class W223 avtomobil ajoyibligining namunasi.",
+          "countOfPlaces": 4,
+          "withDriver": true
         }
 ]
 }

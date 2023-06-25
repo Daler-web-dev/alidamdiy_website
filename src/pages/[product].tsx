@@ -16,6 +16,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { useRouter } from "next/router";
+import Link from "next/link";
 export interface IAppProps {
   data: any;
   query: number;
@@ -336,12 +337,14 @@ export default function Product({ data, query }: IAppProps) {
                   {translation?.header?.orderBtn}
                 </button>
               </div>
+              <Link href={'https://t.me/alidamdiyindustry'}>
               <button
                 className="font-medium px-6 py-2 rounded-md border border-[#E31E24] "
                 type="button"
               >
                 {translation?.header?.consult}
               </button>
+              </Link>
             </div>
           </div>
         </div>
