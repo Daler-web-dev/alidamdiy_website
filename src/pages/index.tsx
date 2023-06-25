@@ -58,9 +58,9 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     formState: { errors },
   } = useForm();
   const submit = (data: any) => {
-    let msg = `Новая заявка! \n`;
-    msg += `Имя: ${data?.name} \n`;
-    msg += `Номер телефона: ${data?.phone} \n`;
+    let msg = `🆕 Новая заявка! \n`;
+    msg += `👨 Имя: ${data?.name} \n`;
+    msg += `📞 Номер телефона: ${data?.phone} \n`;
     axios
       .post(URL, {
         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
@@ -86,11 +86,6 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
     setIsShow(false);
   };
   const [typeCar, setTypeCar] = useState<string>("All");
-  const { isFallback } = useRouter();
-
-  if (isFallback) {
-    return <h1>Fallback</h1>;
-  }
   return (
     <>
       <HeadMeta
@@ -132,11 +127,11 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
               <div className="mb-3 max-sm:mb-0">
                 {
                   locale == 'uz' ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                    <h1 className="text-[#E31E24]">"Alidamdiy"</h1> transport kompaniyasi harakatlanish erkinligini ta'minlaydi
+                    <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> transport kompaniyasi harakatlanish erkinligini taminlaydi
                   </span> : locale == "ru" ? <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                     Транспортная компания <h1 className="text-[#E31E24]">"Alidamdiy"</h1> обеспечивает свободу передвижения
+                     Транспортная компания <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> обеспечивает свободу передвижения
                   </span> : <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                     Transport company <h1 className="text-[#E31E24]">"Alidamdiy"</h1> provides freedom of movement
+                     Transport company <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1> provides freedom of movement
                   </span>
                   
                 }

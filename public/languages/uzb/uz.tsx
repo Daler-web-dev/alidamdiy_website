@@ -8,7 +8,7 @@ const uz = {
     },
     banner: {
         rentText: "Eng yaxshi mashinalarni ijaraga oling",
-        text: "'Alidamdiy' transport kompaniyasi harakatlanish erkinligini ta'minlaydi",
+        text: "&#34;Alidamdiy&#34; transport kompaniyasi harakatlanish erkinligini ta'minlaydi",
         text2: "Barcha hududlarga sayohatlar",
         
         text3: "Tog'larda sayohatlar",
