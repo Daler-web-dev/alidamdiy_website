@@ -105,6 +105,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
 					</div>
 					<h1 className="text-center text-xl">
 						{translation?.catalogPage.notFoundText}
+						
 					</h1>
 				</>
 			) : null}
