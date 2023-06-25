@@ -36,7 +36,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
           <span className="loader2"></span>
         </div>
         <Image
-          className="w-full h-full object-cover relative z-10"
+          className="w-full h-full object-cover relative z-1"
           src={`/${item?.img[0]}`}
           width={100}
           height={100}

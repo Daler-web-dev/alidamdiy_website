@@ -210,4 +210,5 @@ animation: rotation 1s linear infinite;
 }
 .overflowY {
   overflow-y: scroll;
+  /* -ms-wrap-flow: ; */
 }

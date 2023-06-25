@@ -40,7 +40,7 @@ const Catalog: React.FC<ICarsProducts> = ({ data2 }: any) => {
 			data2.filter((item: any) => {
 				if (
 					arg.type === item.type &&
-					arg.range == item.priceWithDriver
+					arg.range <= item.priceWithDriver
 				) {
 					return item;
 				} else if (arg.type == "All" && item.priceWithDriver >= arg.range ) {

@@ -83,11 +83,11 @@
         "priceWithDriver": 90,
         "priceWithoutDriver": 80,
         "img": [
-          "images/Cars/captiva.png",
-          "images/Cars/captiva4.jpg",
-          "images/Cars/captiva1.jpg",
-          "images/Cars/captiva4-inside.jpg",
-          "images/Cars/captiva-inside2.jpg"
+          "images/Cars/captiva4.png",
+          "images/Cars/captiva4.jpeg",
+          "images/Cars/captiva4-inside.webp",
+          "images/Cars/Chevrolet-Captiva.jpeg",
+          "images/Cars/Chevrolet-Captiva-inside.jpeg"
       ],
       "descriptionEN": "The Chevrolet Captiva 4 is an SUV manufactured by Chevrolet. It offers a stylish and modern design, with sleek lines and a bold front grille. The Captiva 4 provides comfortable seating for up to seven passengers and has a spacious interior with ample cargo space. It is equipped with advanced safety features, such as electronic stability control, anti-lock brakes, and multiple airbags. The Captiva 4 is powered by a range of efficient engines, providing good fuel economy and a smooth driving experience. With its versatile features and reliable performance, the Chevrolet Captiva 4 is a popular choice for those seeking a practical and stylish SUV.",
         "descriptionRU": "Chevrolet Captiva 4 - это внедорожник, производимый компанией Chevrolet. Он предлагает стильный и современный дизайн, с гладкими линиями и смелой передней решеткой. Captiva 4 обеспечивает комфортные сидения для семи пассажиров и имеет просторный интерьер с достаточным пространством для грузов. Он оснащен передовыми системами безопасности, такими как электронная система стабилизации, антиблокировочные тормоза и множеством подушек безопасности. Captiva 4 оснащен различными эффективными двигателями, обеспечивающими хорошую экономию топлива и плавную поездку. C его универсальными характеристиками и надежной производительностью Chevrolet Captiva 4 является популярным выбором для тех, кто ищет практичный и стильный внедорожник.",
@@ -155,7 +155,7 @@
         {
           "id": 9,
           "name": "Range Rover 2016",
-          "type": "Luxury SUV",
+          "type": "SUV",
           "priceWithDriver": 80,
           "priceWithoutDriver": 0,
           "img": [
@@ -169,6 +169,25 @@
           "descriptionRU": "Range Rover 2016 - это роскошный внедорожник, который предлагает идеальное сочетание комфорта, стиля и возможностей для бездорожья. Он имеет элегантный и изысканный дизайн с внушительным внешним видом. Интерьер просторный и роскошный, с премиальной кожаной обивкой и высококачественными материалами. Range Rover 2016 оснащен передовыми технологиями и системами безопасности, включая сенсорную систему информационно-развлекательного комплекса, адаптивный круиз-контроль и систему контроля слепых зон. Под капотом он предлагает мощные варианты двигателей, обеспечивая отличную производительность как на дороге, так и в бездорожье. В целом Range Rover 2016 - это автомобиль премиум-класса, предлагающий непревзойденные впечатления от вождения.",
           "descriptionUZ": "Range Rover 2016 - bu qulaylik, stiil va off-road imkoniyatlari ideal birlashmasini taklif qiladigan luxury SUV. U yo'l ostida ta'sirchan tahlilga ega bo'lgan yengil va zarafatli dizayn bilan ta'minlangan. Ichki dizayn keng va sog'liqni oshirgan, premium deri kaptanlik va yuqori sifatli materiallardan tashkil topgan. Range Rover 2016 ustida eng so'nggi texnologiyalarga va xavfsizlik tizimlari, jamiyat ta'sirchanlikni tekshiradigan sensorli infotainment tizimi, adaptiv kruiz nazorati va ko'prikli nuqsonlarni nazorat qiluvchi tizimlar kiritilgan. Kapotning ostida uning etkazib beruvchisi kuchli motor variantlarini taklif qiladi, yo'l ostida va off-roadda ajoyib ish bajarish imkoniyatini ta'minlaydi. Umumiy holatda, Range Rover 2016 eng yuqori sinf avtomobil, hayotga doir ajoyib tajriba taklif qiladi.",
           "countOfPlaces": 6,
+          "withDriver": true
+        },
+        {
+          "id": 10,
+          "name": "Hyunday Staria",
+          "type": "Minivan",
+          "priceWithDriver": 100,
+          "priceWithoutDriver": 0,
+          "img": [
+            "images/Cars/staria-png2.png",
+            "images/Cars/hyundai-staria.jpeg",
+            "images/Cars/hyundai-staria-inside.jpeg",
+            "images/Cars/stariya-baggage.jpeg",
+            "images/Cars/stariya.jpeg"
+        ],
+        "descriptionEN": "Hyundai Staria is a stylish and modern minivan that offers both comfort and functionality. With its sleek and futuristic design, the Staria stands out on the road. The spacious interior can accommodate up to 11 passengers, making it perfect for large families or group outings. The advanced technology features, such as a touchscreen infotainment system and driver-assistance systems, ensure a safe and enjoyable driving experience. The Staria also offers excellent fuel efficiency and a smooth ride, making it an ideal choice for those seeking a versatile and practical vehicle.",
+          "descriptionRU": "Hyundai Staria - стильный и современный минивэн, который сочетает в себе комфорт и функциональность. Своим элегантным и футуристическим дизайном Staria выделяется на дороге. Просторный интерьер вмещает до 11 пассажиров, что делает его идеальным для больших семей или групповых поездок. Предоставляемые передовые технологии, такие как сенсорная информационно-развлекательная система и системы помощи водителю, обеспечивают безопасность и приятный опыт вождения. Staria также предлагает отличную экономичность и плавную поездку, что делает его идеальным выбором для тех, кто ищет универсальное и практичное транспортное средство.",
+          "descriptionUZ": "Hyundai Staria - bu yuqori darajadagi va funksional miniven, qulaylik va ish qobiliyatni birgalikda taklif etadi. Uqsonli va mustaqil dizayni bilan Staria yo'lida ajralib turadi. Keng bo'sh joyi 11 yo'lloqni yoki guruh sayohatlarni qabul qilish uchun mos keladi. Boshqaruvchi yordam sistemasiga ega, masalan, sensorli ma'lumotlar-tarqatish tizimi va haydovchilik yordam tizimlari kabi, ilgari sadoqat va yoqimli haydash imkonini ta'minlaydi. Staria ayniqsa samaradorlik va yumshoq haydash bilan, uning yaxshi tanlov bo'lganlar uchun boy bo'lib turadi, universal va amaliy transport vositasini qidirayotganlar uchun mo'ljallangan.",
+          "countOfPlaces": 8,
           "withDriver": true
         }
 ]

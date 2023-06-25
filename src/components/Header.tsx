@@ -6,13 +6,15 @@ import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/router";
 import Context from "./useTranslate";
 import { ItranslateData } from "./Types/Types";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
+import InputMask from "react-input-mask";
 import Button from "../components/children/button";
 import { MdClose } from "react-icons/md";
 import { Select } from "antd";
-import axios from "axios";
 import SearchInput from "./children/SearchInput";
 import { Modal } from "./Modal";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 interface HeaderProps { }
 
@@ -21,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 	const { locale } = router;
 	const [hide, setHide] = useState<boolean>(false);
 	const [isShow, setIsShow] = useState<boolean>(false);
+	const [isShow2, setIsShow2] = useState<boolean>(false);
 	const [success, setSuccess] = useState<boolean>(false);
 	const [searchInp, setSearchInp] = useState<boolean>(false);
 	const [localeValue, setLocaleValue] = useState<any>(locale);
@@ -31,6 +34,8 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 	const reset = () => {
 		setSuccess(false);
 		setIsShow(false);
+		setIsShow2(false);
+    setHide(false)
 		setSearchInp(false);
 		const body = document.body
 		if (hide == true) {
@@ -42,11 +47,28 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 			body.classList.add('overflowY')
 		}
 	};
+  const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const submit = (data: any) => {
+    let msg = `🆕 Новая заявка на вакансию! \n`;
+    msg += `👨 Имя: ${data?.name} \n`;
+    msg += `📞 Номер телефона: ${data?.phone} \n`;
+    msg += `🚘 Машина: ${data?.car} \n`;
+    axios
+      .post(URL, {
+        chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
+        parse_mode: "html",
+        text: msg,
+      })
+      .catch((err) => console.log(err));
+      setSuccess(true)
+  };
 	const changeLang = (e: any) => {
 		const locale = e;
-		// console.log(e);
-
-
 		router.push("/", "/", { locale });
 		setLocaleValue(locale);
 	};
@@ -64,6 +86,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 			console.log(hide);
 		}
 	}
+  
 
 	return (
 		<>
@@ -120,21 +143,14 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 							onClick={(e) => e.stopPropagation()}
 						>
 							<nav>
-								<ul className="flex max-lg:flex-col gap-7 max-2xl:gap-5 max-lg:gap-3">
+								<ul className="flex max-lg:flex-col gap-7 max-2xl:gap-5 max-lg:gap-3 cursor-pointer">
 									<li className="font-medium max-lg:text-2xl text-[#474747]">
 										<Link href={"/catalog"} onClick={() => setHide(false)}>
 											{translation.header.catalog}
 										</Link>
 									</li>
-									<li className="font-medium max-lg:text-2xl  text-[#474747]">
-										<Link href={"#"} onClick={() => setHide(false)}>
+									<li className="font-medium max-lg:text-2xl  text-[#474747]" onClick={() => {setHide(false), setIsShow2(true)}}>
 											{translation?.header?.drivers}
-										</Link>
-									</li>
-									<li className="font-medium max-lg:text-2xl text-[#474747]">
-										<Link href={"#"} onClick={() => setHide(false)}>
-											{translation?.header?.company}
-										</Link>
 									</li>
 								</ul>
 							</nav>
@@ -203,6 +219,91 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 					{success ? (
 						<div
 							className={isShow ? animation : style1}
+							onClick={(e) => e.stopPropagation()}
+						>
+							<div>
+								<div className="w-full m-auto flex justify-center">
+									<Image
+										src="/images/icons/success.svg"
+										alt="success"
+										width={110}
+										height={110}
+									/>
+								</div>
+								<div className="absolute top-2 right-2" onClick={reset}>
+									<MdClose size={"30"} />
+								</div>
+								<h1 className="text-6xl text-center mt-4">
+									{translation?.productPage?.successText}
+								</h1>
+								<p className="text-center text-xl mt-4">
+									{translation?.productPage?.successText2}
+								</p>
+							</div>
+						</div>
+					) : null}
+				</div>
+			) : null}
+      {isShow2 ? (
+				<div
+					className="w-full h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-10"
+					onClick={reset}
+				>
+					<div
+						className={isShow2 ? animation : style1}
+						onClick={(e) => e.stopPropagation()}
+					>
+						<div>
+      <form action="" onSubmit={handleSubmit(submit)}>
+        <h2 className="text-4xl max-xl:text-3xl max-md:text-2xl font-bold leading-[115%] tracking-[-0.011em] font-[MyFontSemiBold] mb-8">
+          {translation?.modal.application}
+        </h2>
+        <div className="absolute top-2 right-2" onClick={reset}>
+          <MdClose size={"30"} />
+        </div>
+        <div className="flex max-sm:flex-col  gap-6 max-md:gap-4 max-sm:gap-3 mb-2">
+          <input
+            type="text"
+            placeholder={translation?.modal.placeholder}
+            className="w-3/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+            {...register("name", { required: true})}
+          />
+          {errors?.name && <p className="text-red-500">{translation.errors.NameMsg}</p>}
+          <InputMask
+                    mask="+\9\98-(99)-999-99-99"
+                    className="w-2/5 max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+                    placeholder={translation?.modal.phoneNumber}
+                    {...register("phone", { required: true })}
+                  />
+          <div>
+          {errors?.phone && <p className="text-red-500">{translation.errors.NumMsg}</p>}
+          </div>
+        </div>
+        <div className="flex max-sm:flex-col  gap-6 max-md:gap-4 max-sm:gap-3">
+        <input
+            type="text"
+            placeholder={locale == 'ru' ? 'Какая у вас машина?' : locale == 'uz' ? 'Moshinangiz qanaqa?' : 'What is your car?'}
+            className="w-full max-sm:w-full px-6 py-[14px] rounded-[5px] bg-[#D9D9D9]"
+            {...register("car", { required: true})}
+          />
+        </div>
+        <div className="mt-8 max-sm:mt-4 flex max-sm:flex-col-reverse items-center gap-9 max-xl:gap-5 max-sm:gap-2">
+          <div className="h-2/5 max-sm:w-full">
+            <Button>{translation?.modal.btn}</Button>
+          </div>
+          <div className="w-3/4 max-sm:w-full">
+            <p className="max-xl:text-sm max-md:text-xs text-[#6A6A6A]">
+              {translation?.modal.text}
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+					</div>
+					{success ? (
+						<div
+							className={isShow2 ? animation : style1}
+              style={{height: '395px'}}
 							onClick={(e) => e.stopPropagation()}
 						>
 							<div>

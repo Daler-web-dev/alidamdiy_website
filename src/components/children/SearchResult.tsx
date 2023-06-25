@@ -9,7 +9,7 @@ export interface IAppProps {
     name: string;
     type: string;
     countOfPlaces: number;
-    price: number;
+    priceWithDriver: number;
     img: string;
   };
 }
@@ -39,7 +39,7 @@ export function SearchResult({ item }: IAppProps) {
                 : item.countOfPlaces + " мест"}
             </h1>
             <h1 className="text-[#FC0202] font-semibold">
-              {item.price}$/сутки
+              {item?.priceWithDriver}$/сутки
             </h1>
           </div>
         </div>

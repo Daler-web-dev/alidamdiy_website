@@ -1,4 +1,5 @@
 import { Button, Slider } from "@mui/material";
+import { useRouter } from "next/router";
 import * as React from "react";
 import { Controller, useForm } from "react-hook-form";
 
@@ -16,7 +17,8 @@ const Search: React.FC<ISearch> = ({ filteredData, text, typeOfCar }) => {
     formState: { errors },
   } = useForm();
   const submit = (data: any) => filteredData(data);
-
+  const router = useRouter();
+	const { locale } = router;
   return (
     <div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 mt-4">
       <form action="" onSubmit={handleSubmit(submit)}>
@@ -30,11 +32,12 @@ const Search: React.FC<ISearch> = ({ filteredData, text, typeOfCar }) => {
               className="max-sm:text-sm font-['MyFont'] outline-none bg-transparent"
               {...register("type")}
             >
-              <option value="All">Все</option>
-              <option value="Hatchback">Хэтчбэк</option>
-              <option value="Minivan">Минивэн</option>
-              <option value="Sedan">Седан</option>
-              <option value="Сrossover">Кроссовер</option>
+              <option value="All">{locale == 'ru' ? 'Все' : locale == 'uz' ? 'Hammasi': 'All'}</option>
+              <option value="Hatchback">{locale == 'ru' ? 'Хэтчбек' : locale == 'uz' ? 'Xetchbek': 'Hatchback'}</option>
+              <option value="Minivan">{locale == 'ru' ? 'Минивэн' : locale == 'uz' ? 'Mikroavtobus': 'Minivan'}</option>
+              <option value="Sedan">{locale == 'ru' ? 'Седан' : locale == 'uz' ? 'Sedan': 'Sedan'}</option>
+              <option value="Сrossover">{locale == 'ru' ? 'Кроссовер' : locale == 'uz' ? 'Krossover': 'Crossover'}</option>
+              <option value="SUV">{locale == 'ru' ? 'Внедорожник' : locale == 'uz' ? 'SUV': 'SUV'}</option>
             </select>
           </div>
           <div className="flex max-sm:flex-col gap-20 max-xl:gap-10 max-sm:gap-5 items-center justify-between max-sm:items-end w-1/2 max-md:w-full">
