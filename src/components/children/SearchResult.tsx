@@ -24,8 +24,8 @@ export function SearchResult({ item }: IAppProps) {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="max-sm:h-full w-1/2 max-xl:w-3/5 max-md:w-3/4 max-sm:w-full flex max-sm:justify-between max-sm:flex-col-reverse gap-4 items-center max-sm:items-start">
-            <div className="w-2/5 max-sm:w-full max-sm:h-full">
-              <Image className="w-full h-full object-contain" alt="car" width={170} height={170} src={`/${item.img[0]}`} />
+            <div className="w-2/5 max-sm:w-full max-sm:flex max-sm:items-center max-sm:justify-center">
+              <Image className="w-full h-full max-sm:w-3/4 object-contain" alt="car" width={170} height={170} src={`/${item.img[0]}`} />
             </div>
             <div className="w-3/5 max-sm:w-full flex flex-col gap-2">
               <h1 className="text-xl max-md:text-base max-sm:text-sm font-bold">{item.name}</h1>
