@@ -106,7 +106,7 @@ export default function Product({ data, query }: IAppProps) {
           {arr?.name}
         </h1>
         <div className="w-full flex max-lg:flex-col gap-8 justify-between">
-          <div className="w-1/2 h-[600px] max-lg:w-full select-none flex flex-col gap-3">
+          <div className="w-1/2 h-[600px] max-md:h-[350px] max-lg:w-full select-none flex flex-col gap-3">
             <Swiper
               loop={true}
               spaceBetween={10}
@@ -120,7 +120,7 @@ export default function Product({ data, query }: IAppProps) {
             >
               <SwiperSlide>
                 <div className="w-full h-full rounded-xl bg-[#ffff] mb-8 relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <span className="loader2"></span>
                   </div>
                   <Image
@@ -134,7 +134,7 @@ export default function Product({ data, query }: IAppProps) {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8 relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <span className="loader2"></span>
                   </div>
                   <Image
@@ -148,16 +148,16 @@ export default function Product({ data, query }: IAppProps) {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="w-full h-full rounded-xl bg-[#D9D9D9] mb-8 relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <span className="loader2"></span>
                   </div>
                   <Image
-                alt="car"
-                width={1000}
-                height={1000}
-                src={`/${arr?.img[3]}`}
-                className="z-1 relative"
-              />
+                    alt="car"
+                    width={1000}
+                    height={1000}
+                    src={`/${arr?.img[3]}`}
+                    className="z-1 relative"
+                  />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -187,9 +187,9 @@ export default function Product({ data, query }: IAppProps) {
               <div className="w-full flex items-center justify-between gap-7 max-lg:gap-6 max-md:gap-4">
                 <SwiperSlide>
                   <div className="w-full h-full bg-[#D9D9D9] rounded-xl relative">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <span className="loader2"></span>
-                  </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <span className="loader2"></span>
+                    </div>
                     <Image
                       alt="car"
                       width={1000}
@@ -201,9 +201,9 @@ export default function Product({ data, query }: IAppProps) {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="w-full h-full bg-[#D9D9D9] rounded-xl object-cover relative">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <span className="loader2"></span>
-                  </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <span className="loader2"></span>
+                    </div>
                     <Image
                       alt="car"
                       width={1000}
@@ -215,23 +215,23 @@ export default function Product({ data, query }: IAppProps) {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="w-full h-full bg-[#D9D9D9] rounded-xl relative">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <span className="loader2"></span>
-                  </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <span className="loader2"></span>
+                    </div>
                     <Image
-                  alt="car"
-                  width={1000}
-                  height={1000}
-                  src={`/${arr?.img[3]}`}
-                  className="object-cover z-1 relative"
-                />
+                      alt="car"
+                      width={1000}
+                      height={1000}
+                      src={`/${arr?.img[3]}`}
+                      className="object-cover z-1 relative"
+                    />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="w-full h-full bg-[#D9D9D9] rounded-xl relative">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <span className="loader2"></span>
-                  </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <span className="loader2"></span>
+                    </div>
                     <Image
                       alt="car"
                       width={1000}
