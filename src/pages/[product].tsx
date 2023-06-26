@@ -62,7 +62,6 @@ export default function Product({ data, query }: IAppProps) {
   const name = arr?.name;
 
   const router = useRouter();
-  console.log(router);
   const style1 =
     "w-3/5 fixed max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200 z-10";
   const animation =

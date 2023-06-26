@@ -41,7 +41,6 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 		if (hide == true) {
 			body.classList.add('overflow')
 			body.classList.remove('overflowY')
-			console.log(hide);
 		} else {
 			body.classList.remove('overflow')
 			body.classList.add('overflowY')
@@ -69,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
   };
 	const changeLang = (e: any) => {
 		const locale = e;
-		router.push("/", "/", { locale });
+		router.push({pathname: router.pathname, query: router.query}, router.asPath, {locale});
 		setLocaleValue(locale);
 	};
 	const translation = useContext<ItranslateData>(Context);
@@ -79,11 +78,9 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 		if (hide == false) {
 			body.classList.add('overflow')
 			body.classList.remove('overflowY')
-			console.log(hide);
 		} else {
 			body.classList.remove('overflow')
 			body.classList.add('overflowY')
-			console.log(hide);
 		}
 	}
   
