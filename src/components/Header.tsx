@@ -87,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 
 	return (
 		<>
-			<header className="w-full bg-[#BBBBBB]">
+			<header className="w-full bg-[#BBBBBB] relative z-40">
 				<div className="container mx-auto px-24 max-xl:px-14 max-lg:px-5 py-7 max-md:py-5 max-sm:py-4 flex items-center justify-between bg-[#BBBBBB]">
 					<div className="flex items-center gap-10 max-xl:gap-5">
 						<div className="max-lg:hidden block w-[170px] max-2xl:w-[150px] max-xl:w-[120px]">

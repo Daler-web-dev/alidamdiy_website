@@ -68,6 +68,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
 
   const translation = useContext<ItranslateData>(Context);
   const [isShow, setIsShow] = useState<boolean>(false);
+  const [isVideo, setIsVideo] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const style1 =
     "w-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-lg:w-full py-[66px] max-xl:py-12 px-14 max-xl:px-10 max-md:px-5 md:rounded-[15px] shadow-[0px_4px_16px_#00000040] bg-[#FAFAFA] ease-in duration-200";
@@ -76,6 +77,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
   const reset = () => {
     setSuccess(false);
     setIsShow(false);
+    setIsVideo(false)
   };
   const [typeCar, setTypeCar] = useState<string>("All");
   return (
@@ -159,11 +161,9 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                     {translation?.banner?.orderBtn}
                   </button>
                 </div>
-                <Link href="/catalog">
-                  <button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]">
+                  <button className="font-medium px-6 py-2 rounded-[5px] border border-[#E31E24]" onClick={() => setIsVideo(true)}>
                     {translation?.banner?.infoBtn}
                   </button>
-                </Link>
               </div>
             </div>
           </div>
@@ -516,6 +516,17 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           </div>
         </div>
       ) : null}
+      {
+        isVideo ? 
+        <div
+        className="w-full flex items-center justify-center h-screen fixed top-0 left-0 bg-[rgba(236,236,236,.8)] z-40 pt-10"
+        onClick={reset}
+      >
+        <div className="w-[90%] h-[90%] max-md:h-[70%] max-sm:h-[45%]">
+         <iframe className="w-full h-full m-auto relative z-50" src="https://www.youtube.com/embed/Dok5qTGwnIE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        </div>
+      </div> : null
+      }
     </>
   );
 };
