@@ -151,7 +151,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
                 <li className="max-md:text-xs font-[MyFontMedium] leading-[190%] tracking-[-0.011em] text-[#474747]">
                   {translation?.banner?.text5}
                 </li>
-                <a href="" type="tel" className="text-[#E31E24]">
+                <a href="tel:+99855701-11-99" type="tel" className="text-[#E31E24]">
                   +998(55)701-11-99
                 </a>
               </div>
