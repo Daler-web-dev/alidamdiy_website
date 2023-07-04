@@ -114,26 +114,26 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           <div className="w-full py-24 max-lg:py-14 max-md:py-10 max-sm:py-[14px] flex items-center justify-start">
             <div className="max-w-[700px] w-full px-[39px] max-sm:px-0 py-[33px] max-sm:py-0 rounded-[15px] backdrop-blur bg-[#ffffff99] max-sm:bg-transparent">
               <div className="mb-3 max-sm:mb-0">
-                <p className="text-xl font-semibold">
+                <p className="text-xl font-semibold mb-2">
                   {translation?.banner?.rentText}
                 </p>
               </div>
               <div className="mb-3 max-sm:mb-0">
                 {locale == "uz" ? (
-                  <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
-                    <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1>{" "}
+                  <span className="font-[MyFont] text-3xl max-lg:text-2xl font-bold leading-[170%] max-md:leading-[160%] tracking-[-0.011em]">
+                    <h1 className="text-[#E31E24]">&#34;AliDamDiy INDUSTRY&#34;</h1>{" "}
                     transport kompaniyasi harakatlanish erkinligini taminlaydi
                   </span>
                 ) : locale == "ru" ? (
-                  <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+                  <span className="font-[MyFont] text-3xl max-lg:text-2xl font-bold leading-[170%] max-md:leading-[160%] tracking-[-0.011em]">
                     Транспортная компания{" "}
-                    <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1>{" "}
+                    <h1 className="text-[#E31E24]">&#34;AliDamDiy INDUSTRY&#34;</h1>{" "}
                     обеспечивает свободу передвижения
                   </span>
                 ) : (
-                  <span className="font-[MyFont] text-3xl max-lg:text-2xl max-md:text-xl font-bold leading-[120%] max-md:leading-[130%] tracking-[-0.011em]">
+                  <span className="font-[MyFont] text-3xl max-lg:text-2xl font-bold leading-[170%] max-md:leading-[160%] tracking-[-0.011em]">
                     Transport company{" "}
-                    <h1 className="text-[#E31E24]">&#34;Alidamdiy&#34;</h1>{" "}
+                    <h1 className="text-[#E31E24]">&#34;AliDamDiy INDUSTRY&#34;</h1>{" "}
                     provides freedom of movement
                   </span>
                 )}
