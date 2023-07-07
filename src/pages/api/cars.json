@@ -64,7 +64,7 @@
         "priceWithDriver": 75,
         "priceWithoutDriver": 0,
         "img": [
-          "images/Cars/kia-carnival.png",
+          "images/Cars/kia_carnival_white.png",
           "images/Cars/carnival.jpg",
           "images/Cars/carnival2.jpg",
           "images/Cars/carnival-inside.jpg",
@@ -73,7 +73,7 @@
       "descriptionEN": "The Kia Carnival is a minivan manufactured by Kia Motors. It offers spacious seating for up to eight passengers and is known for its comfortable and versatile interior. The Carnival features a sleek and modern design, with a wide grille and stylish headlights. It is equipped with advanced safety features such as blind-spot detection, lane-keeping assist, and rearview camera. The engine options vary, but typically include a powerful V6 engine that provides ample performance and smooth driving experience. The Kia Carnival is a reliable and family-friendly vehicle, perfect for long trips and daily commuting.",
         "descriptionRU": "Kia Carnival - это минивэн, производимый компанией Kia Motors. Он предлагает просторные сидения для восьми пассажиров и известен своим комфортным и универсальным интерьером. Carnival имеет элегантный и современный дизайн, с широкой решеткой и стильными фарами. Он оснащен передовыми системами безопасности, такими как система контроля слепых зон, помощник удержания полосы и камера заднего вида. Варианты двигателя могут различаться, но обычно включают мощный V6-двигатель, который обеспечивает достаточную производительность и плавную поездку. Kia Carnival - надежный и подходящий для семейных поездок автомобиль, идеально подходящий для дальних поездок и ежедневных поездок.",
         "descriptionUZ": "Kia Carnival - Kia Motors tomonidan ishlab chiqarilgan miniven. U to'qqizta yo'lovchilar uchun keng o'tirish imkonini taklif qiladi va uning rahat va kengayadigan intereri bilan mashhur. Carnival keng va modern dizaynga ega, keng panjara va chiroyli faroqlari bilan taniladi. U quyi yo'qolganlarini aniqlash, yo'lni saqlash yordamchisi va orqa ko'rsatkich kamerasi kabi yuqori darajadagi xavfsizlik imkoniyatlariga egadir. Motor variantlari farqli bo'lishi mumkin, lekin odatda yetarli samaradorlik va yumsha hayot ta'minlovchi kuchli V6-motorini o'z ichiga oladi. Kia Carnival ishonchli va oilaviy mehmonxona uchun mo'ljallangan avtomobil, uzoq sayohatlar va kunlik sayohatlar uchun idealdir.",
-        "countOfPlaces": 8,
+        "countOfPlaces": 5,
         "withDriver": true
       },
       {
@@ -92,7 +92,7 @@
       "descriptionEN": "The Chevrolet Captiva 4 is an SUV manufactured by Chevrolet. It offers a stylish and modern design, with sleek lines and a bold front grille. The Captiva 4 provides comfortable seating for up to seven passengers and has a spacious interior with ample cargo space. It is equipped with advanced safety features, such as electronic stability control, anti-lock brakes, and multiple airbags. The Captiva 4 is powered by a range of efficient engines, providing good fuel economy and a smooth driving experience. With its versatile features and reliable performance, the Chevrolet Captiva 4 is a popular choice for those seeking a practical and stylish SUV.",
         "descriptionRU": "Chevrolet Captiva 4 - это внедорожник, производимый компанией Chevrolet. Он предлагает стильный и современный дизайн, с гладкими линиями и смелой передней решеткой. Captiva 4 обеспечивает комфортные сидения для семи пассажиров и имеет просторный интерьер с достаточным пространством для грузов. Он оснащен передовыми системами безопасности, такими как электронная система стабилизации, антиблокировочные тормоза и множеством подушек безопасности. Captiva 4 оснащен различными эффективными двигателями, обеспечивающими хорошую экономию топлива и плавную поездку. C его универсальными характеристиками и надежной производительностью Chevrolet Captiva 4 является популярным выбором для тех, кто ищет практичный и стильный внедорожник.",
         "descriptionUZ": "Chevrolet Captiva 4 - Chevrolet tomonidan ishlab chiqarilgan SUV. U stilniy va modern dizaynga ega, yalg';iz chiziq va jasur old panel bilan taniladi. Captiva 4 yetti yo';lovchilarni qulay joylashish imkonini taklif qiladi va yuklarni olib borish uchun keng interier bilan ta';mirlangan. U elektron stabilizatsiya tizimi, antiblok qilib turgan frenlar va bir nechta havo yastiklari kabi yuqori darajadagi xavfsizlik imkoniyatlari bilan ta';minlangan. Captiva 4 samarali motor variantlari bilan ta';minlangan, bu samaradorlik va yumsha hayot ta';minlovchisi bilan yaxshi yakit isrofdan foydalanish va yumsha hayot ta';minlash imkoniyatlarini beradi. Uning keng foydali xususiyatlari va ishonchli ishlovchi Chevrolet Captiva 4, amaliy va stilli SUV izlayotganlar uchun mashhur tanlovdir.",
-        "countOfPlaces": 6,
+        "countOfPlaces": 3,
         "withDriver": true
       },
       {
@@ -102,7 +102,7 @@
         "priceWithDriver": 120,
         "priceWithoutDriver": 0,
         "img": [
-          "images/Cars/toyota-main.png",
+          "images/Cars/toyota-land-cruiser-prado-2018.jpg",
           "images/Cars/toyota.jpg",
           "images/Cars/toyota-inside.jpg",
           "images/Cars/toyota-inside2.jpg",
@@ -111,7 +111,7 @@
       "descriptionEN": "The Toyota Land Cruiser 200 is a rugged and powerful SUV manufactured by Toyota. It is known for its exceptional off-road capabilities and durability. The Land Cruiser 200 features a strong and muscular exterior design, with a prominent front grille and bold lines. It offers luxurious and spacious seating for up to eight passengers, along with a comfortable and well-equipped interior. This SUV is equipped with advanced safety features, including multiple airbags, stability control, and a comprehensive suite of driver-assistance technologies. The Land Cruiser 200 is powered by a robust engine that delivers impressive performance both on and off the road. With its legendary reliability and versatility, the Toyota Land Cruiser 200 is a popular choice for adventurers and those seeking a capable and luxurious SUV.",
         "descriptionRU": "Toyota Land Cruiser 200 - это прочный и мощный внедорожник, производимый компанией Toyota. Он известен своими исключительными внедорожными возможностями и надежностью. Land Cruiser 200 имеет сильный и мускулистый внешний дизайн, с выдающейся передней решеткой и смелыми линиями. Он предлагает роскошные и просторные сидения для восьми пассажиров, а также комфортный и хорошо оборудованный интерьер. Этот внедорожник оснащен передовыми системами безопасности, включая множество подушек безопасности, систему стабильности и полный набор технологий помощи водителю. Land Cruiser 200 оснащен мощным двигателем, который обеспечивает впечатляющую производительность как на дороге, так и вне ее. Благодаря своей легендарной надежности и универсальности, Toyota Land Cruiser 200 является популярным выбором для авантюристов и тех, кто ищет надежный и роскошный внедорожник.",
         "descriptionUZ": "Toyota Land Cruiser 200 - Toyota tomonidan ishlab chiqarilgan kuchli va qiyin SUV. Uning e'tibor qozonuvchan off-road imkoniyatlari va barqarorligi bilan mashhur. Land Cruiser 200 kuchli va muskulli tashqi dizaynga ega, markaziy panjara va jasur chiziqcha bilan taniladi. U sakkiztadan ortiq yo';lovchilar uchun rahmatli va keng joylashish imkonini taklif qiladi, yanada qulay va yaxshi jihozlangan interier bilan. Ushbu SUV ko'p havo yastiklari, barqarorlik nazorati va haydovchi yordam texnologiyalari to'plami kabi yuqori darajadagi xavfsizlik imkoniyatlari bilan ta';minlangan. Land Cruiser 200 kuchli motor bilan ta';minlanadi, unda yo';l va yo';l tashqarisida kuchli ishlab chiqarish amalga oshiriladi. Uning legendariy ishonch va kengaytirish imkoniyatlari bilan Toyota Land Cruiser 200, guruhlar va texnik harakatlarga qiziqishganlar va kuchli va rafinadlanmi'; bir SUV qidiruvchilar uchun mashhur tanlovdir.",
-        "countOfPlaces": 6,
+        "countOfPlaces": 4,
         "withDriver": true
       },
       {
@@ -130,7 +130,7 @@
       "descriptionEN": "The Mercedes-Benz S-Class W221 is a luxury sedan that offers an exceptional driving experience. It features a sleek and elegant design with a powerful engine that provides impressive performance. The interior is spacious and comfortable, with high-quality materials and advanced technology. The S-Class W221 offers a smooth and refined ride, with excellent handling and a range of safety features. With its luxurious amenities and attention to detail, the Mercedes-Benz S-Class W221 is the epitome of automotive excellence.",
         "descriptionRU": "Mercedes-Benz S-Class W221 - это роскошный седан, который предлагает исключительный опыт вождения. Он имеет изящный и элегантный дизайн с мощным двигателем, обеспечивающим впечатляющую производительность. Интерьер просторный и комфортный, с использованием высококачественных материалов и передовых технологий. S-Class W221 обеспечивает плавную и изысканную поездку, отличную управляемость и ряд функций безопасности. С роскошными удобствами и вниманием к деталям, Mercedes-Benz S-Class W221 является воплощением автомобильного совершенства.",
         "descriptionUZ": "Mercedes-Benz S-Class W221 - bu raqamli sedan, hayratlanadigan haydovchi tajribasi taklif qiladi. U kuchli motor bilan joylashtirilgan yorqin va zarif dizayn, impresionli ishlanishni ta'minlaydi. Interer keng va qulay, yuqori sifatli materiallardan foydalanish va yuqori texnologiyalarni o'z ichiga oladi. S-Class W221 yumshoq va zarif sayohat, ajoyib boshqaruv va himoya xususiyatlari bilan ta'minlaydi. O'zining ilovali imkoniyatlar va tafsilotlarga e'tibor berish bilan, Mercedes-Benz S-Class W221 avtomobil ajoyibligining namunasi.",
-        "countOfPlaces": 4,
+        "countOfPlaces": 3,
         "withDriver": true
       },
       {
@@ -140,8 +140,8 @@
         "priceWithDriver": 100,
         "priceWithoutDriver": 0,
         "img": [
-          "images/Cars/viano.png",
-          "images/Cars/viano3.jpeg",
+          "images/Cars/mercedes-benz-viano.png",
+          "images/Cars/mercedes-viano2020.jpg",
           "images/Cars/viano1.jpeg",
           "images/Cars/viano-inside.jpeg",
           "images/Cars/viano2.jpeg"
@@ -149,26 +149,26 @@
       "descriptionEN": "Mercedes Viano is a luxury multi-purpose vehicle (MPV) produced by the German automaker Mercedes-Benz. It offers a spacious and comfortable interior with seating for up to eight passengers. The Viano features a sleek and stylish design, with a modern and aerodynamic body shape. It is equipped with advanced technology and safety features, such as a touchscreen infotainment system, leather seats, multiple airbags, and driver-assist systems. The Viano is powered by a range of efficient diesel and petrol engines, providing both power and fuel economy. Overall, the Mercedes Viano offers a luxurious and practical driving experience.",
         "descriptionRU": "Mercedes Viano - это роскошный многоцелевой автомобиль (MPV), производимый немецким автопроизводителем Mercedes-Benz. Он предлагает просторный и комфортабельный интерьер с возможностью размещения до восьми пассажиров. Viano имеет элегантный и стильный дизайн с современной и аэродинамической формой кузова. Он оснащен передовыми технологиями и системами безопасности, такими как сенсорная система развлечений, кожаные сиденья, множественные подушки безопасности и системы помощи водителю. Viano оснащен диапазоном эффективных дизельных и бензиновых двигателей, обеспечивающих мощность и экономичность топлива. В целом, Mercedes Viano предлагает роскошный и практичный опыт вождения.",
         "descriptionUZ": "Mercedes Viano - bu Germaniya avtomobil ishlab chiqaruvchisi Mercedes-Benz tomonidan ishlab chiqarilgan yuqori sifatli ko'p maqsadli transport vositasi (MPV). U sizga yetti joyli, keng va qulay interior taklif qiladi. Viano-iq stil va dizaynli ko'rinishga ega, modern va aerodinamik karobka shaklida. U yaqinlashgan texnologiyalar va xavfsizlik tizimlari, masalan, sensorli infotainment tizimi, dermantirlovchi o'rindlar, bir nechta podushek va haydovchi yordam tizimlari bilan jihozlangan. Viano-iq, samarali dizel va benzinli motorlar diapazoni bilan jihozlangan, kuch va yanadaqiyatni ta'minlaydi. Umumiy holatda, Mercedes Viano sizga yuksak sifatli va amaliyotli haydovchi tajribasi taqdim etadi.",
-        "countOfPlaces": 6,
+        "countOfPlaces": 7,
         "withDriver": true
         },
         {
           "id": 9,
-          "name": "Range Rover 2016",
+          "name": "Range Rover 2022",
           "type": "SUV",
           "priceWithDriver": 80,
           "priceWithoutDriver": 0,
           "img": [
-            "images/Cars/range-rover.png",
-            "images/Cars/vito2.jpg",
-            "images/Cars/vito-salon.jpg",
-            "images/Cars/vito-salon2.jpg",
-            "images/Cars/vito-salon3.jpg"
+            "images/Cars/land_rovew2022.png",
+            "images/Cars/rangerover2022.jpg",
+            "images/Cars/range-rover-2022_salon1.jpg",
+            "images/Cars/land_rover_salon2.jpg",
+            "images/Cars/land_rover_left.webp"
         ],
         "descriptionEN": "The Range Rover 2016 is a luxury SUV that offers a perfect blend of comfort, style, and off-road capability. It features a sleek and elegant design with a commanding presence on the road. The interior is spacious and opulent, with premium leather upholstery and high-quality materials. The Range Rover 2016 comes equipped with advanced technology and safety features, including a touchscreen infotainment system, adaptive cruise control, and blind spot monitoring. Under the hood, it offers powerful engine options, providing excellent performance both on and off the road. Overall, the Range Rover 2016 is a top-tier vehicle that offers the ultimate driving experience.",
           "descriptionRU": "Range Rover 2016 - это роскошный внедорожник, который предлагает идеальное сочетание комфорта, стиля и возможностей для бездорожья. Он имеет элегантный и изысканный дизайн с внушительным внешним видом. Интерьер просторный и роскошный, с премиальной кожаной обивкой и высококачественными материалами. Range Rover 2016 оснащен передовыми технологиями и системами безопасности, включая сенсорную систему информационно-развлекательного комплекса, адаптивный круиз-контроль и систему контроля слепых зон. Под капотом он предлагает мощные варианты двигателей, обеспечивая отличную производительность как на дороге, так и в бездорожье. В целом Range Rover 2016 - это автомобиль премиум-класса, предлагающий непревзойденные впечатления от вождения.",
           "descriptionUZ": "Range Rover 2016 - bu qulaylik, stiil va off-road imkoniyatlari ideal birlashmasini taklif qiladigan luxury SUV. U yo'l ostida ta'sirchan tahlilga ega bo'lgan yengil va zarafatli dizayn bilan ta'minlangan. Ichki dizayn keng va sog'liqni oshirgan, premium deri kaptanlik va yuqori sifatli materiallardan tashkil topgan. Range Rover 2016 ustida eng so'nggi texnologiyalarga va xavfsizlik tizimlari, jamiyat ta'sirchanlikni tekshiradigan sensorli infotainment tizimi, adaptiv kruiz nazorati va ko'prikli nuqsonlarni nazorat qiluvchi tizimlar kiritilgan. Kapotning ostida uning etkazib beruvchisi kuchli motor variantlarini taklif qiladi, yo'l ostida va off-roadda ajoyib ish bajarish imkoniyatini ta'minlaydi. Umumiy holatda, Range Rover 2016 eng yuqori sinf avtomobil, hayotga doir ajoyib tajriba taklif qiladi.",
-          "countOfPlaces": 6,
+          "countOfPlaces": 3,
           "withDriver": true
         },
         {
@@ -187,7 +187,7 @@
         "descriptionEN": "Hyundai Staria is a stylish and modern minivan that offers both comfort and functionality. With its sleek and futuristic design, the Staria stands out on the road. The spacious interior can accommodate up to 11 passengers, making it perfect for large families or group outings. The advanced technology features, such as a touchscreen infotainment system and driver-assistance systems, ensure a safe and enjoyable driving experience. The Staria also offers excellent fuel efficiency and a smooth ride, making it an ideal choice for those seeking a versatile and practical vehicle.",
           "descriptionRU": "Hyundai Staria - стильный и современный минивэн, который сочетает в себе комфорт и функциональность. Своим элегантным и футуристическим дизайном Staria выделяется на дороге. Просторный интерьер вмещает до 11 пассажиров, что делает его идеальным для больших семей или групповых поездок. Предоставляемые передовые технологии, такие как сенсорная информационно-развлекательная система и системы помощи водителю, обеспечивают безопасность и приятный опыт вождения. Staria также предлагает отличную экономичность и плавную поездку, что делает его идеальным выбором для тех, кто ищет универсальное и практичное транспортное средство.",
           "descriptionUZ": "Hyundai Staria - bu yuqori darajadagi va funksional miniven, qulaylik va ish qobiliyatni birgalikda taklif etadi. Uqsonli va mustaqil dizayni bilan Staria yo'lida ajralib turadi. Keng bo'sh joyi 11 yo'lloqni yoki guruh sayohatlarni qabul qilish uchun mos keladi. Boshqaruvchi yordam sistemasiga ega, masalan, sensorli ma'lumotlar-tarqatish tizimi va haydovchilik yordam tizimlari kabi, ilgari sadoqat va yoqimli haydash imkonini ta'minlaydi. Staria ayniqsa samaradorlik va yumshoq haydash bilan, uning yaxshi tanlov bo'lganlar uchun boy bo'lib turadi, universal va amaliy transport vositasini qidirayotganlar uchun mo'ljallangan.",
-          "countOfPlaces": 8,
+          "countOfPlaces": 7,
           "withDriver": true
         },
         {
@@ -198,21 +198,20 @@
           "priceWithoutDriver": 0,
           "img": [
             "images/Cars/merc-s222.webp",
-            "images/Cars/merc-222-car.jpg",
-            "images/Cars/2018-mercedes-s-class.webp",
-            "images/Cars/foto-mercedes-s.jpeg",
+            "images/Cars/s(w222).jpg",
+            "images/Cars/s(w222)2.jpg",
+            "images/Cars/s(w222)3.jpg",
             "images/Cars/merc-back.jpeg"
         ],
         "descriptionEN": "Mercedes S222, also known as the Mercedes-Benz S-Class, is a luxury sedan that sets new standards in comfort, technology, and performance. With its elegant and timeless design, the S-Class exudes sophistication and prestige. The interior is meticulously crafted with high-quality materials and offers a spacious and luxurious cabin that pampers both the driver and passengers. Advanced features such as a cutting-edge infotainment system, intelligent safety systems, and a smooth and powerful engine make the S-Class a true masterpiece of automotive engineering.",
           "descriptionRU": "Mercedes S222, также известный как Mercedes-Benz S-Class, является роскошным седаном, который устанавливает новые стандарты комфорта, технологий и производительности. Своим элегантным и вечным дизайном S-Class излучает утонченность и престиж. Интерьер тщательно выполнен из высококачественных материалов и предлагает просторный и роскошный салон, который балует как водителя, так и пассажиров. Передовые функции, такие как передовая информационно-развлекательная система, интеллектуальные системы безопасности и плавный и мощный двигатель, делают S-Class настоящим шедевром автомобильной инженерии.",
           "descriptionUZ": "Mercedes S222, Mercedes-Benz S-Class deb nomlanadi, qulaylik, texnologiya va ishlab chiqarishda yangi standartlar qo';yadi. Uning zarafatli va abadiy dizayni bilan S-Class zarafat va prestijni nazarda tutadi. Ichki dizayn yuqori sifatli materiallar bilan xushobcha ishlab chiqilgan va vodiy va yo';lloqlarni qutb-xona bilan shod qiladi. Sensatsionellik, xavfsizlik tizimlari va yumshoq, kuchli dvigatel kabi ilgari imkoniyatlarga ega bo';lgan S-Class avtomobil muhandisligining ajoyib namunasi bo';lib hisoblanadi.",
-          "countOfPlaces": 5,
+          "countOfPlaces": 3,
           "withDriver": true
         },
         {
           "id": 12,
           "name": "Mercedes-Benz W223",
-          
           "type": "Sedan",
           "priceWithDriver": 500,
           "priceWithoutDriver": 0,
@@ -226,7 +225,26 @@
         "descriptionEN": "The Mercedes-Benz S-Class W223 is a luxury sedan that offers an exceptional driving experience. It features a sleek and elegant design with a powerful engine that provides impressive performance. The interior is spacious and comfortable, with high-quality materials and advanced technology. The S-Class W223 offers a smooth and refined ride, with excellent handling and a range of safety features. With its luxurious amenities and attention to detail, the Mercedes-Benz S-Class W223 is the epitome of automotive excellence.",
           "descriptionRU": "Mercedes-Benz S-Class W223 - это роскошный седан, который предлагает исключительный опыт вождения. Он имеет изящный и элегантный дизайн с мощным двигателем, обеспечивающим впечатляющую производительность. Интерьер просторный и комфортный, с использованием высококачественных материалов и передовых технологий. S-Class W223 обеспечивает плавную и изысканную поездку, отличную управляемость и ряд функций безопасности. С роскошными удобствами и вниманием к деталям, Mercedes-Benz S-Class W223 является воплощением автомобильного совершенства.",
           "descriptionUZ": "Mercedes-Benz S-Class W223 - bu raqamli sedan, hayratlanadigan haydovchi tajribasi taklif qiladi. U kuchli motor bilan joylashtirilgan yorqin va zarif dizayn, impresionli ishlanishni ta'minlaydi. Interer keng va qulay, yuqori sifatli materiallardan foydalanish va yuqori texnologiyalarni o'z ichiga oladi. S-Class W223 yumshoq va zarif sayohat, ajoyib boshqaruv va himoya xususiyatlari bilan ta'minlaydi. O'zining ilovali imkoniyatlar va tafsilotlarga e'tibor berish bilan, Mercedes-Benz S-Class W223 avtomobil ajoyibligining namunasi.",
-          "countOfPlaces": 4,
+          "countOfPlaces": 3,
+          "withDriver": true
+        },
+        {
+          "id": 13,
+          "name": "Hyunday Elantra",
+          "type": "Sedan",
+          "priceWithDriver": 100,
+          "priceWithoutDriver": 100,
+          "img": [
+            "images/Cars/hynday_elantra.png",
+            "images/Cars/hyunday_elantra2.webp",
+            "images/Cars/hyunday_elantra3.webp",
+            "images/Cars/hyunday-elantra_salon.jpg",
+            "images/Cars/hyunday_elantra_salon2.webp"
+        ],
+        "descriptionEN": "Hyundai Elantra is a compact sedan produced by the South Korean automaker Hyundai. It is known for its sleek and modern design, offering a stylish and sophisticated appearance. The Elantra is equipped with a range of advanced features, including a touchscreen infotainment system, Bluetooth connectivity, and advanced safety technologies such as blind-spot monitoring and lane-keeping assist. It is powered by efficient and responsive engines, providing a smooth and comfortable driving experience. With its combination of style, technology, and performance, the Hyundai Elantra is a popular choice in the compact sedan segment.",
+          "descriptionRU": "Hyundai Elantra - компактный седан, производимый южнокорейским автопроизводителем Hyundai. Он известен своим элегантным и современным дизайном, предлагая стильный и утонченный внешний вид. Elantra оснащена рядом передовых функций, включая сенсорную информационно-развлекательную систему, Bluetooth-соединение и продвинутые технологии безопасности, такие как монитор слепых зон и помощь в поддержании полосы движения. Он оснащен эффективными и отзывчивыми двигателями, обеспечивающими комфортное и плавное вождение. Благодаря сочетанию стиля, технологий и производительности, Hyundai Elantra пользуется популярностью в сегменте компактных седанов.",
+          "descriptionUZ": "Hyundai Elantra - Hyundai kompaniyasi tomonidan ishlab chiqarilgan kompakt sedan modelidir. U yalang'och va zamonaviy dizayni bilan mashhur bo'lib, stilli va sofistikanli ko'rinishni taklif etadi. Elantra, sentr infotainment tizimi, Bluetooth bog'lanish va blind-spot monitoring va lane-keeping assist kabi yuqori darajadagi xavfsizlik texnologiyalari kabi qulayliklarga ega. U samarali va javobgar motorlar bilan jihozlangan, yumshoq va qulay haydashni ta'minlaydi. Stil, texnologiya va ishga qo'yishning birikmasi bilan, Hyundai Elantra kompakt sedan segmentida sevimli tanlovdir.",
+          "countOfPlaces": 3,
           "withDriver": true
         }
 ]
