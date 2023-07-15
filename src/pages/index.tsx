@@ -431,7 +431,7 @@ const Home: React.FC<IMainProps> = ({ data }: any) => {
           <div className="w-full">
             <Image
               className="w-full h-full"
-              src={"/images/mapali.JPEG"}
+              src={"/images/map2.PNG"}
               width={500}
               height={500}
               alt="map"
