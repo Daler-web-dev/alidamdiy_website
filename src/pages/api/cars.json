@@ -46,10 +46,10 @@
         "priceWithoutDriver": 0,
         "img": [
           "images/Cars/mercedes-benz-vito.png",
-          "images/Cars/vito2.jpeg",
-          "images/Cars/vito-salon.jpg",
-          "images/Cars/vito-salon2.jpg",
-          "images/Cars/vito-salon3.jpg"
+          "images/Cars/vito1.jpg",
+          "images/Cars/vito3.jpg",
+          "images/Cars/vito2.jpg",
+          "images/Cars/vito4.jpg"
       ],
       "descriptionEN": "Mercedes Vita is a luxury car that combines elegance, sportiness, and cutting-edge technology. It features a sleek and aerodynamic design, with smooth lines and a distinctive front grille. The interior is crafted with premium materials and offers a comfortable and luxurious driving experience. The car is equipped with advanced safety features and innovative technology, including a high-resolution touchscreen display, voice control, and a state-of-the-art sound system. With powerful performance and precise handling, the Mercedes Vita delivers a thrilling driving experience.",
         "descriptionRU": "Mercedes Vita - это роскошный автомобиль, который сочетает в себе элегантность, спортивность и передовые технологии. Он имеет стильный и аэродинамичный дизайн с плавными линиями и характерной передней решеткой. Интерьер выполнен из высококачественных материалов и предлагает комфортабельное и роскошное вождение. Автомобиль оснащен передовыми системами безопасности и инновационной технологией, включая сенсорный дисплей высокого разрешения, голосовое управление и современную аудиосистему. Благодаря мощным характеристикам и точному управлению, Mercedes Vita доставляет захватывающие ощущения от вождения.",
@@ -122,10 +122,10 @@
         "priceWithoutDriver": 0,
         "img": [
           "images/Cars/benz-main.png",
-          "images/Cars/benz.jpg",
-          "images/Cars/Mercedes-Benz-S.jpeg",
-          "images/Cars/mercedes-benz-inside.jpg",
-          "images/Cars/merc.jpeg"
+          "images/Cars/w221-2.jpg",
+          "images/Cars/w221-3.jpg",
+          "images/Cars/w221-4.jpg",
+          "images/Cars/w221-5.jpg"
       ],
       "descriptionEN": "The Mercedes-Benz S-Class W221 is a luxury sedan that offers an exceptional driving experience. It features a sleek and elegant design with a powerful engine that provides impressive performance. The interior is spacious and comfortable, with high-quality materials and advanced technology. The S-Class W221 offers a smooth and refined ride, with excellent handling and a range of safety features. With its luxurious amenities and attention to detail, the Mercedes-Benz S-Class W221 is the epitome of automotive excellence.",
         "descriptionRU": "Mercedes-Benz S-Class W221 - это роскошный седан, который предлагает исключительный опыт вождения. Он имеет изящный и элегантный дизайн с мощным двигателем, обеспечивающим впечатляющую производительность. Интерьер просторный и комфортный, с использованием высококачественных материалов и передовых технологий. S-Class W221 обеспечивает плавную и изысканную поездку, отличную управляемость и ряд функций безопасности. С роскошными удобствами и вниманием к деталям, Mercedes-Benz S-Class W221 является воплощением автомобильного совершенства.",
@@ -213,13 +213,13 @@
           "id": 12,
           "name": "Mercedes-Benz W223",
           "type": "Sedan",
-          "priceWithDriver": 500,
+          "priceWithDriver": 600,
           "priceWithoutDriver": 0,
           "img": [
             "images/Cars/merc23-main.jpg",
-            "images/Cars/merc23-inside.jpg",
+            "images/Cars/w223.jpg",
             "images/Cars/merc23.jpg",
-            "images/Cars/mers233.jpg",
+            "images/Cars/w223-salon.jpg",
             "images/Cars/merclast.jpg"
         ],
         "descriptionEN": "The Mercedes-Benz S-Class W223 is a luxury sedan that offers an exceptional driving experience. It features a sleek and elegant design with a powerful engine that provides impressive performance. The interior is spacious and comfortable, with high-quality materials and advanced technology. The S-Class W223 offers a smooth and refined ride, with excellent handling and a range of safety features. With its luxurious amenities and attention to detail, the Mercedes-Benz S-Class W223 is the epitome of automotive excellence.",
