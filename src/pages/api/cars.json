@@ -24,7 +24,7 @@
         "name": "Chevrolet Malibu 2",
         "type": "Sedan",
         "priceWithDriver": 85,
-        "priceWithoutDriver": 80,
+        "priceWithoutDriver": 100,
         "img": [
           "images/Cars/malibu2.png",
           "images/Cars/malibu.jpg",
@@ -61,8 +61,8 @@
         "id": 4,
         "name": "Kia Carnival",
         "type": "Minivan",
-        "priceWithDriver": 75,
-        "priceWithoutDriver": 0,
+        "priceWithDriver": 180,
+        "priceWithoutDriver": 75,
         "img": [
           "images/Cars/kia_carnival_white.png",
           "images/Cars/carnival.jpg",
@@ -80,8 +80,8 @@
         "id": 5,
         "name": "Captiva 4",
         "type": "Сrossover",
-        "priceWithDriver": 90,
-        "priceWithoutDriver": 80,
+        "priceWithDriver": 50,
+        "priceWithoutDriver": 60,
         "img": [
           "images/Cars/captiva4.png",
           "images/Cars/captiva4.jpeg",
@@ -137,7 +137,7 @@
         "id": 8,
         "name": "Mercedes Viano",
         "type": "Minivan",
-        "priceWithDriver": 100,
+        "priceWithDriver": 140,
         "priceWithoutDriver": 0,
         "img": [
           "images/Cars/mercedes-benz-v-class.jpg",
@@ -156,7 +156,7 @@
           "id": 9,
           "name": "Range Rover 2022",
           "type": "SUV",
-          "priceWithDriver": 80,
+          "priceWithDriver": 100,
           "priceWithoutDriver": 0,
           "img": [
             "images/Cars/land_rovew2022.png",
@@ -252,7 +252,7 @@
           "name": "Equinox",
           "type": "Сrossover",
           "priceWithDriver": 100,
-          "priceWithoutDriver": 100,
+          "priceWithoutDriver": 150,
           "img": [
             "images/Cars/equinox.png",
             "images/Cars/equinox1.jpg",
@@ -265,6 +265,63 @@
           "descriptionUZ": "Equinox 2020 - Chevrolet tomonidan ishlab chiqarilgan kompakt SUV modelidir. U oqibatli va zamonaviy dizaynni taklif etadi, yaqin chizmalar va jasur old ko';rinishli asosiy tirmaga ega. Interer katta va qulay, yo';lchamlar va yuk uchun ko';p joy beradi. Equinox, sentr infotainment tizimi, Apple CarPlay va Android Auto bilan moslashish, old qarash va yo';lni saqlash kabi haydovchi yordam tizimlari kabi yuqori darajadagi texnologiyalarga ega. U turbo motorlardan iborat yumshoq va samarali ishlashni ta';minlaydi. Stil, qulaylik va ilg';or imkoniyatlarning birikmasi bilan, Equinox kompakt SUV segmentida sevimli tanlovdir.",
           "countOfPlaces": 3,
           "withDriver": true
+        },
+        {
+          "id": 15,
+          "name": "Toyota Hiace 2014",
+          "type": "Minivan",
+          "priceWithDriver": 75,
+          "priceWithoutDriver": 0,
+          "img": [
+            "images/Cars/toyota_hiace.jpg",
+            "images/Cars/toyota_hiace.jpg",
+            "images/Cars/toyota_hiace2.jpg",
+            "images/Cars/toyota_hiace_salon2014.jpg",
+            "images/Cars/toyota_hise_2014_left.jpg"
+        ],
+        "descriptionEN": "The Toyota Hiace 2014 is a versatile and reliable minivan produced by Toyota. It offers spacious seating for up to 15 passengers and is known for its durability and performance. The Hiace features a practical and functional design, with sliding doors for easy access. It is equipped with a range of safety features, including airbags and stability control, to ensure a safe and comfortable ride. The Hiace is powered by a fuel-efficient engine that delivers smooth acceleration and good fuel economy. With its reputation for dependability and ample space, the Toyota Hiace 2014 is a popular choice for businesses, transportation services, and large families.",
+          "descriptionRU": "Toyota Hiace 2014 - универсальный и надежный минивэн, производимый компанией Toyota. Он предлагает просторные сидения для до 15 пассажиров и известен своей прочностью и производительностью. Hiace имеет практичный и функциональный дизайн с раздвижными дверями для удобного доступа. Он оснащен рядом систем безопасности, включая подушки безопасности и систему стабилизации, чтобы обеспечить безопасную и комфортную поездку. Hiace оснащен экономичным двигателем, который обеспечивает плавное ускорение и хорошую экономию топлива. Благодаря своей репутации надежности и просторному интерьеру, Toyota Hiace 2014 является популярным выбором для бизнеса, транспортных служб и больших семей.",
+          "descriptionUZ": "Toyota Hiace 2014 - Toyota tomonidan ishlab chiqarilgan kengaygan va ishonchli miniven. U 15 yo';lovchi uchun keng joy beradi va uning barqarorligi va ishlab chiqarish imkoniyati bilan mashhur. Hiace praktik va funktsional dizayn bilan ta';minlangan, kichkina darajadagi daraxtlar uchun oson kirish imkonini taklif qiladi. U havo yastiklari va barqarorlik nazorat tizimi kabi turli xavfsizlik tizimlari bilan ta';minlangan, xavfsiz va qulay sayohat uchun. Hiace samarali yakit sarfi va yumsha hayotga erishishni ta';minlovchi motor bilan ta';minlanadi. Ishonch va kengaygan joyi uchun mashhur Toyota Hiace 2014 tashish xizmatlariga, transport xizmatalariga va katta oilaviyga qiziqishganlar uchun mashhur tanlovdir.",
+          "countOfPlaces": 14,
+          "withDriver": false
+        },
+        {
+          "id": 16,
+          "name": "Toyota Hiace 2022",
+          "type": "Minivan",
+          "priceWithDriver": 100,
+          "priceWithoutDriver": 0,
+          "img": [
+            "images/Cars/toyota_hiace_2022.png",
+            "images/Cars/toyota_hiace_2022.png",
+            "images/Cars/foto-hiace-salon2022.jpg",
+            "images/Cars/salon-Toyota-Hiace2022.jpg",
+            "images/Cars/toyota-hiace-2022-salon3.jpg"
+        ],
+        "descriptionEN": "The Toyota Hiace 2022 is a modern and versatile minivan produced by Toyota. It offers spacious seating for up to 12 passengers and is designed to provide comfort and convenience. The Hiace features a sleek and stylish exterior, with a bold front grille and sharp LED headlights. Inside, it offers a well-appointed interior with high-quality materials and advanced technology features. The Hiace is equipped with a range of safety features, including multiple airbags, stability control, and a rearview camera. It is powered by an efficient engine that delivers smooth performance and good fuel economy. With its reputation for reliability and functionality, the Toyota Hiace 2022 is a popular choice for businesses, families, and transportation services.",
+          "descriptionRU": "Toyota Hiace 2022 - это современный и универсальный минивэн, производимый компанией Toyota. Он предлагает просторные сиденья для до 12 пассажиров и разработан для обеспечения комфорта и удобства. Hiace имеет элегантный и стильный экстерьер, с яркой передней решеткой и острыми светодиодными фарами. Внутри он предлагает прекрасный интерьер с высококачественными материалами и передовыми технологиями. Hiace оснащен рядом систем безопасности, включая множество подушек безопасности, систему стабильности и камеру заднего вида. Он работает на эффективном двигателе, который обеспечивает плавную производительность и хорошую экономию топлива. Благодаря своей репутации надежности и функциональности, Toyota Hiace 2022 является популярным выбором для бизнеса, семей и транспортных служб.",
+          "descriptionUZ": "Toyota Hiace 2022 - Toyota tomonidan ishlab chiqarilgan zamonaviy va kengaygan miniven. U 12 yolovchi uchun keng joy beradi va qulaylik va qulaylikni taminlash uchun dizayn qilingan. Hiace-yuqori sifatli materiallari va eng songgi texnologik xususiyatlari bilan taminlangan chiroyli va stilli tashqi dizaynga ega. Ichida, u ko&#x27;p havo yastiklari, barqarorlik nazorat tizimi va orqa korsatkich kamera kabi xavfsizlik tizimlari bilan taminlanadi. U samarali yakit sarfi va yumsha ishga erishishni taminlovchi kuchli motor bilan ta&#x27;minlanadi. Ishonch va funktsionallik uchun mashhur bo'lgan Toyota Hiace 2022, bizneslarga, oilaviylarga va transport xizmatlariga qiziqishganlar uchun mashhur tanlovdir.",
+          "countOfPlaces": 14,
+          "withDriver": false
+        },
+        {
+          "id": 17,
+          "name": "Chevrolet Camaro",
+          "type": "Coupe",
+          "priceWithDriver": 100,
+          "priceWithoutDriver": 0,
+          "img": [
+            "images/Cars/Yellow-Camaro1.png",
+            "images/Cars/Yellow-Camaro1.png",
+            "images/Cars/comarosalon2.jfif",
+            "images/Cars/camaro-back.jpg",
+            "images/Cars/comaro_left.jpg"
+        ],
+        "descriptionEN": "The Chevrolet Camaro is a legendary American muscle car known for its powerful performance and aggressive styling. It features a sleek and aerodynamic design with bold lines and a distinctive front grille. The Camaro offers a range of powerful engines, including V6 and V8 options, delivering exhilarating acceleration and impressive speed. With its sport-tuned suspension and responsive handling, the Camaro provides an exhilarating driving experience. The interior is driver-focused, with modern technology and comfortable seating. Whether on the track or on the open road, the Chevrolet Camaro is a true icon of performance and style.",
+          "descriptionRU": "Chevrolet Camaro - легендарный американский мускул-кар, известный своей мощной производительностью и агрессивным стилем. Он имеет элегантный и аэродинамичный дизайн с яркими линиями и характерной передней решеткой. Camaro предлагает широкий выбор мощных двигателей, включая V6 и V8, обеспечивающих впечатляющее ускорение и высокую скорость. Благодаря спортивной подвеске и отзывчивому управлению, Camaro предлагает захватывающий опыт вождения. Интерьер сосредоточен на водителе, с современной технологией и комфортными сиденьями. Независимо от того, на треке или на открытой дороге, Chevrolet Camaro является истинным символом производительности и стиля.",
+          "descriptionUZ": "Chevrolet Camaro - muzkul mashina, Ameerika yillik mashinalari orasida mashhur. U kuchli ishchi va g'azal uslubi bilan tanilgan. Uda yuqori tezlik va kuchli imkoniyatlarni taqdim etadigan V6 va V8 emishlar mavjud. Sport podveska va reagiruyushchaya boshqarish bilan Camaro haydashni zaif qilmaydi. Inter'er haydashchi markazlanadi, zamonaviy texnologiyalar va qulay o'rindalar bilan ta'minlanadi. Trekda yoki ochiq yo'lida bo'lsa-da, Chevrolet Camaro haqiqiy kuch va stilning ramzidir.",
+          "countOfPlaces": 3,
+          "withDriver": false
         }
 ]
 }
