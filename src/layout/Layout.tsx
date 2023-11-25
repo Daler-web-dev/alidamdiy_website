@@ -10,14 +10,14 @@ type Layout = {
 }
 const Layout = ({ children }: Layout) => {
    return (
-      <div className={'w-full h-screen fixed top-0 left-0 bg-white z-50 flex items-center justify-center'}>
-         <h1>Сайт не работает из за не уплаты!</h1>
-         {/* <Header />
+      <>
+         {/* <h1>Сайт не работает из за не уплаты!</h1> */}
+         <Header />
          <main>
             {children}
          </main>
-         <Footer /> */}
-      </div>
+         <Footer />
+      </>
    );
 }
 
